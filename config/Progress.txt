@@ -1,0 +1,13 @@
+[1st Week] Phát triển tường lửa (firewall) cơ bản và nâng cao
+1. Tìm hiểu iptables & netfilter 
+2. Sau khi nạp thành công hệ điều hành WebOS lên Raspberry Pi 4 thì triển khai tường lửa iptables như sau:
+* Hiển trị trạng thái iptables //từ máy thật hoặc máy ảo ssh vào Raspberry: ssh root@IP_của_Raspberry và thực thi các lệnh hiển thị
+* Nạp các rules để chống dò quét cổng (port scanning) và tấn công từ chối dịch vụ (DoS/ DDoS attack):
+* Từ máy thật hoặc máy ảo thử tấn công WebOS trên Raspberry với các kiểu tấn công tiêu biểu sau
+SYN flood attack: hping3 -S -p 80 169.254.160.86 --flood
+Random Source Attack: hping3 -S -p 80 169.254.160.86 --flood --rand-source
+Smurf Attack: hping3 --icmp --flood --spoof 169.254.153.216 169.254.160.86
+LAND Attack: hping3 -S -p 80 169.254.160.86 -a 169.254.160.86
+6. Xây dựng, triển khai bash shell iptables chống lại các kiểu tấn công DDoS khác và kiểm tra hiệu quả của nó
+7. Viết báo cáo xây dựng WebOS, triển khai firewall và các kết quả thu được, giải thích vì sao iptables nguyên bản trên WebOS không hỗ trợ connbytes và limit trong khi iptables trên WebOS tại Lab lại hỗ trợ? Báo cáo bản mềm có thể gửi trong tuần sau.
+ 

@@ -1,0 +1,37 @@
+htop -> phát hiện ứng dụng tiêu tốn tài nguyên
+ubuntuServer -> lg_lab_server<number>, lgedv2024
+warning boost-1.78.0-r0 do_fetch: checksum mismatch for local file download/boost
+warning mesa-native-2_22.-.3-r0 do_fetch: failed to fetch URL https://mesa.freedesktop.org/archive/mesa-22.0.3.tar.xz, attempting mirrors if available
+m4-native-1.4.19-r0
+autoconf-native-2.71-r0
+automake-native-1.`6.5-r0
+libtool-native-2.4.7-r0
+patch-native-2.7.6
+bison-native
+autoconf-archive-native-2022.02..11-r0
+libmmpc-native-1.2.1
+gcc-source-11.3
+build-webos/meta-qt6/recipes-qt/qt6/qtbase_git.bb:do_install_ptest_base failed with exit code '1'
+grep-3.7-r0
+gawk-5.1.1-r0 do_fetch
+libunistring-1.0r0 do fetch
+libidn2-2.3.2-r0
+bash-5.1.16r0 do_fetch
+cpio-2.13
+which-2.21
+tar-1.34
+babeltrace-1.5
+error qtbase_git -> bitbake -c clean qtbase && bitbake qtbase
+
+./mcf -p 3 -b 3 -> 20 nhân cpu nên chạy 3x3 đảm bảo không bị quá tải về tài nguyên CPU và RAM
+bitbake -c clean <package> -> clean gói bị lỗi 
+bitbake <package> -> cài lại gói bị lỗi 
+
+lỗi gói  cli-7.4 -> update phiên bản và đổi checksum
+lỗi gói kernel-module-xt-hashlimit -> tạm thời bỏ qua để sau này build (ứng dụng cho tường lửa tìm hiểu chức năng để thay thế bằng module khác nếu có thể )
+webos-image-1.0 Android repo tool not found; manifest not copied
+webos-image do_image_ostreepush: SOTA_PACKED_CREDENTIALS not set. please Add
+
+lỗi qtbase -> tăng swap lên khoảng 10G và tạo tmux session khi SSH để tránh bị ngắt SSH khi đang build gây lỗi 
+
+lỗi opencv -> bitbake opencv -f -c do_compile

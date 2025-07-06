@@ -1,0 +1,29 @@
+diff --git a/meson.build b/meson.build
+index cb9936e..23ef44b 100644
+--- a/meson.build
++++ b/meson.build
+@@ -1085,6 +1085,11 @@ if have
+         conf.set_quoted('SMACK_RUN_LABEL', get_option('smack-run-label'))
+ endif
+ 
++smack_default_process_label = get_option('smack-default-process-label')
++if smack_default_process_label != ''
++        conf.set_quoted('SMACK_DEFAULT_PROCESS_LABEL', smack_default_process_label)
++endif
++
+ want_polkit = get_option('polkit')
+ install_polkit = false
+ install_polkit_pkla = false
+diff --git a/meson_options.txt b/meson_options.txt
+index 401f093..18b2226 100644
+--- a/meson_options.txt
++++ b/meson_options.txt
+@@ -340,6 +340,8 @@ option('smack', type : 'boolean',
+        description : 'SMACK support')
+ option('smack-run-label', type : 'string',
+        description : 'run systemd --system itself with a specific SMACK label')
++option('smack-default-process-label', type : 'string',
++       description : 'run systemd services with a specific SMACK label')
+ option('polkit', type : 'combo', choices : ['auto', 'true', 'false'],
+        description : 'polkit support')
+ option('ima', type : 'boolean',

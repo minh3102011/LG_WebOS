@@ -1,0 +1,12 @@
+[1st Week] Xây dựng WebOS và tích hợp các ứng dụng cần thiết
+1. Hướng dẫn xây dựng (build) WebOS và tích hợp các ứng dụng cần thiết trong Teams Files
+2. Các ứng dụng và thao tác hỗ trợ cơ bản khi xây dựng WebOS
+2.1. Sử dụng htop để theo dõi việc sử dụng tài nguyên (CPU, RAM, SSD) trên Ubuntu ==> phát hiện ứng dụng nào tiêu tốn nhiều RAM khi build WebOS
+2.2. Nên sử dụng phần mềm MobaXterm để truy cập từ xa giúp thao tác dễ hơn trên máy tính của mình.
+2.3. Để truy cập từ xa đến máy mình cần thì cần xác định địa chỉ IP đích. Làm thế nào để biết địa chỉ IP đích trên Ubuntu Server?
+Sử dụng lệnh ip route trên Ubuntu Server sau khi đăng nhập với tài khoản:
+username: lg_lab_serverX (X chạy từ 1 --> 10)
+password: lgedv2024
+Sau khi đăng nhập thành công thì gõ lệnh ip route để biết IP (src), Subnet (x.y.z.t/u), Cổng ra vào (gateway) 
+2.4. Trên phần mềm MobaXterm gõ lệnh ssh username@IP để truy cập từ xa đến Ubuntu Server
+Ví dụ: ssh lg_lab_server2@10.10.16.4
