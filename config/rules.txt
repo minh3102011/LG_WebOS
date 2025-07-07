@@ -57,8 +57,9 @@ iptables -t mangle -A PREROUTING ! -s 192.168.88.252 -m set --match-set blacklis
 /sbin/iptables -A INPUT -p tcp --tcp-flags RST RST -j DROP  
 
 ### 10: Limit new TCP connections per second per source IP ### 
-/sbin/iptables -A INPUT -p tcp -m conntrack --ctstate NEW -m limit --limit 60/s --limit-burst 20 -j ACCEPT 
-/sbin/iptables -A INPUT -p tcp -m conntrack --ctstate NEW -j DROP  
+#/sbin/iptables -A INPUT -p tcp -m conntrack --ctstate NEW -m limit --limit 60/s --limit-burst 20 -j ACCEPT 
+iptables -A INPUT -p tcp -m conntrack --ctstate NEW -m hashlimit --hashlimit-name tcp_new_conn --hashlimit-above 60/second --hashlimit-burst 20 --hashlimit-mode srcip -j DROP
+#/sbin/iptables -A INPUT -p tcp -m conntrack --ctstate NEW -j DROP  
 
 ### 11: Use SYNPROXY on all ports (disables connection limiting rule) ### 
 # Hidden - unlock content above in "Mitigating SYN Floods With SYNPROXY" section
@@ -139,3 +140,49 @@ iptables -A INPUT -p tcp --tcp-flags RST RST -j DROP
 iptables -A INPUT -p tcp --dport ssh -m conntrack --ctstate NEW -m recent --set 
 iptables -A INPUT -p tcp --dport ssh -m conntrack --ctstate NEW -m recent --update --seconds 60 --hitcount 10 -j DROP 
 iptables -t mangle -A PREROUTING -f -j DROP
+
+
+
+
+
+#Ipset config
+ipset destroy blacklist
+
+# Tạo mới với maxelem lớn
+ipset create blacklist hash:net family inet maxelem 1000000
+
+# Thêm các dải
+ipset add blacklist 192.168.0.0/16
+ipset add blacklist 169.254.0.0/16
+ipset add blacklist 172.16.0.0/12
+
+# Chia nhỏ 10.0.0.0/8
+#ipset add blacklist 10.0.0.0/12
+#ipset add blacklist 10.16.0.0/12
+#ipset add blacklist 10.32.0.0/12
+#ipset add blacklist 10.48.0.0/12
+#ipset add blacklist 10.64.0.0/12
+#ipset add blacklist 10.80.0.0/12
+#ipset add blacklist 10.96.0.0/12
+#ipset add blacklist 10.112.0.0/12
+#ipset add blacklist 10.128.0.0/12
+#ipset add blacklist 10.144.0.0/12
+#ipset add blacklist 10.160.0.0/12
+#ipset add blacklist 10.176.0.0/12
+#ipset add blacklist 10.192.0.0/12
+#ipset add blacklist 10.208.0.0/12
+#ipset add blacklist 10.224.0.0/12
+#ipset add blacklist 10.240.0.0/12
+#ipset add blacklist 10.256.0.0/12
+for i in $(seq 0 16 240); do
+  echo "ipset add blacklist 10.$i.0.0/12"
+done
+# Chia nhỏ 224.0.0.0/3 (VD tách 224-239)
+for i in $(seq 224 239); do
+  ipset add blacklist $i.0.0.0/8
+done
+
+# Chia nhỏ 240.0.0.0/5 (VD tách 240-255)
+for i in $(seq 240 255); do
+  ipset add blacklist $i.0.0.0/8
+done

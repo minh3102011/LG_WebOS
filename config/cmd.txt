@@ -1,0 +1,42 @@
+
+100.118.110.66
+curl -fsSL https://tailscale.com/install.sh | sh #auto
+
+##manual
+curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/jammy.noarmor.gpg | sudo tee /usr/share/keyrings/tailscale-archive-keyring.gpg >/dev/null
+curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/jammy.tailscale-keyring.list | sudo tee /etc/apt/sources.list.d/tailscale.list
+sudo apt-get update
+sudo apt-get install tailscale
+
+curl -fsSL https://tailscale.com/install.sh | sh && sudo tailscale up --auth-key=tskey-auth-kbEnma6Cdd11CNTRL-GqQZUmtNNVVb9EWGqDghVVzDncgKSS4V9
+
+sudo tailscale up --reset  --auth-key=tskey-auth-kbEnma6Cdd11CNTRL-GqQZUmtNNVVb9EWGqDghVVzDncgKSS4V9
+
+sudo tailscale up
+udo tailscale down 
+tmux new -s mysession
+tskey-auth-kk8gtgPDXx11CNTRL-zFvDY3iqymAMuKLe4VtUnApkZYSq7p2ZU
+tmux attach -t mysession
+
+
+
+
+
+
+
+CONFIG_IP_SET=y
+CONFIG_IP_SET_HASH_IP=y
+CONFIG_IP_SET_HASH_NET=y
+CONFIG_NETFILTER_XT_SET=y
+bitbake -c cleansstate linux-raspberrypi
+bitbake -c cleansstate smack
+bitbake linux-raspberrypi
+bitbake smack
+bitbake opencv
+bitbake webos-image
+
+
+
+ip -6 addr add fd53:1234:5678:5::14/64 dev eth0
+ip -6 addr show dev eth0
+ip -6 addr flush dev eth0

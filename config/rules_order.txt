@@ -1,0 +1,53 @@
+iptables -A INPUT -p tcp --dport 22 -s 192.168.88.252 -j ACCEPT 
+iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+iptables -t mangle -A PREROUTING -m conntrack --ctstate INVALID -j DROP  
+iptables -t mangle -A PREROUTING -p tcp ! --syn -m conntrack --ctstate NEW -j DROP 
+iptables -t mangle -A PREROUTING -p tcp -m conntrack --ctstate NEW -m tcpmss ! --mss 536:65535 -j DROP 
+
+iptables -t mangle -A PREROUTING -p tcp --tcp-flags FIN,SYN,RST,PSH,ACK,URG NONE -j DROP 
+iptables -t mangle -A PREROUTING -p tcp --tcp-flags FIN,SYN FIN,SYN -j DROP 
+iptables -t mangle -A PREROUTING -p tcp --tcp-flags SYN,RST SYN,RST -j DROP 
+iptables -t mangle -A PREROUTING -p tcp --tcp-flags FIN,RST FIN,RST -j DROP 
+iptables -t mangle -A PREROUTING -p tcp --tcp-flags FIN,ACK FIN -j DROP 
+iptables -t mangle -A PREROUTING -p tcp --tcp-flags ACK,URG URG -j DROP 
+iptables -t mangle -A PREROUTING -p tcp --tcp-flags ACK,FIN FIN -j DROP 
+iptables -t mangle -A PREROUTING -p tcp --tcp-flags ACK,PSH PSH -j DROP 
+iptables -t mangle -A PREROUTING -p tcp --tcp-flags ALL ALL -j DROP 
+iptables -t mangle -A PREROUTING -p tcp --tcp-flags ALL NONE -j DROP 
+iptables -t mangle -A PREROUTING -p tcp --tcp-flags ALL FIN,PSH,URG -j DROP 
+iptables -t mangle -A PREROUTING -p tcp --tcp-flags ALL SYN,FIN,PSH,URG -j DROP 
+iptables -t mangle -A PREROUTING -p tcp --tcp-flags ALL SYN,RST,ACK,FIN,URG -j DROP  
+
+iptables -t mangle -A PREROUTING -p icmp -j DROP
+iptables -t mangle -A PREROUTING -f -j DROP  
+iptables -A INPUT -p tcp -m connlimit --connlimit-above 111 -j REJECT --reject-with tcp-reset
+iptables -A INPUT -p tcp --tcp-flags RST RST -m limit --limit 2/s --limit-burst 2 -j ACCEPT 
+iptables -A INPUT -p tcp --tcp-flags RST RST -j DROP
+iptables -A INPUT -p tcp -m conntrack --ctstate NEW -m hashlimit --hashlimit-name tcp_new_conn --hashlimit-above 60/second --hashlimit-burst 20 --hashlimit-mode srcip -j DROP
+ipset create blacklist hash:net family inet maxelem 1000000
+ipset add blacklist 192.168.0.0/16
+ipset add blacklist 169.254.0.0/16
+ipset add blacklist 172.16.0.0/12
+
+for i in $(seq 0 16 240); do
+  echo "ipset add blacklist 10.$i.0.0/12"
+done
+# Chia nhỏ 224.0.0.0/3 (VD tách 224-239)
+for i in $(seq 224 239); do
+  ipset add blacklist $i.0.0.0/8
+done
+
+# Chia nhỏ 240.0.0.0/5 (VD tách 240-255)
+for i in $(seq 240 255); do
+  ipset add blacklist $i.0.0.0/8
+done
+iptables -t mangle -A PREROUTING ! -s 192.168.88.252 -m set --match-set blacklist src -j DROP
+
+iptables -A INPUT -p tcp --dport ssh -m conntrack --ctstate NEW -m recent --set 
+iptables -A INPUT -p tcp --dport ssh -m conntrack --ctstate NEW -m recent --update --seconds 60 --hitcount 10 -j DROP
+iptables -N port-scanning 
+iptables -A port-scanning -p tcp --tcp-flags SYN,ACK,FIN,RST RST -m limit --limit 1/s --limit-burst 2 -j RETURN 
+iptables -A port-scanning -j DROP
+iptables -t mangle -A PREROUTING -s 192.168.88.252 -d 192.168.88.252 -j DROP
+
+
