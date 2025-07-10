@@ -40,3 +40,24 @@ bitbake webos-image
 ip -6 addr add fd53:1234:5678:5::14/64 dev eth0
 ip -6 addr show dev eth0
 ip -6 addr flush dev eth0
+
+nft flush ruleset
+
+
+
+
+#CONFIG IPV6
+
+ip link set dev eth0 down
+ip link set dev eth0 address d8:3a:dd:a4:bf:02
+ip link set dev eth0 up
+#ip addr add 192.168.88.249/24 dev eth0
+dhclient eth0
+# Hoặc với systemd-networkd:
+systemctl restart systemd-networkd
+ip link delete eth0.5
+
+
+#MAC
+IP = fd53:1234:5678:5::10
+MAC = d8:43:ae:05:07:05

@@ -1,0 +1,273 @@
+add table inet global
+add set inet global blacklist { type ipv4_addr; size 1000000; flags interval; }
+add element inet global blacklist { 10.80.0.0/12 }
+add element inet global blacklist { 240.0.0.0/8 }
+add element inet global blacklist { 10.16.0.0/12 }
+add element inet global blacklist { 10.144.0.0/12 }
+add element inet global blacklist { 242.0.0.0/8 }
+add element inet global blacklist { 251.0.0.0/8 }
+add element inet global blacklist { 235.0.0.0/8 }
+add element inet global blacklist { 169.254.0.0/16 }
+add element inet global blacklist { 232.0.0.0/8 }
+add element inet global blacklist { 249.0.0.0/8 }
+add element inet global blacklist { 225.0.0.0/8 }
+add element inet global blacklist { 229.0.0.0/8 }
+add element inet global blacklist { 10.32.0.0/12 }
+add element inet global blacklist { 248.0.0.0/8 }
+add element inet global blacklist { 192.168.0.0/16 }
+add element inet global blacklist { 253.0.0.0/8 }
+add element inet global blacklist { 227.0.0.0/8 }
+add element inet global blacklist { 226.0.0.0/8 }
+add element inet global blacklist { 239.0.0.0/8 }
+add element inet global blacklist { 10.160.0.0/12 }
+add element inet global blacklist { 234.0.0.0/8 }
+add element inet global blacklist { 243.0.0.0/8 }
+add element inet global blacklist { 255.0.0.0/8 }
+add element inet global blacklist { 10.48.0.0/12 }
+add element inet global blacklist { 10.64.0.0/12 }
+add element inet global blacklist { 10.96.0.0/12 }
+add element inet global blacklist { 10.208.0.0/12 }
+add element inet global blacklist { 233.0.0.0/8 }
+add element inet global blacklist { 10.112.0.0/12 }
+add element inet global blacklist { 10.240.0.0/12 }
+add element inet global blacklist { 244.0.0.0/8 }
+add element inet global blacklist { 10.192.0.0/12 }
+add element inet global blacklist { 246.0.0.0/8 }
+add element inet global blacklist { 241.0.0.0/8 }
+add element inet global blacklist { 10.128.0.0/12 }
+add element inet global blacklist { 172.16.0.0/12 }
+add element inet global blacklist { 245.0.0.0/8 }
+add element inet global blacklist { 231.0.0.0/8 }
+add element inet global blacklist { 228.0.0.0/8 }
+add element inet global blacklist { 250.0.0.0/8 }
+add element inet global blacklist { 10.0.0.0/12 }
+add element inet global blacklist { 224.0.0.0/8 }
+add element inet global blacklist { 247.0.0.0/8 }
+add element inet global blacklist { 237.0.0.0/8 }
+add element inet global blacklist { 254.0.0.0/8 }
+add element inet global blacklist { 10.176.0.0/12 }
+add element inet global blacklist { 230.0.0.0/8 }
+add element inet global blacklist { 238.0.0.0/8 }
+add element inet global blacklist { 236.0.0.0/8 }
+add element inet global blacklist { 252.0.0.0/8 }
+add element inet global blacklist { 10.224.0.0/12 }
+
+
+add table ip nat
+add chain ip nat PREROUTING { type nat hook prerouting priority -100; policy accept; }
+add chain ip nat INPUT { type nat hook input priority 100; policy accept; }
+add chain ip nat OUTPUT { type nat hook output priority -100; policy accept; }
+add chain ip nat POSTROUTING { type nat hook postrouting priority 100; policy accept; }
+add table ip mangle
+add chain ip mangle PREROUTING { type filter hook prerouting priority -150; policy accept; }
+add chain ip mangle INPUT { type filter hook input priority -150; policy accept; }
+add chain ip mangle FORWARD { type filter hook forward priority -150; policy accept; }
+add chain ip mangle OUTPUT { type route hook output priority -150; policy accept; }
+add chain ip mangle POSTROUTING { type filter hook postrouting priority -150; policy accept; }
+add rule ip mangle PREROUTING ct state invalid counter drop
+add rule ip mangle PREROUTING tcp flags != syn / fin,syn,rst,ack ct state new counter drop
+add rule ip mangle PREROUTING ip protocol tcp ct state new tcp option maxseg size != 536-65535 counter drop
+add rule ip mangle PREROUTING tcp flags 0x0 / fin,syn,rst,psh,ack,urg counter drop
+add rule ip mangle PREROUTING tcp flags fin,syn / fin,syn counter drop
+add rule ip mangle PREROUTING tcp flags syn,rst / syn,rst counter drop
+add rule ip mangle PREROUTING tcp flags fin,rst / fin,rst counter drop
+add rule ip mangle PREROUTING tcp flags fin / fin,ack counter drop
+add rule ip mangle PREROUTING tcp flags urg / ack,urg counter drop
+add rule ip mangle PREROUTING tcp flags fin / fin,ack counter drop
+add rule ip mangle PREROUTING tcp flags psh / psh,ack counter drop
+add rule ip mangle PREROUTING tcp flags fin,syn,rst,psh,ack,urg / fin,syn,rst,psh,ack,urg counter drop
+add rule ip mangle PREROUTING tcp flags 0x0 / fin,syn,rst,psh,ack,urg counter drop
+add rule ip mangle PREROUTING tcp flags fin,psh,urg / fin,syn,rst,psh,ack,urg counter drop
+add rule ip mangle PREROUTING tcp flags fin,syn,psh,urg / fin,syn,rst,psh,ack,urg counter drop
+add rule ip mangle PREROUTING tcp flags fin,syn,rst,ack,urg / fin,syn,rst,psh,ack,urg counter drop
+add rule ip mangle PREROUTING ip protocol icmp counter drop
+add rule ip mangle PREROUTING ip frag-off & 0x1fff != 0 counter drop
+add table ip filter
+add chain ip filter INPUT { type filter hook input priority 0; policy accept; }
+add chain ip filter FORWARD { type filter hook forward priority 0; policy accept; }
+add chain ip filter OUTPUT { type filter hook output priority 0; policy accept; }
+add chain ip filter port-scanning
+add rule ip filter INPUT ip saddr 192.168.88.252 tcp dport 22 counter accept
+add rule ip filter INPUT ct state related,established counter accept
+add set ip filter connlimit0 { type ipv4_addr; flags dynamic; }
+add rule ip filter INPUT ip protocol tcp add @connlimit0 { ip saddr ct count over 111 } counter reject with tcp reset
+add rule ip filter INPUT tcp flags rst / rst limit rate 2/second burst 2 packets counter accept
+add rule ip filter INPUT tcp flags rst / rst counter drop
+sudo nft add rule ip mangle PREROUTING ip saddr != 192.168.88.252 ip saddr @blacklist drop
+sudo nft add rule ip mangle PREROUTING ip saddr 192.168.88.252 ip daddr 192.168.88.252 drop
+add rule ip filter INPUT ip protocol tcp ct state new meter tcp_new_conn { ip saddr limit rate over 60/second burst 20 packets } counter drop
+# -t filter -A INPUT -p tcp -m tcp --dport 22 -m conntrack --ctstate NEW -m recent --set --name DEFAULT --mask 255.255.255.255 --rsource 
+# -t filter -A INPUT -p tcp -m tcp --dport 22 -m conntrack --ctstate NEW -m recent --update --seconds 60 --hitcount 10 --name DEFAULT --mask 255.255.255.255 --rsource -j DROP 
+add rule ip filter port-scanning tcp flags rst / fin,syn,rst,ack limit rate 1/second burst 2 packets counter return
+add rule ip filter port-scanning counter drop
+# Completed on Wed Jul  9 14:49:30 2025
+
+
+
+
+
+
+
+
+
+
+
+table ip mangle
+add set ip mangle blacklist { type ipv4_addr; flags interval; size 1000000; }
+add element ip mangle blacklist { 10.80.0.0/12 }
+add element ip mangle blacklist { 240.0.0.0/8 }
+add element ip mangle blacklist { 10.16.0.0/12 }
+add element ip mangle blacklist { 10.144.0.0/12 }
+add element ip mangle blacklist { 242.0.0.0/8 }
+add element ip mangle blacklist { 251.0.0.0/8 }
+add element ip mangle blacklist { 235.0.0.0/8 }
+add element ip mangle blacklist { 169.254.0.0/16 }
+add element ip mangle blacklist { 232.0.0.0/8 }
+add element ip mangle blacklist { 249.0.0.0/8 }
+add element ip mangle blacklist { 225.0.0.0/8 }
+add element ip mangle blacklist { 229.0.0.0/8 }
+add element ip mangle blacklist { 10.32.0.0/12 }
+add element ip mangle blacklist { 248.0.0.0/8 }
+add element ip mangle blacklist { 192.168.0.0/16 }
+add element ip mangle blacklist { 253.0.0.0/8 }
+add element ip mangle blacklist { 227.0.0.0/8 }
+add element ip mangle blacklist { 226.0.0.0/8 }
+add element ip mangle blacklist { 239.0.0.0/8 }
+add element ip mangle blacklist { 10.160.0.0/12 }
+add element ip mangle blacklist { 234.0.0.0/8 }
+add element ip mangle blacklist { 243.0.0.0/8 }
+add element ip mangle blacklist { 255.0.0.0/8 }
+add element ip mangle blacklist { 10.48.0.0/12 }
+add element ip mangle blacklist { 10.64.0.0/12 }
+add element ip mangle blacklist { 10.96.0.0/12 }
+add element ip mangle blacklist { 10.208.0.0/12 }
+add element ip mangle blacklist { 233.0.0.0/8 }
+add element ip mangle blacklist { 10.112.0.0/12 }
+add element ip mangle blacklist { 10.240.0.0/12 }
+add element ip mangle blacklist { 244.0.0.0/8 }
+add element ip mangle blacklist { 10.192.0.0/12 }
+add element ip mangle blacklist { 246.0.0.0/8 }
+add element ip mangle blacklist { 241.0.0.0/8 }
+add element ip mangle blacklist { 10.128.0.0/12 }
+add element ip mangle blacklist { 172.16.0.0/12 }
+add element ip mangle blacklist { 245.0.0.0/8 }
+add element ip mangle blacklist { 231.0.0.0/8 }
+add element ip mangle blacklist { 228.0.0.0/8 }
+add element ip mangle blacklist { 250.0.0.0/8 }
+add element ip mangle blacklist { 10.0.0.0/12 }
+add element ip mangle blacklist { 224.0.0.0/8 }
+add element ip mangle blacklist { 247.0.0.0/8 }
+add element ip mangle blacklist { 237.0.0.0/8 }
+add element ip mangle blacklist { 254.0.0.0/8 }
+add element ip mangle blacklist { 10.176.0.0/12 }
+add element ip mangle blacklist { 230.0.0.0/8 }
+add element ip mangle blacklist { 238.0.0.0/8 }
+add element ip mangle blacklist { 236.0.0.0/8 }
+add element ip mangle blacklist { 252.0.0.0/8 }
+add element ip mangle blacklist { 10.224.0.0/12 }
+
+add table inet global
+add set inet global blacklist { type ipv4_addr; size 1000000; flags interval; }
+add element inet global blacklist { 10.80.0.0/12 }
+add element inet global blacklist { 240.0.0.0/8 }
+add element inet global blacklist { 10.16.0.0/12 }
+add element inet global blacklist { 10.144.0.0/12 }
+add element inet global blacklist { 242.0.0.0/8 }
+add element inet global blacklist { 251.0.0.0/8 }
+add element inet global blacklist { 235.0.0.0/8 }
+add element inet global blacklist { 169.254.0.0/16 }
+add element inet global blacklist { 232.0.0.0/8 }
+add element inet global blacklist { 249.0.0.0/8 }
+add element inet global blacklist { 225.0.0.0/8 }
+add element inet global blacklist { 229.0.0.0/8 }
+add element inet global blacklist { 10.32.0.0/12 }
+add element inet global blacklist { 248.0.0.0/8 }
+add element inet global blacklist { 192.168.0.0/16 }
+add element inet global blacklist { 253.0.0.0/8 }
+add element inet global blacklist { 227.0.0.0/8 }
+add element inet global blacklist { 226.0.0.0/8 }
+add element inet global blacklist { 239.0.0.0/8 }
+add element inet global blacklist { 10.160.0.0/12 }
+add element inet global blacklist { 234.0.0.0/8 }
+add element inet global blacklist { 243.0.0.0/8 }
+add element inet global blacklist { 255.0.0.0/8 }
+add element inet global blacklist { 10.48.0.0/12 }
+add element inet global blacklist { 10.64.0.0/12 }
+add element inet global blacklist { 10.96.0.0/12 }
+add element inet global blacklist { 10.208.0.0/12 }
+add element inet global blacklist { 233.0.0.0/8 }
+add element inet global blacklist { 10.112.0.0/12 }
+add element inet global blacklist { 10.240.0.0/12 }
+add element inet global blacklist { 244.0.0.0/8 }
+add element inet global blacklist { 10.192.0.0/12 }
+add element inet global blacklist { 246.0.0.0/8 }
+add element inet global blacklist { 241.0.0.0/8 }
+add element inet global blacklist { 10.128.0.0/12 }
+add element inet global blacklist { 172.16.0.0/12 }
+add element inet global blacklist { 245.0.0.0/8 }
+add element inet global blacklist { 231.0.0.0/8 }
+add element inet global blacklist { 228.0.0.0/8 }
+add element inet global blacklist { 250.0.0.0/8 }
+add element inet global blacklist { 10.0.0.0/12 }
+add element inet global blacklist { 224.0.0.0/8 }
+add element inet global blacklist { 247.0.0.0/8 }
+add element inet global blacklist { 237.0.0.0/8 }
+add element inet global blacklist { 254.0.0.0/8 }
+add element inet global blacklist { 10.176.0.0/12 }
+add element inet global blacklist { 230.0.0.0/8 }
+add element inet global blacklist { 238.0.0.0/8 }
+add element inet global blacklist { 236.0.0.0/8 }
+add element inet global blacklist { 252.0.0.0/8 }
+add element inet global blacklist { 10.224.0.0/12 }
+
+
+add table ip nat
+add chain ip nat PREROUTING { type nat hook prerouting priority -100; policy accept; }
+add chain ip nat INPUT { type nat hook input priority 100; policy accept; }
+add chain ip nat OUTPUT { type nat hook output priority -100; policy accept; }
+add chain ip nat POSTROUTING { type nat hook postrouting priority 100; policy accept; }
+add table ip mangle
+add chain ip mangle PREROUTING { type filter hook prerouting priority -150; policy accept; }
+add chain ip mangle INPUT { type filter hook input priority -150; policy accept; }
+add chain ip mangle FORWARD { type filter hook forward priority -150; policy accept; }
+add chain ip mangle OUTPUT { type route hook output priority -150; policy accept; }
+add chain ip mangle POSTROUTING { type filter hook postrouting priority -150; policy accept; }
+add rule ip mangle PREROUTING ct state invalid counter drop
+add rule ip mangle PREROUTING tcp flags != syn / fin,syn,rst,ack ct state new counter drop
+add rule ip mangle PREROUTING ip protocol tcp ct state new tcp option maxseg size != 536-65535 counter drop
+add rule ip mangle PREROUTING tcp flags 0x0 / fin,syn,rst,psh,ack,urg counter drop
+add rule ip mangle PREROUTING tcp flags fin,syn / fin,syn counter drop
+add rule ip mangle PREROUTING tcp flags syn,rst / syn,rst counter drop
+add rule ip mangle PREROUTING tcp flags fin,rst / fin,rst counter drop
+add rule ip mangle PREROUTING tcp flags fin / fin,ack counter drop
+add rule ip mangle PREROUTING tcp flags urg / ack,urg counter drop
+add rule ip mangle PREROUTING tcp flags fin / fin,ack counter drop
+add rule ip mangle PREROUTING tcp flags psh / psh,ack counter drop
+add rule ip mangle PREROUTING tcp flags fin,syn,rst,psh,ack,urg / fin,syn,rst,psh,ack,urg counter drop
+add rule ip mangle PREROUTING tcp flags 0x0 / fin,syn,rst,psh,ack,urg counter drop
+add rule ip mangle PREROUTING tcp flags fin,psh,urg / fin,syn,rst,psh,ack,urg counter drop
+add rule ip mangle PREROUTING tcp flags fin,syn,psh,urg / fin,syn,rst,psh,ack,urg counter drop
+add rule ip mangle PREROUTING tcp flags fin,syn,rst,ack,urg / fin,syn,rst,psh,ack,urg counter drop
+add rule ip mangle PREROUTING ip protocol icmp counter drop
+add rule ip mangle PREROUTING ip frag-off & 0x1fff != 0 counter drop
+add table ip filter
+add chain ip filter INPUT { type filter hook input priority 0; policy accept; }
+add chain ip filter FORWARD { type filter hook forward priority 0; policy accept; }
+add chain ip filter OUTPUT { type filter hook output priority 0; policy accept; }
+add chain ip filter port-scanning
+add rule ip filter INPUT ip saddr 192.168.88.252 tcp dport 22 counter accept
+add rule ip filter INPUT ct state related,established counter accept
+add set ip filter connlimit0 { type ipv4_addr; flags dynamic; }
+#add rule ip filter INPUT ip protocol tcp meter connlimit0 { ip saddr ct count over 111 } counter reject with tcp reset
+#add rule ip filter INPUT ip protocol tcp add @connlimit0 { ip saddr ct count over 111 } counter reject with tcp reset
+#add rule ip filter INPUT ct state new ip protocol tcp meter connlimit0 { ip saddr ct count over 111 } counter reject with tcp reset
+add rule ip filter INPUT tcp flags & rst == rst limit rate 2/second burst 2 packets counter accept
+add rule ip filter INPUT tcp flags & rst == rst counter drop
+add rule ip mangle PREROUTING ip saddr != 192.168.88.252 ip saddr @blacklist drop
+add rule ip mangle PREROUTING ip saddr 192.168.88.252 ip daddr 192.168.88.252 drop
+add rule ip filter INPUT ip protocol tcp ct state new meter tcp_new_conn { ip saddr limit rate over 60/second burst 20 packets } counter drop
+# -t filter -A INPUT -p tcp -m tcp --dport 22 -m conntrack --ctstate NEW -m recent --set --name DEFAULT --mask 255.255.255.255 --rsource 
+# -t filter -A INPUT -p tcp -m tcp --dport 22 -m conntrack --ctstate NEW -m recent --update --seconds 60 --hitcount 10 --name DEFAULT --mask 255.255.255.255 --rsource -j DROP 
+add rule ip filter port-scanning tcp flags rst / fin,syn,rst,ack limit rate 1/second burst 2 packets counter return
+add rule ip filter port-scanning counter drop
+# Completed on Wed Jul  9 14:49:30 2025

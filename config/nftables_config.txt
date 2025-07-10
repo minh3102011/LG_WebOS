@@ -1,0 +1,118 @@
+table ip mangle {
+	set blacklist {
+		type ipv4_addr
+		size 1000000
+		flags interval
+		elements = { 10.0.0.0/12, 10.16.0.0/12,
+			    10.32.0.0/12, 10.48.0.0/12,
+			    10.64.0.0/12, 10.80.0.0/12,
+			    10.96.0.0/12, 10.112.0.0/12,
+			    10.128.0.0/12, 10.144.0.0/12,
+			    10.160.0.0/12, 10.176.0.0/12,
+			    10.192.0.0/12, 10.208.0.0/12,
+			    10.224.0.0/12, 10.240.0.0/12,
+			    169.254.0.0/16, 172.16.0.0/12,
+			    192.168.0.0/16, 224.0.0.0/8,
+			    225.0.0.0/8, 226.0.0.0/8,
+			    227.0.0.0/8, 228.0.0.0/8,
+			    229.0.0.0/8, 230.0.0.0/8,
+			    231.0.0.0/8, 232.0.0.0/8,
+			    233.0.0.0/8, 234.0.0.0/8,
+			    235.0.0.0/8, 236.0.0.0/8,
+			    237.0.0.0/8, 238.0.0.0/8,
+			    239.0.0.0/8, 240.0.0.0/8,
+			    241.0.0.0/8, 242.0.0.0/8,
+			    243.0.0.0/8, 244.0.0.0/8,
+			    245.0.0.0/8, 246.0.0.0/8,
+			    247.0.0.0/8, 248.0.0.0/8,
+			    249.0.0.0/8, 250.0.0.0/8,
+			    251.0.0.0/8, 252.0.0.0/8,
+			    253.0.0.0/8, 254.0.0.0/8,
+			    255.0.0.0-255.255.255.255 }
+	}
+
+	chain PREROUTING {
+		type filter hook prerouting priority mangle; policy accept;
+		ct state invalid counter packets 0 bytes 0 drop
+		tcp flags != syn / fin,syn,rst,ack ct state new counter packets 0 bytes 0 drop
+		ct state new tcp option maxseg size != 536-65535 counter packets 0 bytes 0 drop
+		tcp flags ! fin,syn,rst,psh,ack,urg counter packets 0 bytes 0 drop
+		tcp flags fin,syn / fin,syn counter packets 0 bytes 0 drop
+		tcp flags syn,rst / syn,rst counter packets 0 bytes 0 drop
+		tcp flags fin,rst / fin,rst counter packets 0 bytes 0 drop
+		tcp flags fin / fin,ack counter packets 0 bytes 0 drop
+		tcp flags urg / ack,urg counter packets 0 bytes 0 drop
+		tcp flags fin / fin,ack counter packets 0 bytes 0 drop
+		tcp flags psh / psh,ack counter packets 0 bytes 0 drop
+		tcp flags fin,syn,rst,psh,ack,urg / fin,syn,rst,psh,ack,urg counter packets 0 bytes 0 drop
+		tcp flags ! fin,syn,rst,psh,ack,urg counter packets 0 bytes 0 drop
+		tcp flags fin,psh,urg / fin,syn,rst,psh,ack,urg counter packets 0 bytes 0 drop
+		tcp flags fin,syn,psh,urg / fin,syn,rst,psh,ack,urg counter packets 0 bytes 0 drop
+		tcp flags fin,syn,rst,ack,urg / fin,syn,rst,psh,ack,urg counter packets 0 bytes 0 drop
+		ip protocol icmp counter packets 0 bytes 0 drop
+		ip frag-off & 8191 != 0 counter packets 0 bytes 0 drop
+		ip saddr != 192.168.88.252 ip saddr @blacklist drop
+		ip saddr 192.168.88.252 ip daddr 192.168.88.252 drop
+	}
+
+	chain INPUT {
+		type filter hook input priority mangle; policy accept;
+	}
+
+	chain FORWARD {
+		type filter hook forward priority mangle; policy accept;
+	}
+
+	chain OUTPUT {
+		type route hook output priority mangle; policy accept;
+	}
+
+	chain POSTROUTING {
+		type filter hook postrouting priority mangle; policy accept;
+	}
+}
+table ip nat {
+	chain PREROUTING {
+		type nat hook prerouting priority dstnat; policy accept;
+	}
+
+	chain INPUT {
+		type nat hook input priority 100; policy accept;
+	}
+
+	chain OUTPUT {
+		type nat hook output priority -100; policy accept;
+	}
+
+	chain POSTROUTING {
+		type nat hook postrouting priority srcnat; policy accept;
+	}
+}
+table ip filter {
+	set connlimit0 {
+		type ipv4_addr
+		flags dynamic
+	}
+
+	chain INPUT {
+		type filter hook input priority filter; policy accept;
+		ip saddr 192.168.88.252 tcp dport 22 counter packets 630 bytes 43896 accept
+		ct state established,related counter packets 0 bytes 0 accept
+		tcp flags & rst == rst limit rate 2/second burst 2 packets counter packets 0 bytes 0 accept
+		tcp flags & rst == rst counter packets 0 bytes 0 drop
+		ip protocol tcp ct state new meter tcp_new_conn size 65535 { ip saddr limit rate over 60/second burst 20 packets } counter packets 0 bytes 0 drop
+	}
+
+	chain FORWARD {
+		type filter hook forward priority filter; policy accept;
+	}
+
+	chain OUTPUT {
+		type filter hook output priority filter; policy accept;
+	}
+
+	chain port-scanning {
+		tcp flags rst / fin,syn,rst,ack limit rate 1/second burst 2 packets counter packets 0 bytes 0 return
+		counter packets 0 bytes 0 drop
+	}
+}

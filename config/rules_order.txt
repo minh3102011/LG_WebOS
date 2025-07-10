@@ -50,4 +50,3 @@ iptables -A port-scanning -p tcp --tcp-flags SYN,ACK,FIN,RST RST -m limit --limi
 iptables -A port-scanning -j DROP
 iptables -t mangle -A PREROUTING -s 192.168.88.252 -d 192.168.88.252 -j DROP
 
-
