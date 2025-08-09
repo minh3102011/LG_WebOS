@@ -1,0 +1,73 @@
+table inet global {
+    set blacklist {
+        type ipv4_addr;
+        size 1000000;
+        flags interval;
+        elements = {
+            232.0.0.0/8, 255.0.0.0/8, 230.0.0.0/8, 235.0.0.0/8,
+            248.0.0.0/8, 192.168.0.0/16, 169.254.0.0/16, 246.0.0.0/8,
+            244.0.0.0/8, 242.0.0.0/8, 231.0.0.0/8, 233.0.0.0/8,
+            238.0.0.0/8, 229.0.0.0/8, 237.0.0.0/8, 240.0.0.0/8,
+            252.0.0.0/8, 239.0.0.0/8, 225.0.0.0/8, 247.0.0.0/8,
+            253.0.0.0/8, 172.16.0.0/12, 254.0.0.0/8, 243.0.0.0/8,
+            224.0.0.0/8, 227.0.0.0/8, 236.0.0.0/8, 249.0.0.0/8,
+            241.0.0.0/8, 234.0.0.0/8, 226.0.0.0/8, 250.0.0.0/8,
+            245.0.0.0/8, 228.0.0.0/8, 251.0.0.0/8
+        }
+    }
+
+    chain prerouting {
+        type filter hook prerouting priority mangle; policy accept;
+
+        ip saddr != 192.168.88.252 ip saddr @blacklist drop
+    }
+}
+
+# Translated by iptables-restore-translate v1.8.4 on Tue Jul 29 09:50:02 2025
+add table ip nat
+add chain ip nat PREROUTING { type nat hook prerouting priority -100; policy accept; }
+add chain ip nat INPUT { type nat hook input priority 100; policy accept; }
+add chain ip nat OUTPUT { type nat hook output priority -100; policy accept; }
+add chain ip nat POSTROUTING { type nat hook postrouting priority 100; policy accept; }
+add table ip mangle
+add chain ip mangle PREROUTING { type filter hook prerouting priority -150; policy accept; }
+add chain ip mangle INPUT { type filter hook input priority -150; policy accept; }
+add chain ip mangle FORWARD { type filter hook forward priority -150; policy accept; }
+add chain ip mangle OUTPUT { type route hook output priority -150; policy accept; }
+add chain ip mangle POSTROUTING { type filter hook postrouting priority -150; policy accept; }
+add rule ip mangle PREROUTING ct state invalid counter drop
+add rule ip mangle PREROUTING tcp flags & (fin|syn|rst|ack) != syn ct state new counter drop
+# -t mangle -A PREROUTING -p tcp -m conntrack --ctstate NEW -m tcpmss  --mss 536:65535 -j DROP 
+add rule ip mangle PREROUTING tcp flags & (fin|syn|rst|psh|ack|urg) == 0x0 counter drop
+add rule ip mangle PREROUTING tcp flags & (fin|syn) == fin|syn counter drop
+add rule ip mangle PREROUTING tcp flags & (syn|rst) == syn|rst counter drop
+add rule ip mangle PREROUTING tcp flags & (fin|rst) == fin|rst counter drop
+add rule ip mangle PREROUTING tcp flags & (fin|ack) == fin counter drop
+add rule ip mangle PREROUTING tcp flags & (ack|urg) == urg counter drop
+add rule ip mangle PREROUTING tcp flags & (fin|ack) == fin counter drop
+add rule ip mangle PREROUTING tcp flags & (psh|ack) == psh counter drop
+add rule ip mangle PREROUTING tcp flags & (fin|syn|rst|psh|ack|urg) == fin|syn|rst|psh|ack|urg counter drop
+add rule ip mangle PREROUTING tcp flags & (fin|syn|rst|psh|ack|urg) == 0x0 counter drop
+add rule ip mangle PREROUTING tcp flags & (fin|syn|rst|psh|ack|urg) == fin|psh|urg counter drop
+add rule ip mangle PREROUTING tcp flags & (fin|syn|rst|psh|ack|urg) == fin|syn|psh|urg counter drop
+add rule ip mangle PREROUTING tcp flags & (fin|syn|rst|psh|ack|urg) == fin|syn|rst|ack|urg counter drop
+add rule ip mangle PREROUTING ip protocol icmp counter drop
+add rule ip mangle PREROUTING ip frag-off & 0x1fff != 0 counter drop
+add rule ip mangle PREROUTING ip saddr 192.168.88.252 ip daddr 192.168.88.252 counter drop
+add table ip filter
+add chain ip filter INPUT { type filter hook input priority 0; policy accept; }
+add chain ip filter FORWARD { type filter hook forward priority 0; policy accept; }
+add chain ip filter OUTPUT { type filter hook output priority 0; policy accept; }
+add chain ip filter port-scanning
+add rule ip filter INPUT ip saddr 192.168.88.252 tcp dport 22 counter accept
+add rule ip filter INPUT ip saddr 10.10.16.153 tcp dport 22 counter accept
+add rule ip filter INPUT ct state related,established counter accept
+# -t filter -A INPUT -p tcp -m connlimit --connlimit-above 111 --connlimit-mask 32 --connlimit-saddr -j REJECT --reject-with tcp-reset 
+add rule ip filter INPUT tcp flags & (rst) == rst limit rate 2/second burst 2 packets counter accept
+add rule ip filter INPUT tcp flags & (rst) == rst counter drop
+add rule ip filter INPUT ip protocol tcp ct state new meter tcp_new_conn { ip saddr limit rate over 60/second burst 20 packets} counter drop
+# -t filter -A INPUT -p tcp -m tcp --dport 22 -m conntrack --ctstate NEW -m recent --set --name DEFAULT --mask 255.255.255.255 --rsource 
+# -t filter -A INPUT -p tcp -m tcp --dport 22 -m conntrack --ctstate NEW -m recent --update --seconds 60 --hitcount 10 --name DEFAULT --mask 255.255.255.255 --rsource -j DROP 
+add rule ip filter port-scanning tcp flags & (fin|syn|rst|ack) == rst limit rate 1/second burst 2 packets counter return
+add rule ip filter port-scanning counter drop
+# Completed on Tue Jul 29 09:50:02 2025

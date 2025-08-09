@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="dev" data-themeable="true">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="csrf-token" content="Rpa9ZFgS-Zs4w6nvaRDhb2KV5NnuBPHM-1hc">
+    
+    
+    <meta name="description" content="[4th week] Ulogdulogd là một trình nền báo cáo các vấn đề liên quan đến netfilter/iptables. Việc này bao gồm báo cáo vi phạm bảo mật và kiểm toán trên mỗi gói tin. Ulogd còn cho phép báo cáo bảo mật và kiểm toán 1 cách linh hoạt (do người dùng tuỳ chỉnh) trên mỗi luồng lưu lượng.Giả sử WebOS trên các thiết bị Rasberry đã được cài đặt sẵn ulogd2. Để thực thi báo cáo tuỳ biến thì cần tìm hiểu các plugins đầu vào (Input), đầu ra (Output) và thực hiện các công việc sau:">
+    
+    <title>Week4: Ulogd - HackMD</title>
+    <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
+	<link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
+	<!--  meta value for server side given sign in boolean -->
+    <meta name="signin" content="false">
+
+    
+<script nonce="a625bf62-1d03-44c8-a0b5-d2ae5648107c">
+  window.domain = 'hackmd.io'
+  window.urlpath = ''
+  window.debug = false || window.localStorage.getItem('HMD_DEBUG_FLAG') === 'true'
+  window.version = '1.3.0'
+  window.brand = 'HackMD'
+
+  
+  window.NOTE_ID = 'xk5Osh1iRhmqeE0JVIDvQg'
+  
+
+  window.GOOGLE_DRIVE_API_KEY = 'AIzaSyAHmcP5gL_64ZafuAYOvJruFAIaYgHQaY4'
+  window.GOOGLE_DRIVE_CLIENT_ID = '65857506266-76uhhee8se8dgs1i0q8fhtj1prg0ar27.apps.googleusercontent.com'
+  window.DROPBOX_APP_KEY = 'rdoizrlnkuha23r'
+  
+  window.PLANTUML_SERVER = 'https://ptuml.hackmd.io'
+
+  window.ASSET_URL = 'https://assets.hackmd.io'
+
+  window.USER_CAN_CREATE_TEAM = true
+  window.USER_CAN_DELETE_ACCOUNT = true
+  window.USER_DELETE_ACCOUNT_VIA_EMAIL = true
+  window.PAYMENT_ENABLED = true
+  window.PAYMENT_PROMOTION_BANNER_ENABLED = false
+  window.GITHUB_SYNC_ENABLED = true
+  window.GITLAB_SYNC_ENABLED = false
+  window.GITLAB_SYNC_BASE_URL = ''
+  window.VCS_SYNC_MODE = 'github'
+  window.VCS_PROVIDER_NAME = 'GitHub'
+  window.FREE_TEAM_NUM = 20
+  window.FREE_TEAM_MEMBER_NUM = 3
+  window.FREE_PUBLIC_TEAM_NUM = 10
+  window.NEO_OVERVIEW_UI = true
+
+  
+      window.FOLDER_ENABLE = true
+  
+
+  
+  window.EE_SITE_ENABLE = false
+  window.EE_SITE_NAME = 'false'
+  window.EE_SITE_LINK = 'false'
+  window.EESITE_INFO = false
+  window.ENTERPRISE_DISCOVERY_ENABLE = false
+  window.ENTERPRISE_DISCOVERY_TEAM = true
+  window.ENTERPRISE_DISCOVERY_NOTE = true
+  window.ENTERPRISE_DISCOVERY_VIEW_PERMISSION = 'guest'
+  
+  window.ALLOW_ANONYMOUS = true
+  window.ALLOW_ANONYMOUS_EDIT = false
+  window.ALLOW_DOWNLOAD_PDF = true
+  window.PUBLIC_OVERVIEW = false
+  window.INTERNAL_PUBLIC_OVERVIEW = false
+  window.FULL_TEXT_SEARCH_ENABLE = false
+  window.ALGOLIA_SEARCH_ENABLE = true
+  window.MARKETING_EMAIL_ENABLE = true
+  window.OFFLINE_ACCESS = true
+  
+  
+  
+    window.WALLET_CONNECT_PROJECT_ID = '91d6fa182b725b5895a17a170a5878c1'
+  
+  window.API_MANAGEMENT_UI_ENABLE = true
+  window.FEEDBACK_UI_ENABLE = true
+  window.PUBLISH_ENABLE = true
+
+  
+
+  
+  window.SHOW_HOT_NOTES = false
+  
+
+  
+  window.HOT_NOTES_TIME_TYPE = 'week'
+  
+
+  
+  window.SHOW_OVERVIEW = false
+  
+
+  
+  window.MENTIONS = {"991ca9d8-177a-48a3-8747-603e035e750c":{"id":"991ca9d8-177a-48a3-8747-603e035e750c","targetUser":{"userpath":"kidwine29"}},"295bab15-2610-45d6-a2c2-677debc1028e":{"id":"295bab15-2610-45d6-a2c2-677debc1028e","targetUser":{"userpath":"iamproz2911"}}}
+  
+
+  
+  window.MENTION_ANCHORS = [["295bab15-2610-45d6-a2c2-677debc1028e",0,12,1734419295099,1734419295099],["991ca9d8-177a-48a3-8747-603e035e750c",14,10,1734419297833,1734419297833]]
+  
+
+  
+  window.COMMENT_ANCHORS = []
+  
+
+  
+  window.IS_OWNER = false
+  
+
+  
+  window.IS_TEAM_ADMIN = false
+  
+
+  
+  window.IS_TEAM_MEMBER = false
+  
+
+  
+  window.IS_INVITEE_ADMIN = false
+  
+
+  
+  window.USER_PROFILE = '%7B%22name%22%3A%22Guest%20Thomas%22%7D'
+  
+
+  
+  window.VERSION_TIME = '1734923847057'
+  
+
+  
+  window.canEdit = false
+  
+
+  
+  window.canWriteComment = false
+  
+
+  
+  window.canHideComment = false
+  
+
+  window.TRASH_NOTE_DELETE_AFTER_FREE = 3
+  window.TRASH_NOTE_DELETE_AFTER_PAID = 30
+
+  
+    window.ENABLED_PREVIEW_FEATURE = {}
+  
+
+  
+    window.ACTIVE_PREVIEW_FEATURE = ["beta-slide-preview"]
+  
+
+  
+    window.IS_OWNER_UPGRADED = false
+  
+
+  
+    window.IMGUR_FALLBACK_CDN = 'https://imgur-backup.hackmd.io'
+  
+
+  
+    window.CLOUD_META_UI = true
+  
+  
+    window.CLOUD_META_API = true
+  
+  
+    window.CLOUD_META_MIGRATION = false
+  
+  
+    window.YAML_METADATA_ENABLED = false
+  
+
+  
+    window.NOTE_CAPACITY_LIMIT = 50
+  
+
+  
+    window.DOCUMENT_MAX_LENGTH = 100000
+  
+
+  
+    window.SOCIAL_NETWORK_FEATURES_ENABLED = true
+  
+
+  
+    window.PUBLISHMENT_MODERATION_ENABLED = true
+  
+
+  
+    window.COMMENT_ENABLED = true
+  
+
+  
+    window.COMMENT_PERMISSION = "signed_in_users"
+  
+
+  window.SUGGEST_EDIT_ENABLED = true
+  
+    window.SUGGEST_EDIT_ENABLED = true
+  
+
+  window.CITATION_ENABLED = false
+
+  window.NOTE_FROM_COMMENT_ENABLED = false
+
+  
+    window.NOTE_FEATURES = {"emoji-reply":"signed_in_users","citation":"disabled"}
+  
+
+  
+    window.REALTIME_CLIENT_WITH_CREDENTIALS = false
+  
+
+  
+    window.DEBUG_DISCONNECT_SOCKET_WHEN_OFFLINE = false
+  
+
+  
+
+  
+
+  
+
+  
+    window.CUSTOM_STYLE_ENABLED = "true"
+  
+
+  
+    window.USE_NEW_LOGO = true
+  
+
+  
+    window.ITERABLE_ENABLED = true
+  
+  
+    window.ITERABLE_API_KEY = "c2c36a44c2614fb19aa3b46d660bbce2"
+  
+
+  
+    window.TEXT_SELECTION_CHANGED = false
+  
+
+  
+    window.CAN_VIEW_HISTORY_AT_REVISION = false
+  
+
+  
+    window.GUIDED_COMMENT_ENABLED = true
+  
+</script>
+
+
+    
+<!-- Google Tag Manager -->
+<script nonce="a625bf62-1d03-44c8-a0b5-d2ae5648107c">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KLW9Z3');</script>
+<!-- End Google Tag Manager -->
+
+
+    
+
+
+
+
+
+
+    <meta property="fb:app_id" content="1436904003272070">
+
+
+
+    <meta name="robots" content="index, follow">
+
+
+
+    <meta name="twitter:image:src" content="https://hackmd.io/images/media/HackMD-neo-og.jpg">
+    <meta name="twitter:image:alt" content="Week4: Ulogd - HackMD">
+
+
+<meta name="twitter:site" content="@hackmdio" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Week4: Ulogd - HackMD" />
+
+
+    <meta name="twitter:description" content="[4th week] Ulogdulogd là một trình nền báo cáo các vấn đề liên quan đến netfilter/iptables. Việc này bao gồm báo cáo vi phạm bảo mật và kiểm toán trên mỗi gói tin. Ulogd còn cho phép báo cáo bảo mật và kiểm toán 1 cách linh hoạt (do người dùng tuỳ chỉnh) trên mỗi luồng lưu lượng.Giả sử WebOS trên các thiết bị Rasberry đã được cài đặt sẵn ulogd2. Để thực thi báo cáo tuỳ biến thì cần tìm hiểu các plugins đầu vào (Input), đầu ra (Output) và thực hiện các công việc sau:" />
+
+
+
+    <meta property="og:image" content="https://hackmd.io/images/media/HackMD-neo-og.jpg">
+    <meta property="og:image:alt" content="Week4: Ulogd - HackMD">
+
+
+<meta property="og:site_name" content="HackMD" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Week4: Ulogd - HackMD" />
+
+
+    <meta property="og:description" content="[4th week] Ulogdulogd là một trình nền báo cáo các vấn đề liên quan đến netfilter/iptables. Việc này bao gồm báo cáo vi phạm bảo mật và kiểm toán trên mỗi gói tin. Ulogd còn cho phép báo cáo bảo mật và kiểm toán 1 cách linh hoạt (do người dùng tuỳ chỉnh) trên mỗi luồng lưu lượng.Giả sử WebOS trên các thiết bị Rasberry đã được cài đặt sẵn ulogd2. Để thực thi báo cáo tuỳ biến thì cần tìm hiểu các plugins đầu vào (Input), đầu ra (Output) và thực hiện các công việc sau:" />
+
+
+
+    <link rel="canonical" href="https://hackmd.io/@iamproz2911/SknRkj0NJe" />
+    <meta property="og:url" content="https://hackmd.io/@iamproz2911/SknRkj0NJe" />
+    <meta property="twitter:url" content="https://hackmd.io/@iamproz2911/SknRkj0NJe" />
+
+    <link rel="alternate" type="text/markdown" href="https://hackmd.io/@iamproz2911/SknRkj0NJe.md" title="Pure markdown version">
+    <link rel="alternate" type="text/markdown" href="https://hackmd.io/@iamproz2911/SknRkj0NJe.md?no-meta" title="Pure markdown version without metadata">
+
+
+     <link href="https://assets.hackmd.io/build/font-vendor.ea8218d7d4f468b2c430.css" rel="stylesheet"><link href="https://assets.hackmd.io/build/common-vendor.fd34b1d1ad1390fa8864.css" rel="stylesheet"><link href="https://assets.hackmd.io/build/pretty-vendor.d39c3586ad724c4bdff1.css" rel="stylesheet"><link href="https://assets.hackmd.io/build/pretty.191080504f40238cb56f.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+<![endif]-->
+
+    
+
+
+    <script nonce="a625bf62-1d03-44c8-a0b5-d2ae5648107c">
+  window.__shouldIgnoreTracker = function() {
+    const isDebug = window.debug === true
+    const isLocal = /^localhost$|^127(\.[0-9]+){0,2}\.[0-9]+$|^\[::1?\]$|^local\.localhost$/.test(location.hostname) || location.protocol === 'file:'
+    const isAutomation = Boolean(window._phantom || window.__nightmare || window.navigator.webdriver || window.Cypress)
+    return isDebug || isLocal || isAutomation
+  }
+</script>
+
+<!-- plausible -->
+<script defer data-domain="hackmd.io" src="https://tracks.hackmd.io/js/script.js"></script>
+<script nonce="a625bf62-1d03-44c8-a0b5-d2ae5648107c">
+  window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments); }
+  const keyboardWhiteList = ['a', 'span', 'button']
+
+  function getTaggedEventAttributes (e) {
+    const eventAttrs = { name: null, props: {} }
+    if (!e || !e.classList) return eventAttrs
+    const psEvent = /plausible-event-(.+)(=|--)(.+)/
+    for (const className of [...e.classList]) {
+      const [, key, , val] = className.match(psEvent) || []
+      if (!key || !val) continue
+      const value = val.replace(/\+/g, ' ')
+      switch (key.toLowerCase()) {
+        case 'name':
+          eventAttrs.name = value
+          break
+        default:
+          eventAttrs.props[key] = value
+          break
+      }
+    }
+    return eventAttrs
+  }
+
+  function shouldIgnore () {
+    return window.__shouldIgnoreTracker() || window.localStorage.getItem('plausible_ignore') === 'true'
+  }
+
+  function handler (e) {
+    if (!window.plausible) return
+    if (!e.target || !('className' in e.target)) return
+    const ele = e.target
+
+    const eventAttrs = getTaggedEventAttributes(ele)
+    if (!eventAttrs.name) return
+    if (ele?.href) eventAttrs.props.url = ele.href
+
+    if (shouldIgnore()) {
+      if (window.debug) logDebugEventMsg(eventAttrs)
+      return
+    }
+    window.plausible(eventAttrs.name, { props: eventAttrs.props })
+  }
+
+  function logDebugEventMsg (eventAttrs) {
+    console.warn(
+      `Ignoring Event: "${eventAttrs.name}"`,
+      eventAttrs,
+    )
+  }
+
+  function keydownHandler (e) {
+    if (e.key !== 'Enter') return
+    if (e.target.nodeName.toLowerCase() === 'input') {
+      switch (e.target.type.toLowerCase()) {
+        case 'submit':
+        case 'button':
+        case 'reset':
+        case 'checkbox':
+        case 'radio':
+        case 'file':
+        case 'image':
+        case 'color':
+          break
+        default:
+          return
+      }
+    } else if (!keyboardWhiteList.includes(e.target.nodeName.toLowerCase())) {
+      return
+    }
+    handler(e)
+  }
+
+  document.addEventListener('mousedown', handler)
+  document.addEventListener('keydown', keydownHandler)
+</script>
+
+<!-- piwik pro -->
+<script type="text/javascript" nonce="a625bf62-1d03-44c8-a0b5-d2ae5648107c">
+  (function(window, document, dataLayerName, id) {
+    if (window.__shouldIgnoreTracker()) {
+      if (window.debug) {
+        console.warn('Ignoring Piwik Pro Tracker due to debug mode or local environment.')
+      }
+      return;
+    }
+
+    window[dataLayerName]=window[dataLayerName]||[];
+    window[dataLayerName].push({start:(new Date).getTime(),event:"stg.start"});
+
+    var scripts=document.getElementsByTagName('script')[0];
+    var tags=document.createElement('script');
+    var qP=[];
+    dataLayerName!=="dataLayer"&&qP.push("data_layer_name="+dataLayerName);
+    var qPString=qP.length>0?("?"+qP.join("&")):"";
+
+    tags.async=true;
+    tags.src="https://hackmd.containers.piwik.pro/"+id+".js"+qPString;
+    tags.nonce="a625bf62-1d03-44c8-a0b5-d2ae5648107c";
+    scripts.parentNode.insertBefore(tags,scripts);
+
+    !function(a,n,i){
+    a[n]=a[n]||{};
+    for(var c=0;c<i.length;c++)!function(i){
+        a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){
+        var a=[].slice.call(arguments,0);
+        "string"==typeof a[0]&&window[dataLayerName].push({
+            event:n+"."+i+":"+a[0],
+            parameters:[].slice.call(arguments,1)
+        })
+        }
+    }(i[c])
+    }(window,"ppms",["tm","cm"]);
+  })(window, document, 'dataLayer', '8b665e66-46fc-4c65-aef4-4c3429ff4551');
+</script>
+
+    
+<script nonce="a625bf62-1d03-44c8-a0b5-d2ae5648107c">
+  window.publishProps = JSON.parse(`{"isOwnerAnonymous":false,"isOwnedByTeam":false,"ownerInfo":{"name":"iamproz2911","path":"iamproz2911","avatarUrl":"https%3A%2F%2Fuploads-public.hackmd.io%2Fupload_fc16f4eeb6a70292674cb45250365447.jpg","description":"%7CPentesterWeb%20%7C%20CyberSecurity%20%7C%0D%0AWorkHard%20Become%20To%20CyberSecurity%20Engineer%20!%0D%0ADUT2020%20"},"isPublished":true,"createTime":1734418388176,"updateTime":1734923847057,"vcsSyncMode":"github","vcsProviderName":"GitHub","canEdit":false,"hardBreaks":true,"onlyOwnerCanEdit":true,"isCommentEnabled":true,"likedCount":1,"isNotificationEnabled":true,"notificationType":"never","hasEmail":false,"canWriteComment":false,"viewCount":18,"markdown":"%40iamproz2911%20%0A%40kidwine29%20%0A%23%20Week4%3A%20Ulogd%0A%5B4th%20week%5D%20Ulogd%0Aulogd%20l%C3%A0%20m%E1%BB%99t%20tr%C3%ACnh%20n%E1%BB%81n%20b%C3%A1o%20c%C3%A1o%20c%C3%A1c%20v%E1%BA%A5n%20%C4%91%E1%BB%81%20li%C3%AAn%20quan%20%C4%91%E1%BA%BFn%20netfilter%2Fiptables.%20Vi%E1%BB%87c%20n%C3%A0y%20bao%20g%E1%BB%93m%20b%C3%A1o%20c%C3%A1o%20vi%20ph%E1%BA%A1m%20b%E1%BA%A3o%20m%E1%BA%ADt%20v%C3%A0%20ki%E1%BB%83m%20to%C3%A1n%20tr%C3%AAn%20m%E1%BB%97i%20g%C3%B3i%20tin.%20Ulogd%20c%C3%B2n%20cho%20ph%C3%A9p%20b%C3%A1o%20c%C3%A1o%20b%E1%BA%A3o%20m%E1%BA%ADt%20v%C3%A0%20ki%E1%BB%83m%20to%C3%A1n%201%20c%C3%A1ch%20linh%20ho%E1%BA%A1t%20(do%20ng%C6%B0%E1%BB%9Di%20d%C3%B9ng%20tu%E1%BB%B3%20ch%E1%BB%89nh)%20tr%C3%AAn%20m%E1%BB%97i%20lu%E1%BB%93ng%20l%C6%B0u%20l%C6%B0%E1%BB%A3ng.%0AGi%E1%BA%A3%20s%E1%BB%AD%20WebOS%20tr%C3%AAn%20c%C3%A1c%20thi%E1%BA%BFt%20b%E1%BB%8B%20Rasberry%20%C4%91%C3%A3%20%C4%91%C6%B0%E1%BB%A3c%20c%C3%A0i%20%C4%91%E1%BA%B7t%20s%E1%BA%B5n%20ulogd2.%20%C4%90%E1%BB%83%20th%E1%BB%B1c%20thi%20b%C3%A1o%20c%C3%A1o%20tu%E1%BB%B3%20bi%E1%BA%BFn%20th%C3%AC%20c%E1%BA%A7n%20t%C3%ACm%20hi%E1%BB%83u%20c%C3%A1c%20plugins%20%C4%91%E1%BA%A7u%20v%C3%A0o%20(Input)%2C%20%C4%91%E1%BA%A7u%20ra%20(Output)%20v%C3%A0%20th%E1%BB%B1c%20hi%E1%BB%87n%20c%C3%A1c%20c%C3%B4ng%20vi%E1%BB%87c%20sau%3A%0A1.%20T%C3%ACm%20hi%E1%BB%83u%20c%C3%A1c%20plugins%0A1.%201.%20Input%20plugins%3A%20ULOG%2C%20NFLOG%2C%20NFCT%20--%3E%20%C4%91%E1%BB%83%20l%C3%A0m%20g%C3%AC%20v%C3%A0%20c%C3%A1ch%20v%E1%BA%ADn%20h%C3%A0nh%3F%0A1.2.%20Output%20plugins%3A%20LOGEMU%2C%20OPRINT%2C%20SYSLOG%2C%20MYSQL%2C%20PGSQL%2C%20SQLITE3%2C%20PCAP%2C%20IPFIX%2C%20NACCT%2C%20JSON%20--%3E%20%C4%91%E1%BB%83%20l%C3%A0m%20g%C3%AC%20v%C3%A0%20c%C3%A1ch%20v%E1%BA%ADn%20h%C3%A0nh%3F%0A1.3.%20T%C3%ACm%20hi%E1%BB%83u%20tr%C3%AAn%20Ulogd%20tr%C3%AAn%20WebOS%20hi%E1%BB%87n%20t%E1%BA%A1i%20h%E1%BB%97%20tr%E1%BB%A3%20nh%E1%BB%AFng%20plugins%20(Input%2C%20Output)%20n%C3%A0o%3F%0A2.%20X%C3%A2y%20d%E1%BB%B1ng%20Ulogd%20tu%E1%BB%B3%20bi%E1%BA%BFn%20d%E1%BB%B1a%20v%C3%A0o%20c%C3%A1c%20plugins%0AGi%E1%BA%A3%20s%E1%BB%AD%20%C4%91%C3%A3%20t%C3%ACm%20hi%E1%BB%83u%20%C4%91%C6%B0%E1%BB%A3c%20c%C3%A1c%20Input%2F%20Output%20plugins%20tr%C3%AAn%20h%E1%BB%87%20th%E1%BB%91ng%20WebOS%20c%E1%BB%A7a%20m%C3%ACnh.%20X%C3%A2y%20d%E1%BB%B1ng%20Ulogd%20tu%E1%BB%B3%20bi%E1%BA%BFn%20%C4%91%E1%BB%83%20b%C3%A1o%20c%C3%A1o%20c%C3%A1c%20vi%20ph%E1%BA%A1m%2F%20ki%E1%BB%83m%20to%C3%A1n%20v%E1%BB%81%20g%C3%B3i%20tin%2F%20lu%E1%BB%93ng%20l%C6%B0u%20l%C6%B0%E1%BB%A3ng%20(t%E1%BA%A5t%20nhi%C3%AAn%20c%E1%BA%A7n%20x%C3%A2y%20d%E1%BB%B1ng%20tr%C6%B0%E1%BB%9Bc%20ch%C3%ADnh%20s%C3%A1ch%20b%E1%BA%A3o%20m%E1%BA%ADt%20--%3E%20iptables%20--%3E%20ki%E1%BB%83m%20tra%20vi%20ph%E1%BA%A1m%2Fki%E1%BB%83m%20to%C3%A1n%20d%E1%BB%B1a%20v%C3%A0o%20Ulogd%20tu%E1%BB%B3%20bi%E1%BA%BFn)%0A%23%20Ulogd%20INPUT%0AInput%20plugins%3A%20ULOG%2C%20NFLOG%2C%20NFCT%0AInput%20plugins%20l%C3%A0%20th%C3%A0nh%20ph%E1%BA%A7n%20ch%E1%BB%8Bu%20tr%C3%A1ch%20nhi%E1%BB%87m%20thu%20th%E1%BA%ADp%20th%C3%B4ng%20tin%20t%E1%BB%AB%20h%E1%BB%87%20th%E1%BB%91ng%20m%E1%BA%A1ng%20v%C3%A0%20g%E1%BB%ADi%20d%E1%BB%AF%20li%E1%BB%87u%20%C4%91%C3%B3%20cho%20c%C3%A1c%20stack%20c%E1%BB%A7a%20ulogd%20%C4%91%E1%BB%83%20ghi%20l%E1%BA%A1i%20ho%E1%BA%B7c%20x%E1%BB%AD%20l%C3%BD%20th%C3%AAm.%20M%E1%BB%97i%20plugin%20%C4%91%E1%BA%A7u%20v%C3%A0o%20ph%E1%BB%A5c%20v%E1%BB%A5%20m%E1%BB%99t%20m%E1%BB%A5c%20%C4%91%C3%ADch%20ri%C3%AAng%20bi%E1%BB%87t%20v%C3%A0%20s%E1%BB%AD%20d%E1%BB%A5ng%20c%C3%A1c%20ngu%E1%BB%93n%20d%E1%BB%AF%20li%E1%BB%87u%20kh%C3%A1c%20nhau%20t%E1%BB%AB%20h%E1%BB%87%20th%E1%BB%91ng%20m%E1%BA%A1ng.%0A%0AULOG%20l%C3%A0%20m%E1%BB%99t%20plugin%20%C4%91%E1%BA%A7u%20v%C3%A0o%20c%C5%A9%20h%C6%A1n%2C%20%C4%91%C6%B0%E1%BB%A3c%20s%E1%BB%AD%20d%E1%BB%A5ng%20%C4%91%E1%BB%83%20thu%20th%E1%BA%ADp%20c%C3%A1c%20b%E1%BA%A3n%20ghi%20v%E1%BB%81%20c%C3%A1c%20g%C3%B3i%20tin%20m%C3%A0%20h%E1%BB%87%20th%E1%BB%91ng%20netfilter%2Fiptables%20g%E1%BB%ADi%20t%E1%BB%9Bi.%20%0AC%C3%A1ch%20ho%E1%BA%A1t%20%C4%91%E1%BB%99ng%3A%0A%2B%20D%E1%BB%AF%20li%E1%BB%87u%20%C4%91%C6%B0%E1%BB%A3c%20g%E1%BB%ADi%20t%E1%BB%AB%20iptables%20th%C3%B4ng%20qua%20c%C3%A1c%20quy%20t%E1%BA%AFc%20ulog%20ho%E1%BA%B7c%20NFLOG.%0A%2B%20C%C3%A1c%20g%C3%B3i%20tin%20%C4%91%C6%B0%E1%BB%A3c%20g%E1%BB%ADi%20v%C3%A0o%20kh%C3%B4ng%20gian%20ng%C6%B0%E1%BB%9Di%20d%C3%B9ng%20th%C3%B4ng%20qua%20m%E1%BB%99t%20socket%20v%C3%A0%20sau%20%C4%91%C3%B3%20%C4%91%C6%B0%E1%BB%A3c%20ulogd%20x%E1%BB%AD%20l%C3%BD.%0A%0ANFLOG%20l%C3%A0%20m%E1%BB%99t%20plugin%20m%E1%BB%9Bi%20h%C6%A1n%2C%20%C4%91%C6%B0%E1%BB%A3c%20thi%E1%BA%BFt%20k%E1%BA%BF%20%C4%91%E1%BB%83%20thay%20th%E1%BA%BF%20ULOG%20trong%20nhi%E1%BB%81u%20tr%C6%B0%E1%BB%9Dng%20h%E1%BB%A3p%2C%20v%C3%AC%20n%C3%B3%20cung%20c%E1%BA%A5p%20kh%E1%BA%A3%20n%C4%83ng%20ghi%20l%E1%BA%A1i%20hi%E1%BB%87u%20qu%E1%BA%A3%20h%C6%A1n%20v%C3%A0%20h%E1%BB%97%20tr%E1%BB%A3%20c%C3%A1c%20t%C3%ADnh%20n%C4%83ng%20hi%E1%BB%87n%20%C4%91%E1%BA%A1i%20c%E1%BB%A7a%20h%E1%BB%87%20th%E1%BB%91ng%20netfilter.%20%0AC%C3%A1ch%20ho%E1%BA%A1t%20%C4%91%E1%BB%99ng%3A%0A%2B%20Gi%E1%BB%91ng%20nh%C6%B0%20ULOG%2C%20NFLOG%20c%C5%A9ng%20thu%20th%E1%BA%ADp%20d%E1%BB%AF%20li%E1%BB%87u%20t%E1%BB%AB%20iptables%2C%20nh%C6%B0ng%20s%E1%BB%AD%20d%E1%BB%A5ng%20c%C6%A1%20%2B%20ch%E1%BA%BF%20nf_log%20c%E1%BB%A7a%20kernel%20thay%20v%C3%AC%20ulog.%0A%0ANFCT%20(Netfilter%20Connection%20Tracking)%0ANFCT%20l%C3%A0%20m%E1%BB%99t%20plugin%20%C4%91%E1%BA%A7u%20v%C3%A0o%20cho%20ph%C3%A9p%20ulogd%20thu%20th%E1%BA%ADp%20c%C3%A1c%20b%E1%BA%A3n%20ghi%20li%C3%AAn%20quan%20%C4%91%E1%BA%BFn%20theo%20d%C3%B5i%20k%E1%BA%BFt%20n%E1%BB%91i%20t%E1%BB%AB%20netfilter.%0AC%C3%A1ch%20ho%E1%BA%A1t%20%C4%91%E1%BB%99ng%3A%0A%2B%20Plugin%20n%C3%A0y%20s%E1%BB%AD%20d%E1%BB%A5ng%20th%C3%B4ng%20tin%20t%E1%BB%AB%20nf_conntrack%20(connection%20tracking)%20c%E1%BB%A7a%20%2B%20%2B%20netfilter%20%C4%91%E1%BB%83%20ghi%20l%E1%BA%A1i%20c%C3%A1c%20k%E1%BA%BFt%20n%E1%BB%91i%20m%E1%BA%A1ng.%0A%0A%23%20Ulogd%20OUTPUT%0AOutput%20plugins%3A%20LOGEMU%2C%20OPRINT%2C%20SYSLOG%2C%20MYSQL%2C%20PGSQL%2C%20SQLITE3%2C%20PCAP%2C%20IPFIX%2C%20NACCT%2C%20JSON%0AC%C3%A1c%20Output%20plugins%20trong%20ulogd%20l%C3%A0%20c%C3%A1c%20th%C3%A0nh%20ph%E1%BA%A7n%20ch%E1%BB%8Bu%20tr%C3%A1ch%20nhi%E1%BB%87m%20x%E1%BB%AD%20l%C3%BD%20v%C3%A0%20l%C6%B0u%20tr%E1%BB%AF%20th%C3%B4ng%20tin%20m%C3%A0%20c%C3%A1c%20plugin%20%C4%91%E1%BA%A7u%20v%C3%A0o%20thu%20th%E1%BA%ADp%20%C4%91%C6%B0%E1%BB%A3c%20(nh%C6%B0%20c%C3%A1c%20g%C3%B3i%20tin%20ho%E1%BA%B7c%20s%E1%BB%B1%20ki%E1%BB%87n%20m%E1%BA%A1ng).%0AM%E1%BB%97i%20plugin%20%C4%91%E1%BA%A7u%20ra%20c%C3%B3%20m%E1%BB%A5c%20%C4%91%C3%ADch%20ri%C3%AAng%20v%C3%A0%20h%E1%BB%97%20tr%E1%BB%A3%20l%C6%B0u%20tr%E1%BB%AF%20ho%E1%BA%B7c%20g%E1%BB%ADi%20d%E1%BB%AF%20li%E1%BB%87u%20t%E1%BB%9Bi%20c%C3%A1c%20h%E1%BB%87%20th%E1%BB%91ng%20kh%C3%A1c%20nhau.%20%0A1.%20LOGEMU%20(Log%20Emulator)%0A%0A%20%20%20%20Ch%E1%BB%A9c%20n%C4%83ng%3A%20Ghi%20c%C3%A1c%20b%E1%BA%A3n%20ghi%20v%C3%A0o%20file%20d%C6%B0%E1%BB%9Bi%20d%E1%BA%A1ng%20v%C4%83n%20b%E1%BA%A3n.%0A%20%20%20%20%E1%BB%A8ng%20d%E1%BB%A5ng%3A%20Ghi%20l%E1%BA%A1i%20c%C3%A1c%20g%C3%B3i%20tin%20m%E1%BA%A1ng%20v%C3%A0%20s%E1%BB%B1%20ki%E1%BB%87n%20h%E1%BB%87%20th%E1%BB%91ng%20v%C3%A0o%20file%20log%2C%20d%E1%BB%85%20d%C3%A0ng%20%C4%91%E1%BB%83%20theo%20d%C3%B5i%20v%C3%A0%20ph%C3%A2n%20t%C3%ADch.%0A%0A2.%20OPRINT%20(Output%20Print)%0A%0A%20%20%20%20Ch%E1%BB%A9c%20n%C4%83ng%3A%20In%20d%E1%BB%AF%20li%E1%BB%87u%20tr%E1%BB%B1c%20ti%E1%BA%BFp%20ra%20m%C3%A0n%20h%C3%ACnh%20ho%E1%BA%B7c%20stdout.%0A%20%20%20%20%E1%BB%A8ng%20d%E1%BB%A5ng%3A%20H%E1%BB%AFu%20%C3%ADch%20khi%20c%E1%BA%A7n%20ki%E1%BB%83m%20tra%20th%C3%B4ng%20tin%20tr%E1%BB%B1c%20ti%E1%BA%BFp%20trong%20qu%C3%A1%20tr%C3%ACnh%20ph%C3%A1t%20tri%E1%BB%83n%20ho%E1%BA%B7c%20gi%C3%A1m%20s%C3%A1t%20t%E1%BA%A1m%20th%E1%BB%9Di.%0A%0A3.%20SYSLOG%0A%0A%20%20%20%20Ch%E1%BB%A9c%20n%C4%83ng%3A%20G%E1%BB%ADi%20b%E1%BA%A3n%20ghi%20%C4%91%E1%BA%BFn%20h%E1%BB%87%20th%E1%BB%91ng%20syslog.%0A%20%20%20%20%E1%BB%A8ng%20d%E1%BB%A5ng%3A%20Th%C3%ADch%20h%E1%BB%A3p%20%C4%91%E1%BB%83%20g%E1%BB%ADi%20log%20t%E1%BB%9Bi%20h%E1%BB%87%20th%E1%BB%91ng%20qu%E1%BA%A3n%20l%C3%BD%20log%20(nh%C6%B0%20rsyslog)%2C%20gi%C3%BAp%20t%E1%BB%95%20ch%E1%BB%A9c%20v%C3%A0%20ph%C3%A2n%20t%C3%ADch%20log%20tr%C3%AAn%20c%C3%A1c%20h%E1%BB%87%20th%E1%BB%91ng%20t%E1%BA%ADp%20trung.%0A%0A4.%20MYSQL%0A%0A%20%20%20%20Ch%E1%BB%A9c%20n%C4%83ng%3A%20Ghi%20d%E1%BB%AF%20li%E1%BB%87u%20v%C3%A0o%20c%C6%A1%20s%E1%BB%9F%20d%E1%BB%AF%20li%E1%BB%87u%20MySQL.%0A%20%20%20%20%E1%BB%A8ng%20d%E1%BB%A5ng%3A%20L%C6%B0u%20tr%E1%BB%AF%20c%C3%A1c%20s%E1%BB%B1%20ki%E1%BB%87n%20m%E1%BA%A1ng%20v%C3%A0%20g%C3%B3i%20tin%20v%C3%A0o%20c%C6%A1%20s%E1%BB%9F%20d%E1%BB%AF%20li%E1%BB%87u%20MySQL%20%C4%91%E1%BB%83%20ph%C3%A2n%20t%C3%ADch%20sau%20n%C3%A0y%2C%20d%E1%BB%85%20d%C3%A0ng%20truy%20v%E1%BA%A5n%20v%C3%A0%20t%C3%ACm%20ki%E1%BA%BFm.%0A%0A5.%20PGSQL%20(PostgreSQL)%0A%0A%20%20%20%20Ch%E1%BB%A9c%20n%C4%83ng%3A%20Ghi%20d%E1%BB%AF%20li%E1%BB%87u%20v%C3%A0o%20c%C6%A1%20s%E1%BB%9F%20d%E1%BB%AF%20li%E1%BB%87u%20PostgreSQL.%0A%20%20%20%20%E1%BB%A8ng%20d%E1%BB%A5ng%3A%20Gi%E1%BB%91ng%20nh%C6%B0%20MySQL%2C%20d%C3%B9ng%20%C4%91%E1%BB%83%20l%C6%B0u%20tr%E1%BB%AF%20log%20v%C3%A0o%20c%C6%A1%20s%E1%BB%9F%20d%E1%BB%AF%20li%E1%BB%87u%20PostgreSQL%2C%20h%E1%BB%97%20tr%E1%BB%A3%20ph%C3%A2n%20t%C3%ADch%20n%C3%A2ng%20cao%20v%C3%A0%20truy%20v%E1%BA%A5n.%0A%0A6.%20SQLITE3%0A%0A%20%20%20%20Ch%E1%BB%A9c%20n%C4%83ng%3A%20Ghi%20d%E1%BB%AF%20li%E1%BB%87u%20v%C3%A0o%20c%C6%A1%20s%E1%BB%9F%20d%E1%BB%AF%20li%E1%BB%87u%20SQLite.%0A%20%20%20%20%E1%BB%A8ng%20d%E1%BB%A5ng%3A%20L%C6%B0u%20tr%E1%BB%AF%20log%20v%C3%A0o%20m%E1%BB%99t%20c%C6%A1%20s%E1%BB%9F%20d%E1%BB%AF%20li%E1%BB%87u%20SQLite%20nh%E1%BA%B9%2C%20th%C3%ADch%20h%E1%BB%A3p%20cho%20c%C3%A1c%20h%E1%BB%87%20th%E1%BB%91ng%20kh%C3%B4ng%20c%E1%BA%A7n%20c%C6%A1%20s%E1%BB%9F%20d%E1%BB%AF%20li%E1%BB%87u%20ph%E1%BB%A9c%20t%E1%BA%A1p.%0A%0A7.%20PCAP%20(Packet%20Capture)%0A%0A%20%20%20%20Ch%E1%BB%A9c%20n%C4%83ng%3A%20Ghi%20d%E1%BB%AF%20li%E1%BB%87u%20v%C3%A0o%20file%20pcap%20(d%E1%BA%A1ng%20file%20g%C3%B3i%20tin%20m%E1%BA%A1ng).%0A%20%20%20%20%E1%BB%A8ng%20d%E1%BB%A5ng%3A%20Thu%20th%E1%BA%ADp%20v%C3%A0%20l%C6%B0u%20tr%E1%BB%AF%20g%C3%B3i%20tin%20m%E1%BA%A1ng%20theo%20%C4%91%E1%BB%8Bnh%20d%E1%BA%A1ng%20pcap%2C%20c%C3%B3%20th%E1%BB%83%20%C4%91%C6%B0%E1%BB%A3c%20m%E1%BB%9F%20v%C3%A0%20ph%C3%A2n%20t%C3%ADch%20b%E1%BB%9Fi%20c%C3%A1c%20c%C3%B4ng%20c%E1%BB%A5%20nh%C6%B0%20Wireshark.%0A%0A8.%20IPFIX%20(IP%20Flow%20Information%20Export)%0A%0A%20%20%20%20Ch%E1%BB%A9c%20n%C4%83ng%3A%20G%E1%BB%ADi%20d%E1%BB%AF%20li%E1%BB%87u%20theo%20%C4%91%E1%BB%8Bnh%20d%E1%BA%A1ng%20IPFIX%20(chu%E1%BA%A9n%20%C4%91%E1%BB%8Bnh%20d%E1%BA%A1ng%20cho%20xu%E1%BA%A5t%20kh%E1%BA%A9u%20th%C3%B4ng%20tin%20lu%E1%BB%93ng%20m%E1%BA%A1ng).%0A%20%20%20%20%E1%BB%A8ng%20d%E1%BB%A5ng%3A%20D%C3%B9ng%20%C4%91%E1%BB%83%20ghi%20v%C3%A0%20xu%E1%BA%A5t%20th%C3%B4ng%20tin%20lu%E1%BB%93ng%20m%E1%BA%A1ng%2C%20h%E1%BB%97%20tr%E1%BB%A3%20gi%C3%A1m%20s%C3%A1t%20m%E1%BA%A1ng%20v%C3%A0%20ph%C3%A2n%20t%C3%ADch%20l%C6%B0u%20l%C6%B0%E1%BB%A3ng.%0A%0A9.%20NACCT%20(Network%20Accounting)%0A%0A%20%20%20%20Ch%E1%BB%A9c%20n%C4%83ng%3A%20Ghi%20th%C3%B4ng%20tin%20v%E1%BB%81%20vi%E1%BB%87c%20s%E1%BB%AD%20d%E1%BB%A5ng%20m%E1%BA%A1ng%20(t%C3%ADnh%20to%C3%A1n%20v%C3%A0%20th%E1%BB%91ng%20k%C3%AA).%0A%20%20%20%20%E1%BB%A8ng%20d%E1%BB%A5ng%3A%20Ph%C3%A2n%20t%C3%ADch%20b%C4%83ng%20th%C3%B4ng%20v%C3%A0%20s%E1%BB%AD%20d%E1%BB%A5ng%20t%C3%A0i%20nguy%C3%AAn%20m%E1%BA%A1ng%2C%20th%C6%B0%E1%BB%9Dng%20%C4%91%C6%B0%E1%BB%A3c%20d%C3%B9ng%20trong%20c%C3%A1c%20h%E1%BB%87%20th%E1%BB%91ng%20t%C3%ADnh%20ph%C3%AD%20ho%E1%BA%B7c%20gi%C3%A1m%20s%C3%A1t%20l%C6%B0u%20l%C6%B0%E1%BB%A3ng.%0A%0A10.%20JSON%0A%0A%20%20%20%20Ch%E1%BB%A9c%20n%C4%83ng%3A%20Ghi%20d%E1%BB%AF%20li%E1%BB%87u%20d%C6%B0%E1%BB%9Bi%20%C4%91%E1%BB%8Bnh%20d%E1%BA%A1ng%20JSON.%0A%20%20%20%20%E1%BB%A8ng%20d%E1%BB%A5ng%3A%20Th%C3%ADch%20h%E1%BB%A3p%20cho%20vi%E1%BB%87c%20xu%E1%BA%A5t%20d%E1%BB%AF%20li%E1%BB%87u%20m%E1%BA%A1ng%20d%C6%B0%E1%BB%9Bi%20d%E1%BA%A1ng%20c%E1%BA%A5u%20tr%C3%BAc%20d%E1%BB%85%20%C4%91%E1%BB%8Dc%20v%C3%A0%20d%E1%BB%85%20s%E1%BB%AD%20d%E1%BB%A5ng%20trong%20c%C3%A1c%20%E1%BB%A9ng%20d%E1%BB%A5ng%20ph%C3%A2n%20t%C3%ADch%20d%E1%BB%AF%20li%E1%BB%87u%20(nh%C6%B0%20ELK%20stack%20ho%E1%BA%B7c%20c%C3%A1c%20c%C3%B4ng%20c%E1%BB%A5%20ph%C3%A2n%20t%C3%ADch%20d%E1%BB%AF%20li%E1%BB%87u).%0A%23%20Build%20custom%20Ulogd%20based%20on%20plugins%0A%23%23%20Iptables%20%0AVietRules%0AX%C3%A2y%20d%E1%BB%B1ng%20Rules%20Iptables%20ghi%20l%E1%BA%A1i%20(logging)%20c%C3%A1c%20g%C3%B3i%20tin%20v%C3%A0o%20log%20c%E1%BB%A7a%20h%E1%BB%87%20th%E1%BB%91ng%3A%20%0A%0Aiptables%20-A%20INPUT%20-p%20icmp%20-m%20limit%20--limit%201%2Fs%20--limit-burst%201%20-j%20NFLOG%20--nflog-prefix%20%22ping!!!%22%20--nflog-group%201%20%0A%0A%20%20%20%20Rule%20n%C3%A0y%20ghi%20l%E1%BA%A1i%20c%C3%A1c%20g%C3%B3i%20ICMP%20(ping)%20%C4%91%E1%BA%BFn%20h%E1%BB%87%20th%E1%BB%91ng%2C%20v%E1%BB%9Bi%20t%E1%BB%91c%20%C4%91%E1%BB%99%20gi%E1%BB%9Bi%20h%E1%BA%A1n%20l%C3%A0%201%20g%C3%B3i%20m%E1%BB%97i%20gi%C3%A2y%2C%20v%C3%A0%20prefix%22ping!!!%22%20s%E1%BA%BD%20%C4%91%C6%B0%E1%BB%A3c%20th%C3%AAm%20v%C3%A0o%20log.%20%0A%0Aiptables%20-A%20INPUT%20-p%20tcp%20-m%20limit%20--limit%201%2Fs%20--limit-burst%201%20-j%20NFLOG%20--prefix%20%22tcp!!!%22%20--nflog-group%201%20%0A%0A%20%20%20%20Rule%20n%C3%A0y%20ghi%20l%E1%BA%A1i%20c%C3%A1c%20g%C3%B3i%20TCP%20%C4%91%E1%BA%BFn%20h%E1%BB%87%20th%E1%BB%91ng%2C%20v%E1%BB%9Bi%20t%E1%BB%91c%20%C4%91%E1%BB%99%20gi%E1%BB%9Bi%20h%E1%BA%A1n%20l%C3%A0%201%20g%C3%B3i%20m%E1%BB%97i%20gi%C3%A2y%2C%20v%C3%A0%20prefix%22tcp!!!%22%20s%E1%BA%BD%20%C4%91%C6%B0%E1%BB%A3c%20th%C3%AAm%20v%C3%A0o%20log.%20%0A%0ALog%20nh%C3%B3m%20ch%E1%BB%8Dn%20l%C3%A0%20Log2%20v%C3%A0%20khai%20b%C3%A1o%20group%3D1%20%0A%23%23%20View%20Log%20in%20Ulogd%20%0AViewLog%20%0A%23%23%23%20NFLOG%0A-%20**LOGEMU**%3A%20%0A%0ALogemu%20ghi%20l%E1%BA%A1i%20c%C3%A1c%20g%C3%B3i%20tin%20m%E1%BA%A1ng%20d%C6%B0%E1%BB%9Bi%20d%E1%BA%A1ng%20v%C4%83n%20b%E1%BA%A3n%20%0A%0AStack%3A%20stack%3Dlog2%3ANFLOG%2Cbase1%3ABASE%2Cifi1%3AIFINDEX%2Cip2str1%3AIP2STR%2Cprint1%3APRINTPKT%2Cemu1%3ALOGEMU%20%0A%0AC%E1%BA%A5u%20h%C3%ACnh%3A%20%0A%0ABASE%3A%20L%C6%B0u%20tr%E1%BB%AF%20th%C3%B4ng%20tin%20c%C6%A1%20b%E1%BA%A3n%20c%E1%BB%A7a%20g%C3%B3i%20tin.%20%0A%0AIFINDEX%3A%20L%E1%BA%A5y%20ch%E1%BB%89%20s%E1%BB%91%20giao%20di%E1%BB%87n%20m%E1%BA%A1ng.%20%0A%0AIP2STR%3A%20Chuy%E1%BB%83n%20%C4%91%E1%BB%95i%20%C4%91%E1%BB%8Ba%20ch%E1%BB%89%20IP%20th%C3%A0nh%20d%E1%BA%A1ng%20chu%E1%BB%97i%20d%E1%BB%85%20%C4%91%E1%BB%8Dc.%20%0A%0APRINTPKT%3A%20In%20th%C3%B4ng%20tin%20chi%20ti%E1%BA%BFt%20c%E1%BB%A7a%20g%C3%B3i%20tin.%20%0A%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FHJCU7IUr1l.png)%0A%0A-%20**Json%20%26%20Xml**%3A%0Aulogd%20v%E1%BB%9Bi%20module%20JSON%20v%C3%A0%20XML%20xu%E1%BA%A5t%20th%C3%B4ng%20tin%20g%C3%B3i%20tin%20m%E1%BA%A1ng%20d%C6%B0%E1%BB%9Bi%20%C4%91%E1%BB%8Bnh%20d%E1%BA%A1ng%20JSON%20ho%E1%BA%B7c%20XML%20d%E1%BB%85%20ph%C3%A2n%20t%C3%ADch%20v%C3%A0%20l%C6%B0u%20tr%E1%BB%AF.%20%0A%0AStack%3A%20%20%0A%0Astack%3Dlog2%3ANFLOG%2Cbase1%3ABASE%2Cifi1%3AIFINDEX%2Cip2str1%3AIP2STR%2Cmac2str1%3AHWHDR%2Cjson1%3AJSON%2Cxml1%3AXML%0AK%E1%BA%BFt%20qu%E1%BA%A3%3A%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2Fr13s7IUrJx.png)%0A%0A-%20**PCAP**%3A%20%0AUlogd%20l%C6%B0u%20tr%E1%BB%AF%20c%C3%A1c%20g%C3%B3i%20tin%20m%E1%BA%A1ng%20%C4%91%C6%B0%E1%BB%A3c%20ghi%20l%E1%BA%A1i%20d%C6%B0%E1%BB%9Bi%20d%E1%BA%A1ng%20t%E1%BB%87p%20PCAP%20%C4%91%E1%BB%83%20ph%C3%A2n%20t%C3%ADch%20b%E1%BA%B1ng%20c%C3%A1c%20c%C3%B4ng%20c%E1%BB%A5%20nh%C6%B0%20Wireshark.%20%0A%0AStack%3A%20%20%0Astack%3Dlog2%3ANFLOG%2Cbase1%3ABASE%2Cpcap1%3APCAP%20%0A%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FSkry48IBJe.png)%0A%0A-%20**Gprint**%3A%0AIn%20ra%20th%C3%B4ng%20tin%20g%C3%B3i%20tin%20m%E1%BA%A1ng%20d%C6%B0%E1%BB%9Bi%20d%E1%BA%A1ng%20v%C4%83n%20b%E1%BA%A3n%20(plaintext)%20theo%20%C4%91%E1%BB%8Bnh%20d%E1%BA%A1ng%20t%C3%B9y%20ch%E1%BB%89nh%2C%20gi%C3%BAp%20d%E1%BB%85%20d%C3%A0ng%20theo%20d%C3%B5i%20v%C3%A0%20ph%C3%A2n%20t%C3%ADch.%20%0A%0AStack%3A%20stack%3Dlog2%3ANFLOG%2Cbase1%3ABASE%2Cgp1%3AGPRINT%20%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FH18M4I8Bye.png)%0A%0A-%20**OPRINT**%3A%0AIn%20th%C3%B4ng%20tin%20g%C3%B3i%20tin%20m%E1%BA%A1ng%20ra%20%C4%91%E1%BA%A7u%20ra%20chu%E1%BA%A9n%20(stdout)%20ho%E1%BA%B7c%20c%C3%A1c%20h%E1%BB%87%20th%E1%BB%91ng%20log%20kh%C3%A1c%20theo%20%C4%91%E1%BB%8Bnh%20d%E1%BA%A1ng%20c%E1%BA%A5u%20h%C3%ACnh.%20%0A%0AStack%3A%20stack%3Dlog2%3ANFLOG%2Cbase1%3ABASE%2Cifi1%3AIFINDEX%2Cip2str1%3AIP2STR%2Cprint1%3APRINTPKT%2Cop1%3AOPRINT%20%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FHy64NILSyg.png)%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FHJ2HNLLHkg.png)%0A%0A-%20**SQLITE3**%3A%0AL%C6%B0u%20v%C3%A0o%20Database%20v%C3%A0%20truy%20v%E1%BA%A5n%20%C4%91%E1%BB%83%20xem%20th%C3%B4ng%20tin%20log%20%0A%0AStack%3A%20%20stack%3Dlog20%3ANFLOG%2Cbase1%3ABASE%2Cifi1%3AIFINDEX%2Cip2str1%3AIP2STR%2Cmac2str1%3AHWHDR%2Cboot_sqlt%3ASQLITE3%20%0A%0AC%E1%BA%A5u%20h%C3%ACnh%3A%20%0A%0ALog20%3A%20Group20%20%0A%0A%5Bboot_sqlt%5D%20%0A%E2%80%AF%E2%80%AF%E2%80%AF%E2%80%AFtable%3D%22all_in%22%20%0A%E2%80%AF%E2%80%AF%E2%80%AF%E2%80%AFdb%3D%22%2Fvar%2Flog%2Fulog%2Fbootlog-sqlt3.db%22%20%0A%0AT%E1%BA%A1o%20b%E1%BA%A3ng%20all_in%20b%E1%BA%B1ng%20l%E1%BB%87nh%20SQL%20v%E1%BB%9Bi%20c%C3%A1c%20tr%C6%B0%E1%BB%9Dng%20l%C3%A0%20c%C3%A1c%20th%C3%B4ng%20tin%20c%E1%BB%A7a%20g%C3%B3i%20tin.%20%0A%60%60%60%0ACREATE%20TABLE%20all_in%20(%0A%20%20%E2%80%83%E2%80%83oob_prefix%E2%80%83%E2%80%83%E2%80%83%E2%80%83TEXT%2C%0A%20%20%E2%80%83%E2%80%83oob_time_sec%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83oob_time_usec%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83oob_uid%E2%80%83%E2%80%83%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83ip_protocol%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83ip_tos%E2%80%83%E2%80%83%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83ip_ttl%E2%80%83%E2%80%83%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83ip_totlen%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83ip_ihl%E2%80%83%E2%80%83%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83ip_csum%E2%80%83%E2%80%83%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83ip_id%E2%80%83%E2%80%83%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83ip_fragoff%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83ip6_payloadlen%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83ip6_priority%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83ip6_flowlabel%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83ip6_hoplimit%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83ip6_nexthdr%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83ip6_fragoff%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83ip6_fragid%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83tcp_sport%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83tcp_dport%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83tcp_seq%E2%80%83%E2%80%83%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83tcp_ackseq%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83tcp_window%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83tcp_offset%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83tcp_reserved%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83tcp_urg%E2%80%83%E2%80%83%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83tcp_urgp%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83tcp_ack%E2%80%83%E2%80%83%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83tcp_psh%E2%80%83%E2%80%83%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83tcp_rst%E2%80%83%E2%80%83%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83tcp_syn%E2%80%83%E2%80%83%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83tcp_fin%E2%80%83%E2%80%83%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83tcp_res1%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83tcp_res2%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83tcp_csum%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83udp_sport%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83udp_dport%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83udp_len%E2%80%83%E2%80%83%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83udp_csum%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83icmp_type%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83icmp_code%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83icmp_echoid%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83icmp_echoseq%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83icmp_fragmtu%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83icmp_csum%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83icmpv6_type%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83icmpv6_code%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83icmpv6_echoid%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83icmpv6_echoseq%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83icmpv6_csum%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83ahesp_spi%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83arp_hwtype%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83arp_protocoltype%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83arp_operation%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83sctp_sport%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83sctp_dport%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83sctp_csum%E2%80%83%E2%80%83%E2%80%83%E2%80%83INT%20UNSIGNED%2C%0A%20%20%E2%80%83%E2%80%83oob_in%E2%80%83%E2%80%83%E2%80%83%E2%80%83%E2%80%83%E2%80%83TEXT%2C%0A%20%20%E2%80%83%E2%80%83oob_out%E2%80%83%E2%80%83%E2%80%83%E2%80%83%E2%80%83%E2%80%83TEXT%2C%0A%20%20%E2%80%83%E2%80%83mac_saddr_str%E2%80%83%E2%80%83%E2%80%83%E2%80%83TEXT%2C%0A%20%20%E2%80%83%E2%80%83mac_daddr_str%E2%80%83%E2%80%83%E2%80%83%E2%80%83TEXT%2C%0A%20%20%E2%80%83%E2%80%83ip_saddr_str%E2%80%83%E2%80%83%E2%80%83%E2%80%83TEXT%2C%0A%20%20%E2%80%83%E2%80%83ip_daddr_str%E2%80%83%E2%80%83%E2%80%83%E2%80%83TEXT%2C%0A%20%20%E2%80%83%E2%80%83orig_ip_saddr_str%E2%80%83%E2%80%83TEXT%2C%0A%20%20%E2%80%83%E2%80%83orig_ip_daddr_str%E2%80%83%E2%80%83TEXT%2C%0A%20%20%E2%80%83%E2%80%83reply_ip_saddr_str%E2%80%83%E2%80%83TEXT%2C%0A%20%20%E2%80%83%E2%80%83reply_ip_daddr_str%E2%80%83%E2%80%83TEXT%2C%0A%20%20%E2%80%83%E2%80%83arp_saddr_str%E2%80%83%E2%80%83%E2%80%83%E2%80%83TEXT%2C%0A%20%20%E2%80%83%E2%80%83arp_daddr_str%E2%80%83%E2%80%83%E2%80%83%E2%80%83TEXT%2C%0A%E2%80%83%E2%80%83PRIMARY%20KEY%20(%20oob_time_sec%2C%20oob_time_usec%20)%0A)%3B%0A%60%60%60%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FBkkq4LIH1e.png)%0A%0A%23%23%23%20NFCT%0ANFCT%20trong%20ulogd%20b%E1%BA%AFt%20v%C3%A0%20ghi%20l%E1%BA%A1i%20c%C3%A1c%20th%C3%B4ng%20tin%20v%E1%BB%81%20tr%E1%BA%A1ng%20th%C3%A1i%20k%E1%BA%BFt%20n%E1%BB%91i%20(connection%20tracking)%20c%E1%BB%A7a%20c%C3%A1c%20g%C3%B3i%20tin%20m%E1%BA%A1ng%2C%20gi%C3%BAp%20theo%20d%C3%B5i%20v%C3%A0%20ph%C3%A2n%20t%C3%ADch%20c%C3%A1c%20k%E1%BA%BFt%20n%E1%BB%91i%20m%E1%BA%A1ng.%20%0A%0A-%20**LOGEMU**%3A%0AStack%3A%20%0A%0Astack%3Dct1%3ANFCT%2Cip2str1%3AIP2STR%2Cprint1%3APRINTFLOW%2Cemu1%3ALOGEMU%20%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2Fr1i34ULrke.png)%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FHJs6NLUH1g.png)%0A%0A-%20**JSON%2C%20XML**%3A%0AStack%3A%20%0A%0Astack%3Dct1%3ANFCT%2Cjson1%3AJSON%20%0Astack%3Dct1%3ANFCT%2Cxml1%3AXML%20%0A%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FS1R1SUIHkl.png)%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FSyl-rUIBJg.png)%0A%0A-%20Nacct%20%0Anacct%20l%C3%A0%20m%E1%BB%99t%20module%20%C4%91%C6%B0%E1%BB%A3c%20s%E1%BB%AD%20d%E1%BB%A5ng%20%C4%91%E1%BB%83%20t%C3%ADnh%20to%C3%A1n%20s%E1%BB%91%20l%C6%B0%E1%BB%A3ng%20c%C3%A1c%20g%C3%B3i%20d%E1%BB%AF%20li%E1%BB%87u%20trong%20m%E1%BB%99t%20kho%E1%BA%A3ng%20th%E1%BB%9Di%20gian%20nh%E1%BA%A5t%20%C4%91%E1%BB%8Bnh%20%0AStack%3A%20%0A%0Astack%3Dct1%3ANFCT%2Cip2str1%3AIP2STR%2Cnacct1%3ANACCT%20%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FHkPmBLUBye.png)%0A%0A-%20**Oprint**%3A%0AStack%3A%20%0A%0Astack%3Dct1%3ANFCT%2Cop1%3AOPRINT%20%0A%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FByWtBU8BJe.png)%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FH1bcBIIr1e.png)%0A%0A-%20**IPFIX**%3A%0ACho%20bi%E1%BA%BFt%20%20c%C3%A1c%20th%C3%B4ng%20tin%20v%E1%BB%81%20l%C6%B0u%20l%C6%B0%E1%BB%A3ng%20m%E1%BA%A1ng%20(nh%C6%B0%20%C4%91%E1%BB%8Ba%20ch%E1%BB%89%20IP%20ngu%E1%BB%93n%2C%20%C4%91%C3%ADch%2C%20c%E1%BB%95ng%2C%20s%E1%BB%91%20l%C6%B0%E1%BB%A3ng%20byte%2Fg%C3%B3i)%20%0AStack%3A%20%0A%0Astack%3Dct1%3ANFCT%2Ciffix1%3AIPFIX%20%0A%0AC%E1%BA%A5u%20h%C3%ACnh%3A%20%0A%0A%E1%BB%9E%20m%C3%A1y%20%C4%91%C3%ADch%20b%E1%BA%ADt%20netcat%20l%E1%BA%AFng%20nghe%20v%C3%A0%20b%E1%BA%AFt%20g%C3%B3i%20tin%20b%E1%BA%B1ng%20wireshark%20%0A%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FHktaB8IS1e.png)%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FryvASI8HJx.png)%0A%0A%23%23%20Demo%20%0A%C4%90%E1%BA%A7u%20v%C3%A0o%3A%20%0A%0A-%20Gi%E1%BA%A3%20s%E1%BB%AD%20%C4%91%C3%A3%20tu%E1%BB%B3%20ch%E1%BB%89nh%20file%20ulogd.conf.in.user%3A%20%0A%0A-%20Input%20plugin%3A%20NFLOG%20%0A%0A-%20Output%3A%20JSON%20and%20LOGEMU%20%0A%0A%C4%90%E1%BA%A7u%20ra%3A%20%20%0AG%E1%BB%93m%202%20file%20full.log%20v%C3%A0%20firewall_log.json%20%0A%0Aiptables%3A%20Thi%E1%BA%BFt%20l%E1%BA%ADp%202%20Rules%20v%C3%A0o%20h%E1%BB%87%20th%E1%BB%91ng%20%20%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FB101ILIH1g.png)%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FSJ0e88UBJg.png)%0AJson%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FBJeM8UISyl.png)%0A%23%23%20Conclusion%0ATri%E1%BB%83n%20khai%20Ulogd%20th%C3%A0nh%20c%C3%B4ng%20v%E1%BB%9Bi%20Input%3A%20Nflog%20v%C3%A0%20NFCT%2C%20Output%3A%20Logemu%2C%20Json%20Xml%2C%20PCAP%2C%20NACCT%2C%20Oprint%2C%20Gprint%2C%20SQLITE3%2C%20IPFIX...%20C%C3%A1c%20k%E1%BA%BFt%20qu%E1%BA%A3%20cho%20th%E1%BA%A5y%20%C4%91%C3%A3%20tr%C3%ADch%20xu%E1%BA%A5t%20log%20th%C3%A0nh%20c%C3%B4ng%2C%20v%E1%BB%9Bi%20Nflog%20l%C3%A0%20t%C3%B9y%20bi%E1%BA%BFn%20theo%20Iptables%20v%C3%A0%20Nfct%20theo%20d%C3%B5i%20c%C3%A1c%20k%E1%BA%BFt%20n%E1%BB%91i%20m%E1%BA%A1ng.%20%20%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FB1cH8IUSJe.png)%0A%0A","viewMode":"publish","isOwner":false,"isSignIn":false,"isLiked":false,"isBookmarked":false,"publishType":"view","commentCount":0,"isNotesRecommendationsEnabled":true,"recommendedNotes":[{"id":"575d2e8b-746e-4e89-8a04-78f2c30b3444","title":"CAPSTONE%20PROJECT%3A%20X%C3%A2y%20d%E1%BB%B1ng%20CI%2FCD%20Pipeline%20%26%20CodeQL%3A%20Ph%C3%A1t%20hi%E1%BB%87n%20%26%20Ng%C4%83n%20ch%E1%BA%B7n%20l%E1%BB%97%20h%E1%BB%95ng%20b%E1%BA%A3o%20m%E1%BA%ADt.","brief":"%40iamproz2911","lastchangeAt":"2025-06-23T06%3A12%3A07.867Z","publishLink":"%40iamproz2911%2FByN262QVxx"},{"id":"fa430511-69e5-46e1-ade6-b4d086ffda68","title":"Test%20Case%20Security%20Engineer","brief":"Challenge1%3A","lastchangeAt":"2025-05-22T00%3A48%3A44.367Z","publishLink":"%40iamproz2911%2FHkX8DaOblg"},{"id":"855bba18-b8f5-45ac-a785-34ed2c3c6cba","title":"CodeQL","brief":"%23CodeQL","lastchangeAt":"2025-01-24T16%3A43%3A01.384Z","publishLink":"%40iamproz2911%2Fr1MCYq8Pyx"},{"id":"0d6819a5-fbd7-45dc-9b8e-e8305ebda348","title":"Week6%3A%20Nflog%20API","brief":"%40iamproz2911","lastchangeAt":"2025-01-15T17%3A01%3A36.970Z","publishLink":"%40iamproz2911%2FHJMVwPrP1g"}],"lastChangeUserInfo":{"name":"iamproz2911","path":"iamproz2911","avatarUrl":"https%3A%2F%2Fuploads-public.hackmd.io%2Fupload_fc16f4eeb6a70292674cb45250365447.jpg"}}`);
+  (function () {
+    const decodeStringProps = (props) => {
+      for (const key in props) {
+        if (typeof props[key] === 'string') {
+          props[key] = decodeURIComponent(props[key])
+        } else if (typeof props[key] === 'object') {
+          decodeStringProps(props[key])
+        }
+      }
+    }
+    decodeStringProps(window.publishProps)
+  })()
+</script>
+
+    <script src="https://tally.so/widgets/embed.js"></script>
+
+    
+</head>
+
+<body style="display:none;">
+    <div id="toasts-container" class="toasts-container z-[2000]"></div>
+    <div id="publish-page">@iamproz2911 
+@kidwine29 
+# Week4: Ulogd
+[4th week] Ulogd
+ulogd là một trình nền báo cáo các vấn đề liên quan đến netfilter/iptables. Việc này bao gồm báo cáo vi phạm bảo mật và kiểm toán trên mỗi gói tin. Ulogd còn cho phép báo cáo bảo mật và kiểm toán 1 cách linh hoạt (do người dùng tuỳ chỉnh) trên mỗi luồng lưu lượng.
+Giả sử WebOS trên các thiết bị Rasberry đã được cài đặt sẵn ulogd2. Để thực thi báo cáo tuỳ biến thì cần tìm hiểu các plugins đầu vào (Input), đầu ra (Output) và thực hiện các công việc sau:
+1. Tìm hiểu các plugins
+1. 1. Input plugins: ULOG, NFLOG, NFCT --&gt; để làm gì và cách vận hành?
+1.2. Output plugins: LOGEMU, OPRINT, SYSLOG, MYSQL, PGSQL, SQLITE3, PCAP, IPFIX, NACCT, JSON --&gt; để làm gì và cách vận hành?
+1.3. Tìm hiểu trên Ulogd trên WebOS hiện tại hỗ trợ những plugins (Input, Output) nào?
+2. Xây dựng Ulogd tuỳ biến dựa vào các plugins
+Giả sử đã tìm hiểu được các Input/ Output plugins trên hệ thống WebOS của mình. Xây dựng Ulogd tuỳ biến để báo cáo các vi phạm/ kiểm toán về gói tin/ luồng lưu lượng (tất nhiên cần xây dựng trước chính sách bảo mật --&gt; iptables --&gt; kiểm tra vi phạm/kiểm toán dựa vào Ulogd tuỳ biến)
+# Ulogd INPUT
+Input plugins: ULOG, NFLOG, NFCT
+Input plugins là thành phần chịu trách nhiệm thu thập thông tin từ hệ thống mạng và gửi dữ liệu đó cho các stack của ulogd để ghi lại hoặc xử lý thêm. Mỗi plugin đầu vào phục vụ một mục đích riêng biệt và sử dụng các nguồn dữ liệu khác nhau từ hệ thống mạng.
+
+ULOG là một plugin đầu vào cũ hơn, được sử dụng để thu thập các bản ghi về các gói tin mà hệ thống netfilter/iptables gửi tới. 
+Cách hoạt động:
++ Dữ liệu được gửi từ iptables thông qua các quy tắc ulog hoặc NFLOG.
++ Các gói tin được gửi vào không gian người dùng thông qua một socket và sau đó được ulogd xử lý.
+
+NFLOG là một plugin mới hơn, được thiết kế để thay thế ULOG trong nhiều trường hợp, vì nó cung cấp khả năng ghi lại hiệu quả hơn và hỗ trợ các tính năng hiện đại của hệ thống netfilter. 
+Cách hoạt động:
++ Giống như ULOG, NFLOG cũng thu thập dữ liệu từ iptables, nhưng sử dụng cơ + chế nf_log của kernel thay vì ulog.
+
+NFCT (Netfilter Connection Tracking)
+NFCT là một plugin đầu vào cho phép ulogd thu thập các bản ghi liên quan đến theo dõi kết nối từ netfilter.
+Cách hoạt động:
++ Plugin này sử dụng thông tin từ nf_conntrack (connection tracking) của + + netfilter để ghi lại các kết nối mạng.
+
+# Ulogd OUTPUT
+Output plugins: LOGEMU, OPRINT, SYSLOG, MYSQL, PGSQL, SQLITE3, PCAP, IPFIX, NACCT, JSON
+Các Output plugins trong ulogd là các thành phần chịu trách nhiệm xử lý và lưu trữ thông tin mà các plugin đầu vào thu thập được (như các gói tin hoặc sự kiện mạng).
+Mỗi plugin đầu ra có mục đích riêng và hỗ trợ lưu trữ hoặc gửi dữ liệu tới các hệ thống khác nhau. 
+1. LOGEMU (Log Emulator)
+
+    Chức năng: Ghi các bản ghi vào file dưới dạng văn bản.
+    Ứng dụng: Ghi lại các gói tin mạng và sự kiện hệ thống vào file log, dễ dàng để theo dõi và phân tích.
+
+2. OPRINT (Output Print)
+
+    Chức năng: In dữ liệu trực tiếp ra màn hình hoặc stdout.
+    Ứng dụng: Hữu ích khi cần kiểm tra thông tin trực tiếp trong quá trình phát triển hoặc giám sát tạm thời.
+
+3. SYSLOG
+
+    Chức năng: Gửi bản ghi đến hệ thống syslog.
+    Ứng dụng: Thích hợp để gửi log tới hệ thống quản lý log (như rsyslog), giúp tổ chức và phân tích log trên các hệ thống tập trung.
+
+4. MYSQL
+
+    Chức năng: Ghi dữ liệu vào cơ sở dữ liệu MySQL.
+    Ứng dụng: Lưu trữ các sự kiện mạng và gói tin vào cơ sở dữ liệu MySQL để phân tích sau này, dễ dàng truy vấn và tìm kiếm.
+
+5. PGSQL (PostgreSQL)
+
+    Chức năng: Ghi dữ liệu vào cơ sở dữ liệu PostgreSQL.
+    Ứng dụng: Giống như MySQL, dùng để lưu trữ log vào cơ sở dữ liệu PostgreSQL, hỗ trợ phân tích nâng cao và truy vấn.
+
+6. SQLITE3
+
+    Chức năng: Ghi dữ liệu vào cơ sở dữ liệu SQLite.
+    Ứng dụng: Lưu trữ log vào một cơ sở dữ liệu SQLite nhẹ, thích hợp cho các hệ thống không cần cơ sở dữ liệu phức tạp.
+
+7. PCAP (Packet Capture)
+
+    Chức năng: Ghi dữ liệu vào file pcap (dạng file gói tin mạng).
+    Ứng dụng: Thu thập và lưu trữ gói tin mạng theo định dạng pcap, có thể được mở và phân tích bởi các công cụ như Wireshark.
+
+8. IPFIX (IP Flow Information Export)
+
+    Chức năng: Gửi dữ liệu theo định dạng IPFIX (chuẩn định dạng cho xuất khẩu thông tin luồng mạng).
+    Ứng dụng: Dùng để ghi và xuất thông tin luồng mạng, hỗ trợ giám sát mạng và phân tích lưu lượng.
+
+9. NACCT (Network Accounting)
+
+    Chức năng: Ghi thông tin về việc sử dụng mạng (tính toán và thống kê).
+    Ứng dụng: Phân tích băng thông và sử dụng tài nguyên mạng, thường được dùng trong các hệ thống tính phí hoặc giám sát lưu lượng.
+
+10. JSON
+
+    Chức năng: Ghi dữ liệu dưới định dạng JSON.
+    Ứng dụng: Thích hợp cho việc xuất dữ liệu mạng dưới dạng cấu trúc dễ đọc và dễ sử dụng trong các ứng dụng phân tích dữ liệu (như ELK stack hoặc các công cụ phân tích dữ liệu).
+# Build custom Ulogd based on plugins
+## Iptables 
+VietRules
+Xây dựng Rules Iptables ghi lại (logging) các gói tin vào log của hệ thống: 
+
+iptables -A INPUT -p icmp -m limit --limit 1/s --limit-burst 1 -j NFLOG --nflog-prefix &#34;ping!!!&#34; --nflog-group 1 
+
+    Rule này ghi lại các gói ICMP (ping) đến hệ thống, với tốc độ giới hạn là 1 gói mỗi giây, và prefix&#34;ping!!!&#34; sẽ được thêm vào log. 
+
+iptables -A INPUT -p tcp -m limit --limit 1/s --limit-burst 1 -j NFLOG --prefix &#34;tcp!!!&#34; --nflog-group 1 
+
+    Rule này ghi lại các gói TCP đến hệ thống, với tốc độ giới hạn là 1 gói mỗi giây, và prefix&#34;tcp!!!&#34; sẽ được thêm vào log. 
+
+Log nhóm chọn là Log2 và khai báo group=1 
+## View Log in Ulogd 
+ViewLog 
+### NFLOG
+- **LOGEMU**: 
+
+Logemu ghi lại các gói tin mạng dưới dạng văn bản 
+
+Stack: stack=log2:NFLOG,base1:BASE,ifi1:IFINDEX,ip2str1:IP2STR,print1:PRINTPKT,emu1:LOGEMU 
+
+Cấu hình: 
+
+BASE: Lưu trữ thông tin cơ bản của gói tin. 
+
+IFINDEX: Lấy chỉ số giao diện mạng. 
+
+IP2STR: Chuyển đổi địa chỉ IP thành dạng chuỗi dễ đọc. 
+
+PRINTPKT: In thông tin chi tiết của gói tin. 
+
+![image](https://hackmd.io/_uploads/HJCU7IUr1l.png)
+
+- **Json &amp; Xml**:
+ulogd với module JSON và XML xuất thông tin gói tin mạng dưới định dạng JSON hoặc XML dễ phân tích và lưu trữ. 
+
+Stack:  
+
+stack=log2:NFLOG,base1:BASE,ifi1:IFINDEX,ip2str1:IP2STR,mac2str1:HWHDR,json1:JSON,xml1:XML
+Kết quả:
+![image](https://hackmd.io/_uploads/r13s7IUrJx.png)
+
+- **PCAP**: 
+Ulogd lưu trữ các gói tin mạng được ghi lại dưới dạng tệp PCAP để phân tích bằng các công cụ như Wireshark. 
+
+Stack:  
+stack=log2:NFLOG,base1:BASE,pcap1:PCAP 
+
+![image](https://hackmd.io/_uploads/Skry48IBJe.png)
+
+- **Gprint**:
+In ra thông tin gói tin mạng dưới dạng văn bản (plaintext) theo định dạng tùy chỉnh, giúp dễ dàng theo dõi và phân tích. 
+
+Stack: stack=log2:NFLOG,base1:BASE,gp1:GPRINT 
+![image](https://hackmd.io/_uploads/H18M4I8Bye.png)
+
+- **OPRINT**:
+In thông tin gói tin mạng ra đầu ra chuẩn (stdout) hoặc các hệ thống log khác theo định dạng cấu hình. 
+
+Stack: stack=log2:NFLOG,base1:BASE,ifi1:IFINDEX,ip2str1:IP2STR,print1:PRINTPKT,op1:OPRINT 
+![image](https://hackmd.io/_uploads/Hy64NILSyg.png)
+![image](https://hackmd.io/_uploads/HJ2HNLLHkg.png)
+
+- **SQLITE3**:
+Lưu vào Database và truy vấn để xem thông tin log 
+
+Stack:  stack=log20:NFLOG,base1:BASE,ifi1:IFINDEX,ip2str1:IP2STR,mac2str1:HWHDR,boot_sqlt:SQLITE3 
+
+Cấu hình: 
+
+Log20: Group20 
+
+[boot_sqlt] 
+    table=&#34;all_in&#34; 
+    db=&#34;/var/log/ulog/bootlog-sqlt3.db&#34; 
+
+Tạo bảng all_in bằng lệnh SQL với các trường là các thông tin của gói tin. 
+```
+CREATE TABLE all_in (
+    oob_prefix    TEXT,
+    oob_time_sec    INT UNSIGNED,
+    oob_time_usec    INT UNSIGNED,
+    oob_uid      INT UNSIGNED,
+    ip_protocol    INT UNSIGNED,
+    ip_tos      INT UNSIGNED,
+    ip_ttl      INT UNSIGNED,
+    ip_totlen    INT UNSIGNED,
+    ip_ihl      INT UNSIGNED,
+    ip_csum      INT UNSIGNED,
+    ip_id      INT UNSIGNED,
+    ip_fragoff    INT UNSIGNED,
+    ip6_payloadlen    INT UNSIGNED,
+    ip6_priority    INT UNSIGNED,
+    ip6_flowlabel    INT UNSIGNED,
+    ip6_hoplimit    INT UNSIGNED,
+    ip6_nexthdr    INT UNSIGNED,
+    ip6_fragoff    INT UNSIGNED,
+    ip6_fragid    INT UNSIGNED,
+    tcp_sport    INT UNSIGNED,
+    tcp_dport    INT UNSIGNED,
+    tcp_seq      INT UNSIGNED,
+    tcp_ackseq    INT UNSIGNED,
+    tcp_window    INT UNSIGNED,
+    tcp_offset    INT UNSIGNED,
+    tcp_reserved    INT UNSIGNED,
+    tcp_urg      INT UNSIGNED,
+    tcp_urgp    INT UNSIGNED,
+    tcp_ack      INT UNSIGNED,
+    tcp_psh      INT UNSIGNED,
+    tcp_rst      INT UNSIGNED,
+    tcp_syn      INT UNSIGNED,
+    tcp_fin      INT UNSIGNED,
+    tcp_res1    INT UNSIGNED,
+    tcp_res2    INT UNSIGNED,
+    tcp_csum    INT UNSIGNED,
+    udp_sport    INT UNSIGNED,
+    udp_dport    INT UNSIGNED,
+    udp_len      INT UNSIGNED,
+    udp_csum    INT UNSIGNED,
+    icmp_type    INT UNSIGNED,
+    icmp_code    INT UNSIGNED,
+    icmp_echoid    INT UNSIGNED,
+    icmp_echoseq    INT UNSIGNED,
+    icmp_fragmtu    INT UNSIGNED,
+    icmp_csum    INT UNSIGNED,
+    icmpv6_type    INT UNSIGNED,
+    icmpv6_code    INT UNSIGNED,
+    icmpv6_echoid    INT UNSIGNED,
+    icmpv6_echoseq    INT UNSIGNED,
+    icmpv6_csum    INT UNSIGNED,
+    ahesp_spi    INT UNSIGNED,
+    arp_hwtype    INT UNSIGNED,
+    arp_protocoltype  INT UNSIGNED,
+    arp_operation    INT UNSIGNED,
+    sctp_sport    INT UNSIGNED,
+    sctp_dport    INT UNSIGNED,
+    sctp_csum    INT UNSIGNED,
+    oob_in      TEXT,
+    oob_out      TEXT,
+    mac_saddr_str    TEXT,
+    mac_daddr_str    TEXT,
+    ip_saddr_str    TEXT,
+    ip_daddr_str    TEXT,
+    orig_ip_saddr_str  TEXT,
+    orig_ip_daddr_str  TEXT,
+    reply_ip_saddr_str  TEXT,
+    reply_ip_daddr_str  TEXT,
+    arp_saddr_str    TEXT,
+    arp_daddr_str    TEXT,
+  PRIMARY KEY ( oob_time_sec, oob_time_usec )
+);
+```
+![image](https://hackmd.io/_uploads/Bkkq4LIH1e.png)
+
+### NFCT
+NFCT trong ulogd bắt và ghi lại các thông tin về trạng thái kết nối (connection tracking) của các gói tin mạng, giúp theo dõi và phân tích các kết nối mạng. 
+
+- **LOGEMU**:
+Stack: 
+
+stack=ct1:NFCT,ip2str1:IP2STR,print1:PRINTFLOW,emu1:LOGEMU 
+![image](https://hackmd.io/_uploads/r1i34ULrke.png)
+![image](https://hackmd.io/_uploads/HJs6NLUH1g.png)
+
+- **JSON, XML**:
+Stack: 
+
+stack=ct1:NFCT,json1:JSON 
+stack=ct1:NFCT,xml1:XML 
+
+![image](https://hackmd.io/_uploads/S1R1SUIHkl.png)
+![image](https://hackmd.io/_uploads/Syl-rUIBJg.png)
+
+- Nacct 
+nacct là một module được sử dụng để tính toán số lượng các gói dữ liệu trong một khoảng thời gian nhất định 
+Stack: 
+
+stack=ct1:NFCT,ip2str1:IP2STR,nacct1:NACCT 
+![image](https://hackmd.io/_uploads/HkPmBLUBye.png)
+
+- **Oprint**:
+Stack: 
+
+stack=ct1:NFCT,op1:OPRINT 
+
+![image](https://hackmd.io/_uploads/ByWtBU8BJe.png)
+![image](https://hackmd.io/_uploads/H1bcBIIr1e.png)
+
+- **IPFIX**:
+Cho biết  các thông tin về lưu lượng mạng (như địa chỉ IP nguồn, đích, cổng, số lượng byte/gói) 
+Stack: 
+
+stack=ct1:NFCT,iffix1:IPFIX 
+
+Cấu hình: 
+
+Ở máy đích bật netcat lắng nghe và bắt gói tin bằng wireshark 
+
+![image](https://hackmd.io/_uploads/HktaB8IS1e.png)
+![image](https://hackmd.io/_uploads/ryvASI8HJx.png)
+
+## Demo 
+Đầu vào: 
+
+- Giả sử đã tuỳ chỉnh file ulogd.conf.in.user: 
+
+- Input plugin: NFLOG 
+
+- Output: JSON and LOGEMU 
+
+Đầu ra:  
+Gồm 2 file full.log và firewall_log.json 
+
+iptables: Thiết lập 2 Rules vào hệ thống  
+![image](https://hackmd.io/_uploads/B101ILIH1g.png)
+![image](https://hackmd.io/_uploads/SJ0e88UBJg.png)
+Json
+![image](https://hackmd.io/_uploads/BJeM8UISyl.png)
+## Conclusion
+Triển khai Ulogd thành công với Input: Nflog và NFCT, Output: Logemu, Json Xml, PCAP, NACCT, Oprint, Gprint, SQLITE3, IPFIX... Các kết quả cho thấy đã trích xuất log thành công, với Nflog là tùy biến theo Iptables và Nfct theo dõi các kết nối mạng.  
+![image](https://hackmd.io/_uploads/B1cH8IUSJe.png)
+
+</div>
+    <!-- signin modal -->
+
+<div class="modal fade signin-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-top: 10px; right: 20px; position: absolute;"><span aria-hidden="true">&times;</span></button>
+            
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+<h3>Sign in</h3>
+
+<form data-toggle="validator" role="form" class="form-horizontal" method="post" enctype="application/x-www-form-urlencoded" id="signin-form">
+    <div class="hmd-dn"><input type="hidden" name="_csrf" value="Rpa9ZFgS-Zs4w6nvaRDhb2KV5NnuBPHM-1hc"></div>
+    <div class="hmd-dn"><input type="hidden" name="create_team" value="false"></div>
+    <div class="hmd-dn"><input type="hidden" name="create_paid_team" value="false"></div>
+    
+    <div class="form-group  ">
+        <label for="email" class="control-label">Email</label>
+        <label for="inputEmail" class="control-label pull-right errors">
+            
+        </label>
+        <span class="help-block control-label with-errors pull-right" style="margin-top: 14px"></span>
+        <div class="input-block">
+            
+                <input type="email" class="form-control" name="email" placeholder="Your email" required autocomplete="email">
+            
+            <span class="error-sign"></span>
+        </div>
+    </div>
+    <div class="form-group ">
+        <label for="password" class="control-label">Password</label>
+        <label for="inputPassword" class="control-label pull-right errors">
+            
+        </label>
+        <span class="help-block control-label with-errors pull-right" style="margin-top: 14px"></span>
+        <div class="input-block">
+            <input type="password" class="form-control" name="password" placeholder="Your password" required autocomplete="current-password" maxlength="128">
+            <span class="error-sign"></span>
+            
+                <span class="control-label pull-right !text-normal !leading-normal !font-normal !mt-1.5"><a href="https://hackmd.io/settings/forgotPassword" style="text-decoration: underline;">Forgot password</a></span>
+            
+        </div>
+    </div>
+
+    <div style="text-align: center; padding-top: 15px; margin-bottom: 0px;">
+        <div
+            hidden
+            id="hmd-captcha"
+            data-provider=""
+            data-captcha-data=""
+            class="flex justify-center"
+        ></div>
+
+        
+            <input type="submit" class="neo-btn neo-btn-primary !justify-center !py-3.5 !mx-auto w-[180px] text-[18px]" formaction="https://hackmd.io/login" value="Sign in">
+        
+
+        
+    </div>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        <p class="separator">or</p>
+    
+
+    
+        <p>By clicking below, you agree to our <a href="https://hackmd.io/s/terms" target="_blank">terms of service</a>.</p>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="gsi-client" src="https://accounts.google.com/gsi/client" async defer nonce="a625bf62-1d03-44c8-a0b5-d2ae5648107c"></script>
+<script nonce="a625bf62-1d03-44c8-a0b5-d2ae5648107c">
+    function handleCredentialResponse(response) {
+        const form = document.getElementById('sign-in-with-google-form')
+        form.children.credential.value = response.credential
+        form.children.method.value = location.href.toLowerCase() === 'https://hackmd.io/settings#general' ? 'merge' : 'login'
+        form.submit()
+    }
+    var GSI_READY = new Promise(function (resolve) {
+        function initialize () {
+            google.accounts.id.initialize({
+                client_id: '911617723593-drikdibvvn63slfd6kbqigo8ql1no55s.apps.googleusercontent.com',
+                callback: handleCredentialResponse
+            })
+            const loginPath = '/login'
+            const joinPath = '/join'
+            const renderButton = function () {
+                google.accounts.id.renderButton(
+                    document.getElementById('sign-in-with-google-button'),
+                    { type: 'standard', width: 250 }
+                )
+            }
+            if (location.pathname.toLowerCase() === loginPath || location.pathname.toLowerCase() === joinPath) {
+                renderButton()
+            } else {
+                $('.signin-modal').one('shown.bs.modal', function () {
+                    renderButton()
+                })
+            }
+            resolve()
+        }
+
+        window.addEventListener('load', function () { initialize() })
+    })
+</script>
+<form class="hidden" id="sign-in-with-google-form" action="/auth/google" method="post">
+    <input type="hidden" name="credential">
+    <input type="hidden" name="method">
+    <input type="hidden" name="_csrf" value="Rpa9ZFgS-Zs4w6nvaRDhb2KV5NnuBPHM-1hc">
+</form>
+
+
+<div class="social-buttons-container">
+    
+    <div id="sign-in-with-google-button"></div>
+    
+    
+    <a href="https://hackmd.io/auth/facebook" class="btn btn-lg btn-block btn-social btn-facebook">
+        <i class="fa fa-facebook"></i> Sign in via Facebook
+    </a>
+    
+    
+    <a href="https://hackmd.io/auth/twitter" class="btn btn-lg btn-block btn-social btn-twitter">
+        <i class="fa fa-twitter"></i> Sign in via Twitter
+    </a>
+    
+    
+    <a href="https://hackmd.io/auth/github" class="btn btn-lg btn-block btn-social btn-github">
+        <i class="fa fa-github"></i> Sign in via GitHub
+    </a>
+    
+    
+    <a href="https://hackmd.io/auth/dropbox" class="btn btn-lg btn-block btn-social btn-dropbox">
+        <i class="fa fa-dropbox"></i> Sign in via Dropbox
+    </a>
+    
+    
+    
+      <a href="#" class="btn btn-block btn-social btn-web3 bg-gray-800 hocus:bg-[#2b2b2b] text-white hocus:text-white">
+          <img src="https://hackmd.io/images/wallet.svg" style="max-height: 20px; margin-top: 8px; margin-left: 6px; border: none;">
+          <span class="sign-in-wallet-text">
+              Sign in with Wallet
+          </span>
+
+          <div class="inline-flex items-center justify-between w-full hidden web3-wallet-info">
+              <span>
+                   Wallet
+                   (
+                    <span class="web3-wallet-address"></span>
+                   )
+              </span>
+
+              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          </div>
+      </a>
+
+      <small class="web3-wallet-info hidden text-left hocus:text-white underline hocus:underline block pt-2 ui-disconnect-connected-wallets text-gray-600 cursor-pointer">
+          Connect another wallet
+      </small>
+    
+</div>
+
+
+
+
+    <div >
+        <p>New to HackMD? <a href="https://hackmd.io/join" class="plausible-event-name=LoginModalSignUp">Sign up</a></p>
+    </div>
+
+
+
+
+        </div>
+    </div>
+</div>
+
+    
+    <script src="https://www.googletagmanager.com/gtag/js?id=G-NGVZMM6DR6"></script>
+    <script nonce="a625bf62-1d03-44c8-a0b5-d2ae5648107c">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        let userid = (document.cookie.match('(^|; )userid=([^;]*)')||0)[2];
+        gtag('config', 'G-NGVZMM6DR6', {'user_id': userid});
+        
+    </script>
+
+
+    
+<script src="https://browser.sentry-cdn.com/5.15.5/bundle.min.js" crossorigin="anonymous"></script>
+<script nonce="a625bf62-1d03-44c8-a0b5-d2ae5648107c">
+  Sentry.init({ dsn: 'https://73410f1915d84abc8b2dd1f1aabd1c82@sentry.hackmd.dev/4', environment: 'production', integrations: function (intrus) { return intrus.filter(function (itr) { return itr.name !== 'TryCatch' }) } });
+  const sentryUserId = document.cookie
+    .split('; ')
+    .map(cookie => cookie.split('='))
+    .reduce((acc, [k, v]) => k === 'userid' ? v : acc, '');
+  Sentry.setUser(sentryUserId ? { id: sentryUserId } : null);
+</script>
+
+
+    
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLW9Z3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+    <script src="https://hackmd.io/api/i18n.js"></script>
+     <script src="https://assets.hackmd.io/build/font-vendor.7631cb852a460f17d568.js" defer="defer"></script><script src="https://assets.hackmd.io/build/common-vendor.3c9a3da9f8a49f6ad878.js" defer="defer"></script><script src="https://assets.hackmd.io/build/pretty-vendor.1e65e4faa04a7ebdd05b.js" defer="defer"></script><script src="https://assets.hackmd.io/build/pretty-common.fb61aa6b71cf8200ffc1.js" defer="defer"></script><script src="https://assets.hackmd.io/build/pretty.4b82ea784de626fa8622.js" defer="defer"></script>
+
+    
+
+</body>
+</html>

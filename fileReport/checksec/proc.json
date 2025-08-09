@@ -1,0 +1,1097 @@
+[
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "6",
+      "fortify_source": "Yes",
+      "fortifyable": "12",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/lib/systemd/systemd"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "4",
+      "fortify_source": "Yes",
+      "fortifyable": "9",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/lib/systemd/systemd-journald"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "5",
+      "fortify_source": "Yes",
+      "fortifyable": "11",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/bin/udevadm"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "4",
+      "fortify_source": "Yes",
+      "fortifyable": "8",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/ls-hubd"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "3",
+      "fortify_source": "Yes",
+      "fortifyable": "6",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/configd"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "0",
+      "fortify_source": "No",
+      "fortifyable": "0",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/bin/surface-manager"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "3",
+      "fortify_source": "Yes",
+      "fortifyable": "8",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/auditd"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "1",
+      "fortify_source": "Yes",
+      "fortifyable": "2",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/com.webos.service.sdkagent"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "3",
+      "fortify_source": "Yes",
+      "fortifyable": "5",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/bin/dbus-daemon"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "8",
+      "fortify_source": "Yes",
+      "fortifyable": "15",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/ofonod"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "3",
+      "fortify_source": "Yes",
+      "fortifyable": "5",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/agetty"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "3",
+      "fortify_source": "Yes",
+      "fortifyable": "6",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/lib/systemd/systemd-logind"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "6",
+      "fortify_source": "Yes",
+      "fortifyable": "9",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/ulogd"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "1",
+      "fortify_source": "Yes",
+      "fortifyable": "1",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/bin/luna-prefs-service"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "4",
+      "fortify_source": "Yes",
+      "fortifyable": "6",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/ninfod"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "4",
+      "fortify_source": "Yes",
+      "fortifyable": "6",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/rdisc"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "8",
+      "fortify_source": "Yes",
+      "fortifyable": "15",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/ntpd.ntp"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "1",
+      "fortify_source": "Yes",
+      "fortifyable": "5",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/bin/WebAppMgr"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "3",
+      "fortify_source": "Yes",
+      "fortifyable": "6",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/sam"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "2",
+      "fortify_source": "Yes",
+      "fortifyable": "5",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/bootd"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "1",
+      "fortify_source": "Yes",
+      "fortifyable": "5",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/bin/WebAppMgr"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "1",
+      "fortify_source": "Yes",
+      "fortifyable": "5",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/bin/WebAppMgr"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "1",
+      "fortify_source": "Yes",
+      "fortifyable": "5",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/bin/WebAppMgr"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "1",
+      "fortify_source": "Yes",
+      "fortifyable": "5",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/bin/WebAppMgr"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "1",
+      "fortify_source": "Yes",
+      "fortifyable": "5",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/bin/WebAppMgr"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "5",
+      "fortify_source": "Yes",
+      "fortifyable": "8",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/audiod"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "1",
+      "fortify_source": "Yes",
+      "fortifyable": "2",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/audiofocusmanager"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "0",
+      "fortify_source": "No",
+      "fortifyable": "2",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/audiooutputd"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "12",
+      "fortify_source": "Yes",
+      "fortifyable": "19",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/libexec/bluetooth/bluetooth-meshd"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "11",
+      "fortify_source": "Yes",
+      "fortifyable": "19",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/libexec/bluetooth/bluetoothd"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "2",
+      "fortify_source": "Yes",
+      "fortifyable": "6",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/com.webos.service.camera2"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "2",
+      "fortify_source": "Yes",
+      "fortifyable": "5",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/com.webos.service.intent"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "2",
+      "fortify_source": "Yes",
+      "fortifyable": "6",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/memorymanager"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "2",
+      "fortify_source": "Yes",
+      "fortifyable": "4",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/powermgr"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "2",
+      "fortify_source": "Yes",
+      "fortifyable": "3",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/sleepd"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "1",
+      "fortify_source": "Yes",
+      "fortifyable": "1",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/bin/pulseaudio"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "7",
+      "fortify_source": "Yes",
+      "fortifyable": "14",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/libexec/bluetooth/obexd"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "5",
+      "fortify_source": "Yes",
+      "fortifyable": "9",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/webos-bluetooth-service"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "8",
+      "fortify_source": "Yes",
+      "fortifyable": "12",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/wpa_supplicant"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "0",
+      "fortify_source": "No",
+      "fortifyable": "1",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/com.webos.service.mediacontroller"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "9",
+      "fortify_source": "Yes",
+      "fortifyable": "16",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/connmand"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "3",
+      "fortify_source": "Yes",
+      "fortifyable": "3",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/pacrunner"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "2",
+      "fortify_source": "Yes",
+      "fortifyable": "6",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/webos-connman-adapter"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "8",
+      "fortify_source": "Yes",
+      "fortifyable": "13",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/bin/hciattach"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "6",
+      "fortify_source": "Yes",
+      "fortifyable": "10",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/LunaSysService"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "1",
+      "fortify_source": "Yes",
+      "fortifyable": "4",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/physical-device-manager"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "0",
+      "fortify_source": "No",
+      "fortifyable": "2",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/mojodb-luna"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "1",
+      "fortify_source": "Yes",
+      "fortifyable": "5",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/bin/WebAppMgr"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "1",
+      "fortify_source": "Yes",
+      "fortifyable": "5",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/bin/WebAppMgr"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "0",
+      "fortify_source": "No",
+      "fortifyable": "2",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/mojodb-luna"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "0",
+      "fortify_source": "No",
+      "fortifyable": "2",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/mojodb-luna"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "4",
+      "fortify_source": "Yes",
+      "fortifyable": "6",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/SettingsService"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "0",
+      "fortify_source": "No",
+      "fortifyable": "3",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/com.webos.service.mediaindexer"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "3",
+      "fortify_source": "Yes",
+      "fortifyable": "7",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/umediaserver"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "0",
+      "fortify_source": "No",
+      "fortifyable": "3",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/activitymanager"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "0",
+      "fortify_source": "No",
+      "fortifyable": "6",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/appinstalld"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "0",
+      "fortify_source": "No",
+      "fortifyable": "2",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/notificationmgr"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "1",
+      "fortify_source": "Yes",
+      "fortifyable": "5",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/bin/LunaDownloadMgr"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "1",
+      "fortify_source": "Yes",
+      "fortifyable": "1",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/aiservice"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "1",
+      "fortify_source": "Yes",
+      "fortifyable": "4",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/peripheralmanager"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "12",
+      "fortify_source": "Yes",
+      "fortifyable": "20",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/bin/busybox.nosuid"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "2",
+      "fortify_source": "Yes",
+      "fortifyable": "4",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/unifiedsearch"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "4",
+      "fortify_source": "Yes",
+      "fortifyable": "7",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/webos-hfp-service"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "11",
+      "fortify_source": "Yes",
+      "fortifyable": "19",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/bin/fluent-bit"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "0",
+      "fortify_source": "No",
+      "fortifyable": "2",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/event-monitor"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "1",
+      "fortify_source": "Yes",
+      "fortifyable": "2",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/MaliitServer"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "5",
+      "fortify_source": "Yes",
+      "fortifyable": "10",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/dropbearmulti"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "5",
+      "fortify_source": "Yes",
+      "fortifyable": "10",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/sbin/dropbearmulti"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "12",
+      "fortify_source": "Yes",
+      "fortifyable": "20",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/bin/busybox.nosuid"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "12",
+      "fortify_source": "Yes",
+      "fortifyable": "20",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/bin/busybox.nosuid"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "1",
+      "fortify_source": "Yes",
+      "fortifyable": "5",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/bin/WebAppMgr"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "12",
+      "fortify_source": "Yes",
+      "fortifyable": "20",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/bin/busybox.nosuid"
+  },
+  {
+    "checks": {
+      "canary": "Canary Found",
+      "fortified": "5",
+      "fortify_source": "Yes",
+      "fortifyable": "8",
+      "nx": "NX enabled",
+      "pie": "PIE Enabled",
+      "relro": "Full RELRO",
+      "rpath": "No RPATH",
+      "runpath": "No RUNPATH",
+      "symbols": "No Symbols"
+    },
+    "name": "/usr/bin/df.coreutils"
+  }
+]

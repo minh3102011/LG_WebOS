@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="dev" data-themeable="true">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="csrf-token" content="Z5xPOn4x-IV3DAviqpAJCnE1k8v1924fUUmU">
+    
+    
+    <meta name="description" content="@iamproz2911@kidwine29[3nd week] IPv46_Type">
+    
+    <title>Week3: IPv4, IPv6_Type - HackMD</title>
+    <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
+	<link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
+	<!--  meta value for server side given sign in boolean -->
+    <meta name="signin" content="false">
+
+    
+<script nonce="5dca7693-c22d-4da1-aea3-1051f9f515e3">
+  window.domain = 'hackmd.io'
+  window.urlpath = ''
+  window.debug = false || window.localStorage.getItem('HMD_DEBUG_FLAG') === 'true'
+  window.version = '1.3.0'
+  window.brand = 'HackMD'
+
+  
+  window.NOTE_ID = 'S77Nd0KlR8OZfO3OBdosdg'
+  
+
+  window.GOOGLE_DRIVE_API_KEY = 'AIzaSyAHmcP5gL_64ZafuAYOvJruFAIaYgHQaY4'
+  window.GOOGLE_DRIVE_CLIENT_ID = '65857506266-76uhhee8se8dgs1i0q8fhtj1prg0ar27.apps.googleusercontent.com'
+  window.DROPBOX_APP_KEY = 'rdoizrlnkuha23r'
+  
+  window.PLANTUML_SERVER = 'https://ptuml.hackmd.io'
+
+  window.ASSET_URL = 'https://assets.hackmd.io'
+
+  window.USER_CAN_CREATE_TEAM = true
+  window.USER_CAN_DELETE_ACCOUNT = true
+  window.USER_DELETE_ACCOUNT_VIA_EMAIL = true
+  window.PAYMENT_ENABLED = true
+  window.PAYMENT_PROMOTION_BANNER_ENABLED = false
+  window.GITHUB_SYNC_ENABLED = true
+  window.GITLAB_SYNC_ENABLED = false
+  window.GITLAB_SYNC_BASE_URL = ''
+  window.VCS_SYNC_MODE = 'github'
+  window.VCS_PROVIDER_NAME = 'GitHub'
+  window.FREE_TEAM_NUM = 20
+  window.FREE_TEAM_MEMBER_NUM = 3
+  window.FREE_PUBLIC_TEAM_NUM = 10
+  window.NEO_OVERVIEW_UI = true
+
+  
+      window.FOLDER_ENABLE = true
+  
+
+  
+  window.EE_SITE_ENABLE = false
+  window.EE_SITE_NAME = 'false'
+  window.EE_SITE_LINK = 'false'
+  window.EESITE_INFO = false
+  window.ENTERPRISE_DISCOVERY_ENABLE = false
+  window.ENTERPRISE_DISCOVERY_TEAM = true
+  window.ENTERPRISE_DISCOVERY_NOTE = true
+  window.ENTERPRISE_DISCOVERY_VIEW_PERMISSION = 'guest'
+  
+  window.ALLOW_ANONYMOUS = true
+  window.ALLOW_ANONYMOUS_EDIT = false
+  window.ALLOW_DOWNLOAD_PDF = true
+  window.PUBLIC_OVERVIEW = false
+  window.INTERNAL_PUBLIC_OVERVIEW = false
+  window.FULL_TEXT_SEARCH_ENABLE = false
+  window.ALGOLIA_SEARCH_ENABLE = true
+  window.MARKETING_EMAIL_ENABLE = true
+  window.OFFLINE_ACCESS = true
+  
+  
+  
+    window.WALLET_CONNECT_PROJECT_ID = '91d6fa182b725b5895a17a170a5878c1'
+  
+  window.API_MANAGEMENT_UI_ENABLE = true
+  window.FEEDBACK_UI_ENABLE = true
+  window.PUBLISH_ENABLE = true
+
+  
+
+  
+  window.SHOW_HOT_NOTES = false
+  
+
+  
+  window.HOT_NOTES_TIME_TYPE = 'week'
+  
+
+  
+  window.SHOW_OVERVIEW = false
+  
+
+  
+  window.MENTIONS = {}
+  
+
+  
+  window.MENTION_ANCHORS = []
+  
+
+  
+  window.COMMENT_ANCHORS = []
+  
+
+  
+  window.IS_OWNER = false
+  
+
+  
+  window.IS_TEAM_ADMIN = false
+  
+
+  
+  window.IS_TEAM_MEMBER = false
+  
+
+  
+  window.IS_INVITEE_ADMIN = false
+  
+
+  
+  window.USER_PROFILE = '%7B%22name%22%3A%22Guest%20Fowler%22%7D'
+  
+
+  
+  window.VERSION_TIME = '1734163923686'
+  
+
+  
+  window.canEdit = false
+  
+
+  
+  window.canWriteComment = false
+  
+
+  
+  window.canHideComment = false
+  
+
+  window.TRASH_NOTE_DELETE_AFTER_FREE = 3
+  window.TRASH_NOTE_DELETE_AFTER_PAID = 30
+
+  
+    window.ENABLED_PREVIEW_FEATURE = {}
+  
+
+  
+    window.ACTIVE_PREVIEW_FEATURE = ["beta-slide-preview"]
+  
+
+  
+    window.IS_OWNER_UPGRADED = false
+  
+
+  
+    window.IMGUR_FALLBACK_CDN = 'https://imgur-backup.hackmd.io'
+  
+
+  
+    window.CLOUD_META_UI = true
+  
+  
+    window.CLOUD_META_API = true
+  
+  
+    window.CLOUD_META_MIGRATION = false
+  
+  
+    window.YAML_METADATA_ENABLED = false
+  
+
+  
+    window.NOTE_CAPACITY_LIMIT = 50
+  
+
+  
+    window.DOCUMENT_MAX_LENGTH = 100000
+  
+
+  
+    window.SOCIAL_NETWORK_FEATURES_ENABLED = true
+  
+
+  
+    window.PUBLISHMENT_MODERATION_ENABLED = true
+  
+
+  
+    window.COMMENT_ENABLED = true
+  
+
+  
+    window.COMMENT_PERMISSION = "signed_in_users"
+  
+
+  window.SUGGEST_EDIT_ENABLED = true
+  
+    window.SUGGEST_EDIT_ENABLED = true
+  
+
+  window.CITATION_ENABLED = false
+
+  window.NOTE_FROM_COMMENT_ENABLED = false
+
+  
+    window.NOTE_FEATURES = {"emoji-reply":"signed_in_users","citation":"disabled"}
+  
+
+  
+    window.REALTIME_CLIENT_WITH_CREDENTIALS = false
+  
+
+  
+    window.DEBUG_DISCONNECT_SOCKET_WHEN_OFFLINE = false
+  
+
+  
+
+  
+
+  
+
+  
+    window.CUSTOM_STYLE_ENABLED = "true"
+  
+
+  
+    window.USE_NEW_LOGO = true
+  
+
+  
+    window.ITERABLE_ENABLED = true
+  
+  
+    window.ITERABLE_API_KEY = "c2c36a44c2614fb19aa3b46d660bbce2"
+  
+
+  
+    window.TEXT_SELECTION_CHANGED = false
+  
+
+  
+    window.CAN_VIEW_HISTORY_AT_REVISION = false
+  
+
+  
+    window.GUIDED_COMMENT_ENABLED = true
+  
+</script>
+
+
+    
+<!-- Google Tag Manager -->
+<script nonce="5dca7693-c22d-4da1-aea3-1051f9f515e3">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KLW9Z3');</script>
+<!-- End Google Tag Manager -->
+
+
+    
+
+
+
+
+
+
+    <meta property="fb:app_id" content="1436904003272070">
+
+
+
+    <meta name="robots" content="index, follow">
+
+
+
+    <meta name="twitter:image:src" content="https://hackmd.io/images/media/HackMD-neo-og.jpg">
+    <meta name="twitter:image:alt" content="Week3: IPv4, IPv6_Type - HackMD">
+
+
+<meta name="twitter:site" content="@hackmdio" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Week3: IPv4, IPv6_Type - HackMD" />
+
+
+    <meta name="twitter:description" content="@iamproz2911@kidwine29[3nd week] IPv46_Type" />
+
+
+
+    <meta property="og:image" content="https://hackmd.io/images/media/HackMD-neo-og.jpg">
+    <meta property="og:image:alt" content="Week3: IPv4, IPv6_Type - HackMD">
+
+
+<meta property="og:site_name" content="HackMD" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Week3: IPv4, IPv6_Type - HackMD" />
+
+
+    <meta property="og:description" content="@iamproz2911@kidwine29[3nd week] IPv46_Type" />
+
+
+
+    <link rel="canonical" href="https://hackmd.io/@iamproz2911/Hy8__6PNkg" />
+    <meta property="og:url" content="https://hackmd.io/@iamproz2911/Hy8__6PNkg" />
+    <meta property="twitter:url" content="https://hackmd.io/@iamproz2911/Hy8__6PNkg" />
+
+    <link rel="alternate" type="text/markdown" href="https://hackmd.io/@iamproz2911/Hy8__6PNkg.md" title="Pure markdown version">
+    <link rel="alternate" type="text/markdown" href="https://hackmd.io/@iamproz2911/Hy8__6PNkg.md?no-meta" title="Pure markdown version without metadata">
+
+
+     <link href="https://assets.hackmd.io/build/font-vendor.ea8218d7d4f468b2c430.css" rel="stylesheet"><link href="https://assets.hackmd.io/build/common-vendor.fd34b1d1ad1390fa8864.css" rel="stylesheet"><link href="https://assets.hackmd.io/build/pretty-vendor.d39c3586ad724c4bdff1.css" rel="stylesheet"><link href="https://assets.hackmd.io/build/pretty.191080504f40238cb56f.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+<![endif]-->
+
+    
+
+
+    <script nonce="5dca7693-c22d-4da1-aea3-1051f9f515e3">
+  window.__shouldIgnoreTracker = function() {
+    const isDebug = window.debug === true
+    const isLocal = /^localhost$|^127(\.[0-9]+){0,2}\.[0-9]+$|^\[::1?\]$|^local\.localhost$/.test(location.hostname) || location.protocol === 'file:'
+    const isAutomation = Boolean(window._phantom || window.__nightmare || window.navigator.webdriver || window.Cypress)
+    return isDebug || isLocal || isAutomation
+  }
+</script>
+
+<!-- plausible -->
+<script defer data-domain="hackmd.io" src="https://tracks.hackmd.io/js/script.js"></script>
+<script nonce="5dca7693-c22d-4da1-aea3-1051f9f515e3">
+  window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments); }
+  const keyboardWhiteList = ['a', 'span', 'button']
+
+  function getTaggedEventAttributes (e) {
+    const eventAttrs = { name: null, props: {} }
+    if (!e || !e.classList) return eventAttrs
+    const psEvent = /plausible-event-(.+)(=|--)(.+)/
+    for (const className of [...e.classList]) {
+      const [, key, , val] = className.match(psEvent) || []
+      if (!key || !val) continue
+      const value = val.replace(/\+/g, ' ')
+      switch (key.toLowerCase()) {
+        case 'name':
+          eventAttrs.name = value
+          break
+        default:
+          eventAttrs.props[key] = value
+          break
+      }
+    }
+    return eventAttrs
+  }
+
+  function shouldIgnore () {
+    return window.__shouldIgnoreTracker() || window.localStorage.getItem('plausible_ignore') === 'true'
+  }
+
+  function handler (e) {
+    if (!window.plausible) return
+    if (!e.target || !('className' in e.target)) return
+    const ele = e.target
+
+    const eventAttrs = getTaggedEventAttributes(ele)
+    if (!eventAttrs.name) return
+    if (ele?.href) eventAttrs.props.url = ele.href
+
+    if (shouldIgnore()) {
+      if (window.debug) logDebugEventMsg(eventAttrs)
+      return
+    }
+    window.plausible(eventAttrs.name, { props: eventAttrs.props })
+  }
+
+  function logDebugEventMsg (eventAttrs) {
+    console.warn(
+      `Ignoring Event: "${eventAttrs.name}"`,
+      eventAttrs,
+    )
+  }
+
+  function keydownHandler (e) {
+    if (e.key !== 'Enter') return
+    if (e.target.nodeName.toLowerCase() === 'input') {
+      switch (e.target.type.toLowerCase()) {
+        case 'submit':
+        case 'button':
+        case 'reset':
+        case 'checkbox':
+        case 'radio':
+        case 'file':
+        case 'image':
+        case 'color':
+          break
+        default:
+          return
+      }
+    } else if (!keyboardWhiteList.includes(e.target.nodeName.toLowerCase())) {
+      return
+    }
+    handler(e)
+  }
+
+  document.addEventListener('mousedown', handler)
+  document.addEventListener('keydown', keydownHandler)
+</script>
+
+<!-- piwik pro -->
+<script type="text/javascript" nonce="5dca7693-c22d-4da1-aea3-1051f9f515e3">
+  (function(window, document, dataLayerName, id) {
+    if (window.__shouldIgnoreTracker()) {
+      if (window.debug) {
+        console.warn('Ignoring Piwik Pro Tracker due to debug mode or local environment.')
+      }
+      return;
+    }
+
+    window[dataLayerName]=window[dataLayerName]||[];
+    window[dataLayerName].push({start:(new Date).getTime(),event:"stg.start"});
+
+    var scripts=document.getElementsByTagName('script')[0];
+    var tags=document.createElement('script');
+    var qP=[];
+    dataLayerName!=="dataLayer"&&qP.push("data_layer_name="+dataLayerName);
+    var qPString=qP.length>0?("?"+qP.join("&")):"";
+
+    tags.async=true;
+    tags.src="https://hackmd.containers.piwik.pro/"+id+".js"+qPString;
+    tags.nonce="5dca7693-c22d-4da1-aea3-1051f9f515e3";
+    scripts.parentNode.insertBefore(tags,scripts);
+
+    !function(a,n,i){
+    a[n]=a[n]||{};
+    for(var c=0;c<i.length;c++)!function(i){
+        a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){
+        var a=[].slice.call(arguments,0);
+        "string"==typeof a[0]&&window[dataLayerName].push({
+            event:n+"."+i+":"+a[0],
+            parameters:[].slice.call(arguments,1)
+        })
+        }
+    }(i[c])
+    }(window,"ppms",["tm","cm"]);
+  })(window, document, 'dataLayer', '8b665e66-46fc-4c65-aef4-4c3429ff4551');
+</script>
+
+    
+<script nonce="5dca7693-c22d-4da1-aea3-1051f9f515e3">
+  window.publishProps = JSON.parse(`{"isOwnerAnonymous":false,"isOwnedByTeam":false,"ownerInfo":{"name":"iamproz2911","path":"iamproz2911","avatarUrl":"https%3A%2F%2Fuploads-public.hackmd.io%2Fupload_fc16f4eeb6a70292674cb45250365447.jpg","description":"%7CPentesterWeb%20%7C%20CyberSecurity%20%7C%0D%0AWorkHard%20Become%20To%20CyberSecurity%20Engineer%20!%0D%0ADUT2020%20"},"isPublished":true,"createTime":1733970030127,"updateTime":1734163923686,"vcsSyncMode":"github","vcsProviderName":"GitHub","canEdit":false,"hardBreaks":true,"onlyOwnerCanEdit":true,"isCommentEnabled":true,"likedCount":1,"isNotificationEnabled":true,"notificationType":"never","hasEmail":false,"canWriteComment":false,"viewCount":31,"markdown":"%40iamproz2911%20%0A%40kidwine29%0A%23%20Week3%3A%20IPv4%2FIPv6_Type%0A%5B3rd%20week%5DIPv4%2FIPv6%20Unicast%2C%20Multicast%2C%20Broadcast%2C%20Anycast%0A1.%20X%C3%A2y%20d%E1%BB%B1ng%20h%E1%BB%87%20th%E1%BB%91ng%20g%E1%BB%93m%203%20thi%E1%BA%BFt%20b%E1%BB%8B%20Raspberry%20%C4%91%C3%A3%20c%C3%A0i%20%C4%91%E1%BA%B7t%20s%E1%BA%B5n%20WebOS%20k%E1%BA%BFt%20n%E1%BB%91i%20qua%20LAN%0A2.%20X%C3%A2y%20d%E1%BB%B1ng%20c%C3%A1c%20ch%C6%B0%C6%A1ng%20tr%C3%ACnh%20python%20%C4%91%E1%BB%83%20g%E1%BB%ADi%2F%20nh%E1%BA%ADn%20c%C3%A1c%20th%C3%B4ng%20%C4%91i%E1%BB%87p%20b%E1%BA%B1ng%20IPv4%20(Unicast%2C%20Broadcast%20v%C3%A0%20Multicast)%20%2F%2FMulticast%20s%E1%BA%BD%20s%E1%BB%AD%20d%E1%BB%A5ng%20giao%20th%E1%BB%A9c%20IGMP%0A3.%20X%C3%A2y%20d%E1%BB%B1ng%20c%C3%A1c%20ch%C6%B0%C6%A1ng%20tr%C3%ACnh%20python%20%C4%91%E1%BB%83%20g%E1%BB%ADi%2F%20nh%E1%BA%ADn%20c%C3%A1c%20th%C3%B4ng%20%C4%91i%E1%BB%87p%20b%E1%BA%B1ng%20IPv6%20(Unicast%2C%20Multicast%2C%20Anycast)%0A4.%20%C4%90%C3%A1nh%20gi%C3%A1%20hi%E1%BB%87u%20n%C4%83ng%20v%C3%A0%20an%20to%C3%A0n%20%C4%91%E1%BB%83%20%C4%91%C6%B0a%20ra%20s%E1%BB%B1%20l%E1%BB%B1a%20ch%E1%BB%8Dn%20khi%20g%E1%BB%ADi%2Fnh%E1%BA%ADn%20th%C3%B4ng%20%C4%91i%E1%BB%87p.%20%0A%0A%23%20IPv4%2FIPv6%20Unicast%2C%20Multicast%2C%20Broadcast%2C%20Anycast%0A%23%23%20Unicast%20%0AUnicast%20l%C3%A0%20ph%C6%B0%C6%A1ng%20th%E1%BB%A9c%20g%E1%BB%ADi%20th%C3%B4ng%20%C4%91i%E1%BB%87p%20t%E1%BB%AB%20m%E1%BB%99t%20%C4%91i%E1%BB%83m%20ngu%E1%BB%93n%20t%E1%BB%9Bi%20m%E1%BB%99t%20%C4%91i%E1%BB%83m%20%C4%91%C3%ADch%20duy%20nh%E1%BA%A5t.%20%C4%90i%E1%BB%81u%20n%C3%A0y%20%C4%91%C6%B0%E1%BB%A3c%20d%C3%B9ng%20ph%E1%BB%95%20bi%E1%BA%BFn%20khi%20b%E1%BA%A1n%20truy%20c%E1%BA%ADp%20m%E1%BB%99t%20trang%20web%20ho%E1%BA%B7c%20g%E1%BB%ADi%20email.%0AIPv4%3A%20S%E1%BB%AD%20d%E1%BB%A5ng%20%C4%91%E1%BB%8Ba%20ch%E1%BB%89%20IP%20%C4%91%C3%ADch%20duy%20nh%E1%BA%A5t%2C%20v%C3%AD%20d%E1%BB%A5%3A%20192.168.1.1.%0AIPv6%3A%20S%E1%BB%AD%20d%E1%BB%A5ng%20%C4%91%E1%BB%8Ba%20ch%E1%BB%89%20IPv6%20duy%20nh%E1%BA%A5t%2C%20v%C3%AD%20d%E1%BB%A5%3A%202001%3A0db8%3A85a3%3A0000%3A0000%3A8a2e%3A0370%3A7334.%0ANguy%C3%AAn%20l%C3%BD%20ho%E1%BA%A1t%20%C4%91%E1%BB%99ng%3A%0A%0AThi%E1%BA%BFt%20b%E1%BB%8B%20ngu%E1%BB%93n%20t%E1%BA%A1o%20g%C3%B3i%20tin%20v%C3%A0%20g%E1%BA%AFn%20%C4%91%E1%BB%8Ba%20ch%E1%BB%89%20IP%20%C4%91%C3%ADch.%0AG%C3%B3i%20tin%20%C4%91%C6%B0%E1%BB%A3c%20chuy%E1%BB%83n%20ti%E1%BA%BFp%20qua%20m%E1%BA%A1ng%20cho%20%C4%91%E1%BA%BFn%20khi%20%C4%91%E1%BA%BFn%20%C4%91%C6%B0%E1%BB%A3c%20thi%E1%BA%BFt%20b%E1%BB%8B%20%C4%91%C3%ADch.%0A%0A%23%23%20Broadcast%0ABroadcast%20l%C3%A0%20ph%C6%B0%C6%A1ng%20th%E1%BB%A9c%20g%E1%BB%ADi%20th%C3%B4ng%20%C4%91i%E1%BB%87p%20t%E1%BB%AB%20m%E1%BB%99t%20%C4%91i%E1%BB%83m%20ngu%E1%BB%93n%20t%E1%BB%9Bi%20t%E1%BA%A5t%20c%E1%BA%A3%20c%C3%A1c%20thi%E1%BA%BFt%20b%E1%BB%8B%20trong%20c%C3%B9ng%20m%E1%BB%99t%20m%E1%BA%A1ng.%0A%0AIPv4%3A%20S%E1%BB%AD%20d%E1%BB%A5ng%20%C4%91%E1%BB%8Ba%20ch%E1%BB%89%20broadcast%2C%20v%C3%AD%20d%E1%BB%A5%3A%20192.168.1.255.%0A%0AIPv6%3A%20IPv6%20kh%C3%B4ng%20h%E1%BB%97%20tr%E1%BB%A3%20broadcast%2C%20thay%20v%C3%A0o%20%C4%91%C3%B3%20s%E1%BB%AD%20d%E1%BB%A5ng%20multicast%20%C4%91%E1%BB%83%20th%E1%BB%B1c%20hi%E1%BB%87n%20c%C3%A1c%20t%C3%A1c%20v%E1%BB%A5%20t%C6%B0%C6%A1ng%20t%E1%BB%B1.%0A%0ANguy%C3%AAn%20l%C3%BD%20ho%E1%BA%A1t%20%C4%91%E1%BB%99ng%3A%0A%0AThi%E1%BA%BFt%20b%E1%BB%8B%20ngu%E1%BB%93n%20t%E1%BA%A1o%20g%C3%B3i%20tin%20v%C3%A0%20g%E1%BA%AFn%20%C4%91%E1%BB%8Ba%20ch%E1%BB%89%20broadcast.%0A%0AG%C3%B3i%20tin%20%C4%91%C6%B0%E1%BB%A3c%20chuy%E1%BB%83n%20ti%E1%BA%BFp%20t%E1%BB%9Bi%20t%E1%BA%A5t%20c%E1%BA%A3%20c%C3%A1c%20thi%E1%BA%BFt%20b%E1%BB%8B%20trong%20c%C3%B9ng%20m%E1%BB%99t%20m%E1%BA%A1ng.%0A%0A%23%23%20Multicast%0AMulticast%20l%C3%A0%20ph%C6%B0%C6%A1ng%20th%E1%BB%A9c%20g%E1%BB%ADi%20th%C3%B4ng%20%C4%91i%E1%BB%87p%20t%E1%BB%AB%20m%E1%BB%99t%20%C4%91i%E1%BB%83m%20ngu%E1%BB%93n%20t%E1%BB%9Bi%20m%E1%BB%99t%20nh%C3%B3m%20c%C3%A1c%20thi%E1%BA%BFt%20b%E1%BB%8B%20%C4%91%C3%A3%20%C4%91%C4%83ng%20k%C3%BD%20nh%E1%BA%ADn%20th%C3%B4ng%20%C4%91i%E1%BB%87p.%0AIPv4%3A%20S%E1%BB%AD%20d%E1%BB%A5ng%20%C4%91%E1%BB%8Ba%20ch%E1%BB%89%20multicast%2C%20v%C3%AD%20d%E1%BB%A5%3A%20224.0.0.1.%0AIPv6%3A%20S%E1%BB%AD%20d%E1%BB%A5ng%20%C4%91%E1%BB%8Ba%20ch%E1%BB%89%20multicast%20IPv6%2C%20v%C3%AD%20d%E1%BB%A5%3A%20ff02%3A%3A1.%0A%0ANguy%C3%AAn%20l%C3%BD%20ho%E1%BA%A1t%20%C4%91%E1%BB%99ng%3A%0A%0AThi%E1%BA%BFt%20b%E1%BB%8B%20ngu%E1%BB%93n%20t%E1%BA%A1o%20g%C3%B3i%20tin%20v%C3%A0%20g%E1%BA%AFn%20%C4%91%E1%BB%8Ba%20ch%E1%BB%89%20multicast.%0AC%C3%A1c%20thi%E1%BA%BFt%20b%E1%BB%8B%20mu%E1%BB%91n%20nh%E1%BA%ADn%20th%C3%B4ng%20%C4%91i%E1%BB%87p%20s%E1%BA%BD%20tham%20gia%20nh%C3%B3m%20multicast.%0AG%C3%B3i%20tin%20%C4%91%C6%B0%E1%BB%A3c%20chuy%E1%BB%83n%20ti%E1%BA%BFp%20t%E1%BB%9Bi%20c%C3%A1c%20thi%E1%BA%BFt%20b%E1%BB%8B%20trong%20nh%C3%B3m%20multicast.%0A%0A%23%23%20Anycast%0AAnycast%20l%C3%A0%20ph%C6%B0%C6%A1ng%20th%E1%BB%A9c%20g%E1%BB%ADi%20th%C3%B4ng%20%C4%91i%E1%BB%87p%20t%E1%BB%AB%20m%E1%BB%99t%20%C4%91i%E1%BB%83m%20ngu%E1%BB%93n%20t%E1%BB%9Bi%20m%E1%BB%99t%20trong%20s%E1%BB%91%20nhi%E1%BB%81u%20%C4%91i%E1%BB%83m%20%C4%91%C3%ADch%2C%20th%C6%B0%E1%BB%9Dng%20l%C3%A0%20%C4%91i%E1%BB%83m%20%C4%91%C3%ADch%20g%E1%BA%A7n%20nh%E1%BA%A5t%20ho%E1%BA%B7c%20hi%E1%BB%87u%20qu%E1%BA%A3%20nh%E1%BA%A5t.%0AIPv4%20v%C3%A0%20IPv6%3A%20S%E1%BB%AD%20d%E1%BB%A5ng%20%C4%91%E1%BB%8Ba%20ch%E1%BB%89%20IP%20chung%20gi%E1%BB%AFa%20c%C3%A1c%20%C4%91i%E1%BB%83m%20%C4%91%C3%ADch%2C%20%C4%91%E1%BB%8Ba%20ch%E1%BB%89%20n%C3%A0y%20%C4%91%C6%B0%E1%BB%A3c%20g%E1%BA%AFn%20v%C3%A0o%20nhi%E1%BB%81u%20%C4%91i%E1%BB%83m%20%C4%91%C3%ADch%20kh%C3%A1c%20nhau.%0A%0ANguy%C3%AAn%20l%C3%BD%20ho%E1%BA%A1t%20%C4%91%E1%BB%99ng%3A%0A%0AThi%E1%BA%BFt%20b%E1%BB%8B%20ngu%E1%BB%93n%20t%E1%BA%A1o%20g%C3%B3i%20tin%20v%C3%A0%20g%E1%BA%AFn%20%C4%91%E1%BB%8Ba%20ch%E1%BB%89%20anycast.%0AG%C3%B3i%20tin%20%C4%91%C6%B0%E1%BB%A3c%20chuy%E1%BB%83n%20ti%E1%BA%BFp%20qua%20m%E1%BA%A1ng%20v%C3%A0%20%C4%91%C6%B0%E1%BB%A3c%20%C4%91%E1%BB%8Bnh%20tuy%E1%BA%BFn%20t%E1%BB%9Bi%20%C4%91i%E1%BB%83m%20%C4%91%C3%ADch%20g%E1%BA%A7n%20nh%E1%BA%A5t%20ho%E1%BA%B7c%20hi%E1%BB%87u%20qu%E1%BA%A3%20nh%E1%BA%A5t.%0A%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FHkhDo6v4Je.png)%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FS18YjaDVke.png)%0A%0A%0A%23%20Code%20SendMessage%0A%23%23%20T%E1%BA%A1o%20Menu%20ch%E1%BB%A9a%20c%C3%A1c%20h%C3%A0m%20g%E1%BB%ADi%20th%C3%B4ng%20%C4%91i%E1%BB%87p%20b%E1%BA%B1ng%20c%C3%A1c%20ph%C6%B0%C6%A1ng%20th%E1%BB%A9c%20v%C3%A0%20c%C3%A1c%20t%C3%B9y%20ch%E1%BB%8Dn%0A%60%60%60%0A%23%20menu.py%20%0Aimport%20socket%0Aimport%20struct%20%0A%0A%23%20Function%20Send%20Unicast(IPv4)%0Adef%20send_unicast_ipv4(message%2C%20target_ip%2C%20target_port)%3A%0A%20%20%20%20with%20socket.socket(socket.AF_INET%2C%20socket.SOCK_DGRAM)%20as%20s%3A%0A%20%20%20%20%20%20%20%20s.sendto(message.encode()%2C%20(target_ip%2C%20target_port))%0A%20%20%20%20%20%20%20%20%0A%23%20Function%20Send%20Broadcast(IPv4)%0Adef%20send_broadcast_ipv4(message%2C%20target_port)%3A%0A%20%20%20%20with%20socket.socket(socket.AF_INET%2C%20socket.SOCK_DGRAM)%20as%20s%3A%0A%20%20%20%20%20%20%20%20s.setsockopt(socket.SOL_SOCKET%2C%20socket.SO_BROADCAST%2C%201)%0A%20%20%20%20%20%20%20%20s.sendto(message.encode()%2C%20('10.10.22.255'%2C%20target_port))%0A%20%20%20%20%20%20%20%20%0A%23Function%20Send%20Multicast(IPv4)%0Adef%20send_multicast_ipv4(message%2C%20group_ip%2C%20group_port)%3A%0A%20%20%20%20multicast_group%20%3D%20(group_ip%2C%20group_port)%0A%20%20%20%20with%20socket.socket(socket.AF_INET%2Csocket.SOCK_DGRAM)%20as%20s%3A%0A%20%20%20%20%20%20%20%20ttl%20%3D%20struct.pack('B'%2C%20255)%0A%20%20%20%20%20%20%20%20s.setsockopt(socket.IPPROTO_IP%2C%20socket.IP_MULTICAST_TTL%2C%20ttl)%0A%20%20%20%20%20%20%20%20s.sendto(message.encode()%2C%20multicast_group)%0A%20%20%20%20%20%20%20%20%0A%23Function%20Send%20Anycast(IPv4)%0Adef%20send_anycast_ipv4(message%2C%20target_ips%2C%20target_port)%3A%0A%20%20%20%20for%20ip%20in%20target_ips%3A%0A%20%20%20%20%20%20%20%20with%20socket.socket(socket.AF_INET%2C%20socket.SOCK_DGRAM)%20as%20s%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20s.sendto(message.encode()%2C%20(ip%2C%20target_port))%0A%20%20%20%20%20%20%20%20%20%20%20%20print(f%22Send%20Message%20Anycast%20to%20%7Bip%7D%3A%7Btarget_port%7D%22)%0A%0A%23Function%20Send%20Unicast(IPv6)%0Adef%20send_unicast_ipv6(message%2C%20target_ip%2C%20target_port)%3A%0A%20%20%20%20with%20socket.socket(socket.AF_INET6%2C%20socket.SOCK_DGRAM)%20as%20s%3A%0A%20%20%20%20%20%20%20%20s.sendto(message.encode()%2C%20(target_ip%2C%20target_port))%20%20%20%20%0A%20%20%20%20%20%20%20%20%0A%23Function%20Send%20Multicast(IPv6)%0Adef%20send_multicast_ipv6(message%2C%20group_ip%2C%20target_port)%3A%0A%20%20%20%20multicast_group%20%3D%20(group_ip%2C%20target_port)%0A%20%20%20%20with%20socket.socket(socket.AF_INET6%2C%20socket.SOCK_DGRAM)%20as%20s%3A%0A%20%20%20%20%20%20%20%20ttl%20%3D%20struct.pack('B'%2C%20255)%0A%20%20%20%20%20%20%20%20s.setsockopt(socket.IPPROTO_IPV6%2C%20socket.IPV6_MULTICAST_HOPS%2C%20ttl)%0A%20%20%20%20%20%20%20%20s.sendto(message.encode()%2C%20multicast_group)%0A%0A%23Function%20Send%20Anycast(IPv6)%0Adef%20send_anycast_ipv6(message%2C%20target_ips%2C%20target_port)%3A%0A%20%20%20%20for%20ip%20in%20target_ips%3A%0A%20%20%20%20%20%20%20%20with%20socket.socket(socket.AF_INET6%2C%20socket.SOCK_DGRAM)%20as%20s%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20s.sendto(message.encode()%2C%20(ip%2C%20target_port))%0A%20%20%20%20%20%20%20%20%20%20%20%20print(f%22Send%20Message%20Anycast%20to%20%7Bip%7D%3A%7Btarget_port%7D%22)%0A%20%20%20%20%20%20%20%20%20%20%20%20%0A%23Main%20Menu%0Adef%20menu()%3A%0A%20%20%20%20print(%22Slect%201-6%3A%22)%0A%20%20%20%20print(%221.%20Send%20Unicast%22)%0A%20%20%20%20print(%222.%20Send%20Broadcast%22)%0A%20%20%20%20print(%223.%20Send%20Multicast%22)%0A%20%20%20%20print(%224.%20Send%20Anycast%20(IPv4)%22)%0A%20%20%20%20print(%225.%20Send%20Anycast%20(IPv6)%22)%0A%20%20%20%20print(%226.%20Exit%22)%0A%20%20%20%20%0A%20%20%20%20choice%20%3D%20input(%22Choose%201-6%3A%20%22)%0A%20%20%20%20%0A%20%20%20%20if%20choice%20%3D%3D%20'1'%3A%0A%20%20%20%20%20%20%20%20print(%22Sent%20Unicast%22)%0A%20%20%20%20%20%20%20%20target_ip%20%3D%20input(%22IP%20target%3A%20%22)%0A%20%20%20%20%20%20%20%20target_port%20%3D%20int(input(%22Port%20target%3A%20%22))%0A%20%20%20%20%20%20%20%20message%20%3D%20input(%22Input%20Message%3A%20%22)%0A%20%20%20%20%20%20%20%20return%20'unicast'%2C%20target_ip%2C%20target_port%2C%20message%0A%20%20%20%20elif%20choice%20%3D%3D%20'2'%3A%0A%20%20%20%20%20%20%20%20print(%22Sent%20Broadcast%22)%0A%20%20%20%20%20%20%20%20target_port%20%3D%20int(input(%22Port%20target%3A%20%22))%0A%20%20%20%20%20%20%20%20message%20%3D%20input(%22Input%20Message%3A%20%22)%0A%20%20%20%20%20%20%20%20return%20'broadcast'%2CNone%20%2C%20target_port%2C%20message%0A%20%20%20%20elif%20choice%20%3D%3D%20'3'%3A%0A%20%20%20%20%20%20%20%20print(%22Sent%20Multicast%22)%0A%20%20%20%20%20%20%20%20group_ip%20%3D%20input(%22Input%20GroupIPv4%20Multicast%3A%20%22)%0A%20%20%20%20%20%20%20%20target_port%20%3D%20int(input(%22Port%20target%3A%20%22))%0A%20%20%20%20%20%20%20%20message%20%3D%20input(%22Input%20Message%3A%20%22)%0A%20%20%20%20%20%20%20%20return%20'multicast'%2C%20group_ip%2C%20target_port%2C%20message%0A%20%20%20%20elif%20choice%20%3D%3D%20'4'%3A%0A%20%20%20%20%20%20%20%20print(%22Sent%20Anycast%20(IPv4)%22)%0A%20%20%20%20%20%20%20%20target_ips%20%3D%20input(%22Input%20GroupIPv4%3A%22).split()%0A%20%20%20%20%20%20%20%20target_port%20%3D%20int(input(%22Port%20target%3A%20%22))%0A%20%20%20%20%20%20%20%20message%20%3D%20input(%22Input%20Message%3A%20%22)%0A%20%20%20%20%20%20%20%20return%20'anycast_ipv4'%2C%20target_ips%2C%20target_port%2C%20message%0A%20%20%20%20elif%20choice%20%3D%3D%20'5'%3A%0A%20%20%20%20%20%20%20%20print(%22Sent%20Anycast%20(IPv6)%22)%0A%20%20%20%20%20%20%20%20target_ips%20%3D%20input(%22Input%20GroupIPv6%3A%20%22).split()%0A%20%20%20%20%20%20%20%20target_port%20%3D%20int(input(%22Port%20target%3A%20%22))%0A%20%20%20%20%20%20%20%20message%20%3D%20input(%22Input%20Message%3A%20%22)%0A%20%20%20%20%20%20%20%20return%20'anycast_ipv6'%2C%20target_ips%2C%20target_port%2C%20message%0A%20%20%20%20elif%20choice%20%3D%3D%20'6'%3A%0A%20%20%20%20%20%20%20%20print(%22Exit.%22)%0A%20%20%20%20%20%20%20%20return%20None%2C%20None%2C%20None%2C%20None%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20print(%22404%22)%0A%20%20%20%20%20%20%20%20return%20menu()%20%0A%60%60%60%0A%23%23%20Code%20SendIPv4%0A%60%60%60%0Afrom%20menu%20import%20menu%2C%20send_unicast_ipv4%2C%20send_broadcast_ipv4%2C%20send_multicast_ipv4%2C%20send_anycast_ipv4%0Adef%20send_ipv4()%3A%0A%20%20%20%20action%2C%20target_ip%2C%20target_port%2C%20message%20%3D%20menu()%0A%20%20%20%20%0A%20%20%20%20if%20action%20%3D%3D%20'unicast'%3A%0A%20%20%20%20%20%20%20%20send_unicast_ipv4(message%2C%20target_ip%2C%20target_port)%0A%20%20%20%20%20%20%20%20print(f%22Sent%20Message%20Unicast%3A%20%7Bmessage%7D%20to%20%7Btarget_ip%7D%3A%7Btarget_port%7D%22)%0A%20%20%20%20elif%20action%20%3D%3D%20'broadcast'%3A%0A%20%20%20%20%20%20%20%20send_broadcast_ipv4(message%2C%20target_port)%0A%20%20%20%20%20%20%20%20print(f%22Sent%20Message%20Broadcast%3A%20%7Bmessage%7D%22)%0A%20%20%20%20elif%20action%20%3D%3D%20'multicast'%3A%0A%20%20%20%20%20%20%20%20send_multicast_ipv4(message%2C%20target_ip%2C%20target_port)%0A%20%20%20%20%20%20%20%20print(f%22Sent%20Message%20Multicast%3A%20%7Bmessage%7D%20to%20Group%20%7Btarget_ip%7D%3A%7Btarget_port%7D%22)%0A%20%20%20%20elif%20action%20%3D%3D%20'anycast_ipv4'%3A%0A%20%20%20%20%20%20%20%20send_anycast_ipv4(message%2C%20target_ip%2C%20target_port)%0A%20%20%20%20%20%20%20%20print(f%22Sent%20Message%20Anycast%20IPv4%3A%20%7Bmessage%7D%20to%20...%20%7B'%2C%20'.join(target_ip)%7D%3A%7Btarget_port%7D%22)%0A%20%20%20%20elif%20action%20is%20None%3A%0A%20%20%20%20%20%20%20%20print(%22End.%22)%0A%0Aif%20__name__%20%3D%3D%20%22__main__%22%3A%0A%20%20%20%20send_ipv4()%0A%60%60%60%0A%23%23%20Code%20SendIPv6%0A%60%60%60%0A%23%20ipv6_sender.py%0Afrom%20menu%20import%20menu%2C%20send_unicast_ipv6%2C%20send_multicast_ipv6%2C%20send_anycast_ipv6%0A%0Adef%20send_ipv6()%3A%0A%20%20%20%20action%2C%20target_ip%2C%20target_port%2C%20message%20%3D%20menu()%0A%20%20%20%20%0A%20%20%20%20if%20action%20%3D%3D%20'unicast'%3A%0A%20%20%20%20%20%20%20%20send_unicast_ipv6(message%2C%20target_ip%2C%20target_port)%0A%20%20%20%20%20%20%20%20print(f%22Sent%20Message%20Unicast%20IPv6%3A%20%7Bmessage%7D%20to%20%7Btarget_ip%7D%3A%7Btarget_port%7D%22)%0A%20%20%20%20elif%20action%20%3D%3D%20'multicast'%3A%0A%20%20%20%20%20%20%20%20send_multicast_ipv6(message%2C%20target_ip%2C%20target_port)%0A%20%20%20%20%20%20%20%20print(f%22Sent%20Message%20Multicast%20IPv6%3A%20%7Bmessage%7D%20to%20group%20%7Btarget_ip%7D%3A%7Btarget_port%7D%22)%0A%20%20%20%20elif%20action%20%3D%3D%20'anycast_ipv6'%3A%0A%20%20%20%20%20%20%20%20send_anycast_ipv6(message%2C%20target_ip%2C%20target_port)%0A%20%20%20%20%20%20%20%20print(f%22Sent%20Message%20Anycast%20IPv6%3A%20%7Bmessage%7D%20to%20...%20%7B'%2C%20'.join(target_ip)%7D%3A%7Btarget_port%7D%22)%0A%20%20%20%20elif%20action%20%3D%3D%20'broadcast'%3A%0A%20%20%20%20%20%20%20%20print(%22Error!%20IPv6%20does%20not%20suppo%20%20%20rt!%22)%0A%20%20%20%20elif%20action%20is%20None%3A%0A%20%20%20%20%20%20%20%20print(%22End%22)%0A%0Aif%20__name__%20%3D%3D%20%22__main__%22%3A%0A%20%20%20%20send_ipv6()%0A%0A%60%60%60%0A%23%20Receive%20by%20TCPdump%0Atcpdump%20-i%20eth0%20udp%20and%20src%20host%2010.10.22.133%20-v%0A%0Atcpdump%20-i%20eth0%20igmp%0A%0A%23%20Demo%20%0A%23%23%20Unicast%20%0A%23%23%23%20IPv4%20%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FByuqho9Vyx.png)%0A%23%23%23%20IPv6%20%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FSJOsnicVkx.png)%0A%23%23%20Multicast%20%0A%23%23%23%20IPv4%20%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FryvyTjcV1g.png)%0A%23%23%23%20IPv6%20%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FHkYT2icN1l.png)%0A%23%23%20Broadcast%20%0A%23%23%23%20IPv4%20%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FrkYRhi9Eyx.png)%0A%23%23%20Anycast%20%0A%23%23%23%20IPv6%20%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FryvyTjcV1g.png)%0A%0A%23%20Nh%E1%BA%ADn%20x%C3%A9t%20%C4%91%C3%A1nh%20gi%C3%A1%20hi%E1%BB%87u%20n%C4%83ng%20an%20to%C3%A0n%20khi%20g%E1%BB%ADi%20nh%E1%BA%ADn%20th%C3%B4ng%20%C4%91i%E1%BB%87p%20%0A%0A-%20Sau%20khi%20%C4%91%C3%A3%20tri%E1%BB%83n%20khai%20th%C3%A0nh%20c%C3%B4ng%20c%C3%A1c%20lo%E1%BA%A1i%20ph%C6%B0%C6%A1ng%20th%E1%BB%A9c%20g%E1%BB%ADi%20%E1%BB%9F%20IPv4%20v%C3%A0%20IPv6%2C%20c%C3%A1c%20k%E1%BA%BFt%20qu%E1%BA%A3%20cho%20th%E1%BA%A5y%20m%E1%BB%8Di%20ph%C6%B0%C6%A1ng%20th%E1%BB%A9c%20%C4%91%E1%BB%81u%20ho%E1%BA%A1t%20%C4%91%E1%BB%99ng%20t%E1%BB%91t%2C%20c%C3%A1c%20th%C3%B4ng%20%C4%91i%E1%BB%87p%20%C4%91%C6%B0%E1%BB%A3c%20g%E1%BB%ADi%20nh%E1%BA%ADn%20th%C3%A0nh%20c%C3%B4ng%2C%20tuy%20v%E1%BA%ADy%20th%C3%AC%20s%E1%BB%B1%20kh%C3%A1c%20nhau%20gi%E1%BB%AFa%20c%C3%A1c%20ph%C6%B0%C6%A1ng%20th%E1%BB%A9c%20g%E1%BB%ADi%20v%E1%BB%81%20hi%E1%BB%87u%20n%C4%83ng%20v%C3%A0%20an%20to%C3%A0n%20l%C3%A0%20kh%C3%A1c%20nhau%2C%20v%C3%A0%20m%E1%BB%97i%20lo%E1%BA%A1i%20s%E1%BA%BD%20ph%C3%B9%20h%E1%BB%A3p%20v%E1%BB%9Bi%20m%C3%B4i%20tr%C6%B0%E1%BB%9Dng%20kh%C3%A1c%20nhau.%0A-%20%C4%90%E1%BB%91i%20v%E1%BB%9Bi%20m%C3%B4i%20tr%C6%B0%E1%BB%9Dng%203%20Raspberry%20trong%20m%E1%BA%A1ng%20n%E1%BB%99i%20b%E1%BB%99%20m%C3%A0%20nh%C3%B3m%20tri%E1%BB%83n%20khai%20th%C3%AC%20Unicast%20s%E1%BA%BD%20l%C3%A0%20ph%C6%B0%C6%A1ng%20th%E1%BB%A9c%20g%E1%BB%ADi%20t%E1%BB%91t%20nh%E1%BA%A5t.%20G%E1%BB%ADi%20tr%E1%BB%B1c%20ti%E1%BA%BFp%20gi%E1%BB%AFa%20hai%2C%20ba%20thi%E1%BA%BFt%20b%E1%BB%8B%2C%20hi%E1%BB%87u%20n%C4%83ng%20t%E1%BB%91t%20n%E1%BA%BFu%20c%C3%B3%20%C3%ADt%20thi%E1%BA%BFt%20b%E1%BB%8B%2C%20nh%C6%B0ng%20v%E1%BB%9Bi%20nhi%E1%BB%81u%20thi%E1%BA%BFt%20b%E1%BB%8B%2C%20b%C4%83ng%20th%C3%B4ng%20s%E1%BA%BD%20b%E1%BB%8B%20gi%E1%BA%A3m%20do%20d%E1%BB%AF%20li%E1%BB%87u%20ph%E1%BA%A3i%20%C4%91%C6%B0%E1%BB%A3c%20g%E1%BB%ADi%20nhi%E1%BB%81u%20l%E1%BA%A7n%20%C4%91%E1%BA%BFn%20t%E1%BB%ABng%20thi%E1%BA%BFt%20b%E1%BB%8B.%20%0A**IPv4**%3A%0A-%20Ngo%C3%A0i%20ra%2C%20Multicast%20c%C5%A9ng%20l%C3%A0%20ph%C6%B0%C6%A1ng%20th%E1%BB%A9c%20g%E1%BB%ADi%20hi%E1%BB%87u%20qu%E1%BA%A3%20nh%E1%BA%A5t%20trong%20c%C3%A1c%20tr%C6%B0%E1%BB%9Dng%20h%E1%BB%A3p%20c%C3%B3%20nhi%E1%BB%81u%20thi%E1%BA%BFt%20b%E1%BB%8B%20nh%E1%BA%ADn%20th%C3%B4ng%20tin%20gi%E1%BB%91ng%20nhau.%0A-%20Tuy%20nhi%C3%AAn%2C%20Multicast%20y%C3%AAu%20c%E1%BA%A7u%20c%E1%BA%A5u%20h%C3%ACnh%20ph%E1%BB%A9c%20t%E1%BA%A1p%20h%C6%A1n%2C%20v%C3%A0%20kh%E1%BA%A3%20n%C4%83ng%20h%E1%BB%97%20tr%E1%BB%A3%20multicast%20c%C3%B3%20th%E1%BB%83%20kh%C3%B4ng%20c%C3%B3%20s%E1%BA%B5n%20tr%C3%AAn%20t%E1%BA%A5t%20c%E1%BA%A3%20c%C3%A1c%20m%E1%BA%A1ng%20ho%E1%BA%B7c%20router.%0ABroadcast%3A%20G%E1%BB%ADi%20%C4%91%E1%BA%BFn%20t%E1%BA%A5t%20c%E1%BA%A3%20thi%E1%BA%BFt%20b%E1%BB%8B%20trong%20m%E1%BA%A1ng%20con.%20Tr%C6%B0%E1%BB%9Dng%20h%E1%BB%A3p%20c%E1%BB%A7a%20Raspberry%2C%20v%E1%BB%9Bi%20ph%E1%BA%A7n%20c%E1%BB%A9ng%20h%E1%BA%A1n%20ch%E1%BA%BF%2C%20c%C3%B3%20th%E1%BB%83%20g%E1%BA%B7p%20kh%C3%B3%20kh%C4%83n%20trong%20vi%E1%BB%87c%20x%E1%BB%AD%20l%C3%BD%20qu%C3%A1%20nhi%E1%BB%81u%20broadcast.%0A-%20V%E1%BB%81%20%C4%91%E1%BB%99%20an%20to%C3%A0n%2C%20Unicast%20n%E1%BA%BFu%20kh%C3%B4ng%20m%C3%A3%20h%C3%B3a%20v%C3%A0%20x%C3%A1c%20th%E1%BB%B1c%20th%C3%AC%20d%E1%BB%85%20b%E1%BB%8B%20t%E1%BA%A5n%20c%C3%B4ng%2C%20Broadcast%20l%C3%A0%20ph%C6%B0%C6%A1ng%20th%E1%BB%A9c%20d%E1%BB%85%20b%E1%BB%8B%20t%E1%BA%A5n%20c%C3%B4ng%20nh%E1%BA%A5t%2C%20do%20m%E1%BB%8Di%20thi%E1%BA%BFt%20b%E1%BB%8B%20trong%20m%E1%BA%A1ng%20%C4%91%E1%BB%81u%20nh%E1%BA%ADn%20%C4%91%C6%B0%E1%BB%A3c%20th%C3%B4ng%20%C4%91i%E1%BB%87p.%0AMulticast%20l%C3%A0%20ph%C6%B0%C6%A1ng%20th%E1%BB%A9c%20an%20to%C3%A0n%2C%20%C4%91%E1%BA%B7c%20bi%E1%BB%87t%20l%C3%A0%20khi%20d%C3%B9ng%20(IGMP%20%E1%BB%9F%20IPv4)%20%C4%91%E1%BB%83%20h%E1%BA%A1n%20ch%E1%BA%BF%20truy%20c%E1%BA%ADp%2C%20ph%C3%A1t%20hi%E1%BB%87n%20tham%20gia%20v%C3%A0%20r%E1%BB%9Di%20nh%C3%B3m%20b%E1%BA%A3o%20v%E1%BB%87%20d%E1%BB%AF%20li%E1%BB%87u%20kh%E1%BB%8Fi%20c%C3%A1c%20cu%E1%BB%99c%20t%E1%BA%A5n%20c%C3%B4ng.%0A**IPv6**%3A%20%0A-%20V%E1%BB%9Bi%20IPv6%20th%C3%AC%20Unicast%20v%E1%BA%ABn%20l%C3%A0%20hi%E1%BB%87u%20qu%E1%BA%A3%20nh%E1%BA%A5t%20v%C3%A0%20an%20to%C3%A0n%20nh%E1%BA%A5t%20l%C3%AD%20do%20l%C3%A0%20(IPv6%20cung%20c%E1%BA%A5p%20c%C3%A1c%20t%C3%ADnh%20n%C4%83ng%20b%E1%BA%A3o%20m%E1%BA%ADt%20m%E1%BA%A1nh%20m%E1%BA%BD%20h%C6%A1n%20so%20v%E1%BB%9Bi%20IPv4%20nh%E1%BB%9D%20c%C3%A1c%20c%C6%A1%20ch%E1%BA%BF%20nh%C6%B0%20IPsec%20(Security%20Protocol).%0A-%20Multicast%20%E1%BB%9F%20IPv6%20s%E1%BB%AD%20d%E1%BB%A5ng%20ICMPv6%20%C4%91%E1%BB%83%20th%C3%B4ng%20b%C3%A1o%20c%C3%A1c%20ho%E1%BA%A1t%20%C4%91%E1%BB%99ng%20v%C3%A0o%20nh%C3%B3m%20ho%E1%BA%B7c%20r%E1%BB%9Di%20nh%C3%B3m%2C%20c%C5%A9ng%20c%E1%BA%A7n%20c%C3%A1c%20bi%E1%BB%87n%20ph%C3%A1p%20%C4%91%E1%BB%83%20b%E1%BA%A3o%20v%E1%BB%87.%0AAnycast%20c%C3%B3%20th%E1%BB%83%20gi%C3%BAp%20t%E1%BB%91i%20%C6%B0u%20h%C3%B3a%20%C4%91%E1%BB%99%20tr%E1%BB%85%20v%C3%A0%20t%C4%83ng%20t%C3%ADnh%20s%E1%BA%B5n%20s%C3%A0ng%20cho%20c%C3%A1c%20d%E1%BB%8Bch%20v%E1%BB%A5%2C%20v%C3%AC%20n%C3%B3%20g%E1%BB%ADi%20t%E1%BB%9Bi%20n%C3%BAt%20g%E1%BA%A7n%20nh%E1%BA%A5t.%20Kh%C3%B3%20b%E1%BB%8B%20t%E1%BA%A5n%20c%C3%B4ng%20v%C3%AC%20n%E1%BA%BFu%20b%E1%BB%8B%20DoS%20ch%E1%BA%B3ng%20h%E1%BA%A1n%20th%C3%AC%20g%C3%B3i%20tin%20s%E1%BA%BD%20chuy%E1%BB%83n%20qua%20n%C3%BAt%20kh%C3%A1c%20g%E1%BA%A7n%20th%E1%BB%A9%20hai.%0A","viewMode":"publish","isOwner":false,"isSignIn":false,"isLiked":false,"isBookmarked":false,"publishType":"view","commentCount":0,"isNotesRecommendationsEnabled":true,"recommendedNotes":[{"id":"575d2e8b-746e-4e89-8a04-78f2c30b3444","title":"CAPSTONE%20PROJECT%3A%20X%C3%A2y%20d%E1%BB%B1ng%20CI%2FCD%20Pipeline%20%26%20CodeQL%3A%20Ph%C3%A1t%20hi%E1%BB%87n%20%26%20Ng%C4%83n%20ch%E1%BA%B7n%20l%E1%BB%97%20h%E1%BB%95ng%20b%E1%BA%A3o%20m%E1%BA%ADt.","brief":"%40iamproz2911","lastchangeAt":"2025-06-23T06%3A12%3A07.867Z","publishLink":"%40iamproz2911%2FByN262QVxx"},{"id":"fa430511-69e5-46e1-ade6-b4d086ffda68","title":"Test%20Case%20Security%20Engineer","brief":"Challenge1%3A","lastchangeAt":"2025-05-22T00%3A48%3A44.367Z","publishLink":"%40iamproz2911%2FHkX8DaOblg"},{"id":"855bba18-b8f5-45ac-a785-34ed2c3c6cba","title":"CodeQL","brief":"%23CodeQL","lastchangeAt":"2025-01-24T16%3A43%3A01.384Z","publishLink":"%40iamproz2911%2Fr1MCYq8Pyx"},{"id":"0d6819a5-fbd7-45dc-9b8e-e8305ebda348","title":"Week6%3A%20Nflog%20API","brief":"%40iamproz2911","lastchangeAt":"2025-01-15T17%3A01%3A36.970Z","publishLink":"%40iamproz2911%2FHJMVwPrP1g"}],"lastChangeUserInfo":{"name":"kidwine29","path":"kidwine29","avatarUrl":"https%3A%2F%2Fuploads-public.hackmd.io%2Fupload_2d1bb60ebb02a4cb5f76111ee0c0677c.jpg"}}`);
+  (function () {
+    const decodeStringProps = (props) => {
+      for (const key in props) {
+        if (typeof props[key] === 'string') {
+          props[key] = decodeURIComponent(props[key])
+        } else if (typeof props[key] === 'object') {
+          decodeStringProps(props[key])
+        }
+      }
+    }
+    decodeStringProps(window.publishProps)
+  })()
+</script>
+
+    <script src="https://tally.so/widgets/embed.js"></script>
+
+    
+</head>
+
+<body style="display:none;">
+    <div id="toasts-container" class="toasts-container z-[2000]"></div>
+    <div id="publish-page">@iamproz2911 
+@kidwine29
+# Week3: IPv4/IPv6_Type
+[3rd week]IPv4/IPv6 Unicast, Multicast, Broadcast, Anycast
+1. Xây dựng hệ thống gồm 3 thiết bị Raspberry đã cài đặt sẵn WebOS kết nối qua LAN
+2. Xây dựng các chương trình python để gửi/ nhận các thông điệp bằng IPv4 (Unicast, Broadcast và Multicast) //Multicast sẽ sử dụng giao thức IGMP
+3. Xây dựng các chương trình python để gửi/ nhận các thông điệp bằng IPv6 (Unicast, Multicast, Anycast)
+4. Đánh giá hiệu năng và an toàn để đưa ra sự lựa chọn khi gửi/nhận thông điệp. 
+
+# IPv4/IPv6 Unicast, Multicast, Broadcast, Anycast
+## Unicast 
+Unicast là phương thức gửi thông điệp từ một điểm nguồn tới một điểm đích duy nhất. Điều này được dùng phổ biến khi bạn truy cập một trang web hoặc gửi email.
+IPv4: Sử dụng địa chỉ IP đích duy nhất, ví dụ: 192.168.1.1.
+IPv6: Sử dụng địa chỉ IPv6 duy nhất, ví dụ: 2001:0db8:85a3:0000:0000:8a2e:0370:7334.
+Nguyên lý hoạt động:
+
+Thiết bị nguồn tạo gói tin và gắn địa chỉ IP đích.
+Gói tin được chuyển tiếp qua mạng cho đến khi đến được thiết bị đích.
+
+## Broadcast
+Broadcast là phương thức gửi thông điệp từ một điểm nguồn tới tất cả các thiết bị trong cùng một mạng.
+
+IPv4: Sử dụng địa chỉ broadcast, ví dụ: 192.168.1.255.
+
+IPv6: IPv6 không hỗ trợ broadcast, thay vào đó sử dụng multicast để thực hiện các tác vụ tương tự.
+
+Nguyên lý hoạt động:
+
+Thiết bị nguồn tạo gói tin và gắn địa chỉ broadcast.
+
+Gói tin được chuyển tiếp tới tất cả các thiết bị trong cùng một mạng.
+
+## Multicast
+Multicast là phương thức gửi thông điệp từ một điểm nguồn tới một nhóm các thiết bị đã đăng ký nhận thông điệp.
+IPv4: Sử dụng địa chỉ multicast, ví dụ: 224.0.0.1.
+IPv6: Sử dụng địa chỉ multicast IPv6, ví dụ: ff02::1.
+
+Nguyên lý hoạt động:
+
+Thiết bị nguồn tạo gói tin và gắn địa chỉ multicast.
+Các thiết bị muốn nhận thông điệp sẽ tham gia nhóm multicast.
+Gói tin được chuyển tiếp tới các thiết bị trong nhóm multicast.
+
+## Anycast
+Anycast là phương thức gửi thông điệp từ một điểm nguồn tới một trong số nhiều điểm đích, thường là điểm đích gần nhất hoặc hiệu quả nhất.
+IPv4 và IPv6: Sử dụng địa chỉ IP chung giữa các điểm đích, địa chỉ này được gắn vào nhiều điểm đích khác nhau.
+
+Nguyên lý hoạt động:
+
+Thiết bị nguồn tạo gói tin và gắn địa chỉ anycast.
+Gói tin được chuyển tiếp qua mạng và được định tuyến tới điểm đích gần nhất hoặc hiệu quả nhất.
+
+![image](https://hackmd.io/_uploads/HkhDo6v4Je.png)
+![image](https://hackmd.io/_uploads/S18YjaDVke.png)
+
+
+# Code SendMessage
+## Tạo Menu chứa các hàm gửi thông điệp bằng các phương thức và các tùy chọn
+```
+# menu.py 
+import socket
+import struct 
+
+# Function Send Unicast(IPv4)
+def send_unicast_ipv4(message, target_ip, target_port):
+    with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
+        s.sendto(message.encode(), (target_ip, target_port))
+        
+# Function Send Broadcast(IPv4)
+def send_broadcast_ipv4(message, target_port):
+    with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
+        s.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
+        s.sendto(message.encode(), (&#39;10.10.22.255&#39;, target_port))
+        
+#Function Send Multicast(IPv4)
+def send_multicast_ipv4(message, group_ip, group_port):
+    multicast_group = (group_ip, group_port)
+    with socket.socket(socket.AF_INET,socket.SOCK_DGRAM) as s:
+        ttl = struct.pack(&#39;B&#39;, 255)
+        s.setsockopt(socket.IPPROTO_IP, socket.IP_MULTICAST_TTL, ttl)
+        s.sendto(message.encode(), multicast_group)
+        
+#Function Send Anycast(IPv4)
+def send_anycast_ipv4(message, target_ips, target_port):
+    for ip in target_ips:
+        with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
+            s.sendto(message.encode(), (ip, target_port))
+            print(f&#34;Send Message Anycast to {ip}:{target_port}&#34;)
+
+#Function Send Unicast(IPv6)
+def send_unicast_ipv6(message, target_ip, target_port):
+    with socket.socket(socket.AF_INET6, socket.SOCK_DGRAM) as s:
+        s.sendto(message.encode(), (target_ip, target_port))    
+        
+#Function Send Multicast(IPv6)
+def send_multicast_ipv6(message, group_ip, target_port):
+    multicast_group = (group_ip, target_port)
+    with socket.socket(socket.AF_INET6, socket.SOCK_DGRAM) as s:
+        ttl = struct.pack(&#39;B&#39;, 255)
+        s.setsockopt(socket.IPPROTO_IPV6, socket.IPV6_MULTICAST_HOPS, ttl)
+        s.sendto(message.encode(), multicast_group)
+
+#Function Send Anycast(IPv6)
+def send_anycast_ipv6(message, target_ips, target_port):
+    for ip in target_ips:
+        with socket.socket(socket.AF_INET6, socket.SOCK_DGRAM) as s:
+            s.sendto(message.encode(), (ip, target_port))
+            print(f&#34;Send Message Anycast to {ip}:{target_port}&#34;)
+            
+#Main Menu
+def menu():
+    print(&#34;Slect 1-6:&#34;)
+    print(&#34;1. Send Unicast&#34;)
+    print(&#34;2. Send Broadcast&#34;)
+    print(&#34;3. Send Multicast&#34;)
+    print(&#34;4. Send Anycast (IPv4)&#34;)
+    print(&#34;5. Send Anycast (IPv6)&#34;)
+    print(&#34;6. Exit&#34;)
+    
+    choice = input(&#34;Choose 1-6: &#34;)
+    
+    if choice == &#39;1&#39;:
+        print(&#34;Sent Unicast&#34;)
+        target_ip = input(&#34;IP target: &#34;)
+        target_port = int(input(&#34;Port target: &#34;))
+        message = input(&#34;Input Message: &#34;)
+        return &#39;unicast&#39;, target_ip, target_port, message
+    elif choice == &#39;2&#39;:
+        print(&#34;Sent Broadcast&#34;)
+        target_port = int(input(&#34;Port target: &#34;))
+        message = input(&#34;Input Message: &#34;)
+        return &#39;broadcast&#39;,None , target_port, message
+    elif choice == &#39;3&#39;:
+        print(&#34;Sent Multicast&#34;)
+        group_ip = input(&#34;Input GroupIPv4 Multicast: &#34;)
+        target_port = int(input(&#34;Port target: &#34;))
+        message = input(&#34;Input Message: &#34;)
+        return &#39;multicast&#39;, group_ip, target_port, message
+    elif choice == &#39;4&#39;:
+        print(&#34;Sent Anycast (IPv4)&#34;)
+        target_ips = input(&#34;Input GroupIPv4:&#34;).split()
+        target_port = int(input(&#34;Port target: &#34;))
+        message = input(&#34;Input Message: &#34;)
+        return &#39;anycast_ipv4&#39;, target_ips, target_port, message
+    elif choice == &#39;5&#39;:
+        print(&#34;Sent Anycast (IPv6)&#34;)
+        target_ips = input(&#34;Input GroupIPv6: &#34;).split()
+        target_port = int(input(&#34;Port target: &#34;))
+        message = input(&#34;Input Message: &#34;)
+        return &#39;anycast_ipv6&#39;, target_ips, target_port, message
+    elif choice == &#39;6&#39;:
+        print(&#34;Exit.&#34;)
+        return None, None, None, None
+    else:
+        print(&#34;404&#34;)
+        return menu() 
+```
+## Code SendIPv4
+```
+from menu import menu, send_unicast_ipv4, send_broadcast_ipv4, send_multicast_ipv4, send_anycast_ipv4
+def send_ipv4():
+    action, target_ip, target_port, message = menu()
+    
+    if action == &#39;unicast&#39;:
+        send_unicast_ipv4(message, target_ip, target_port)
+        print(f&#34;Sent Message Unicast: {message} to {target_ip}:{target_port}&#34;)
+    elif action == &#39;broadcast&#39;:
+        send_broadcast_ipv4(message, target_port)
+        print(f&#34;Sent Message Broadcast: {message}&#34;)
+    elif action == &#39;multicast&#39;:
+        send_multicast_ipv4(message, target_ip, target_port)
+        print(f&#34;Sent Message Multicast: {message} to Group {target_ip}:{target_port}&#34;)
+    elif action == &#39;anycast_ipv4&#39;:
+        send_anycast_ipv4(message, target_ip, target_port)
+        print(f&#34;Sent Message Anycast IPv4: {message} to ... {&#39;, &#39;.join(target_ip)}:{target_port}&#34;)
+    elif action is None:
+        print(&#34;End.&#34;)
+
+if __name__ == &#34;__main__&#34;:
+    send_ipv4()
+```
+## Code SendIPv6
+```
+# ipv6_sender.py
+from menu import menu, send_unicast_ipv6, send_multicast_ipv6, send_anycast_ipv6
+
+def send_ipv6():
+    action, target_ip, target_port, message = menu()
+    
+    if action == &#39;unicast&#39;:
+        send_unicast_ipv6(message, target_ip, target_port)
+        print(f&#34;Sent Message Unicast IPv6: {message} to {target_ip}:{target_port}&#34;)
+    elif action == &#39;multicast&#39;:
+        send_multicast_ipv6(message, target_ip, target_port)
+        print(f&#34;Sent Message Multicast IPv6: {message} to group {target_ip}:{target_port}&#34;)
+    elif action == &#39;anycast_ipv6&#39;:
+        send_anycast_ipv6(message, target_ip, target_port)
+        print(f&#34;Sent Message Anycast IPv6: {message} to ... {&#39;, &#39;.join(target_ip)}:{target_port}&#34;)
+    elif action == &#39;broadcast&#39;:
+        print(&#34;Error! IPv6 does not suppo   rt!&#34;)
+    elif action is None:
+        print(&#34;End&#34;)
+
+if __name__ == &#34;__main__&#34;:
+    send_ipv6()
+
+```
+# Receive by TCPdump
+tcpdump -i eth0 udp and src host 10.10.22.133 -v
+
+tcpdump -i eth0 igmp
+
+# Demo 
+## Unicast 
+### IPv4 
+![image](https://hackmd.io/_uploads/Byuqho9Vyx.png)
+### IPv6 
+![image](https://hackmd.io/_uploads/SJOsnicVkx.png)
+## Multicast 
+### IPv4 
+![image](https://hackmd.io/_uploads/ryvyTjcV1g.png)
+### IPv6 
+![image](https://hackmd.io/_uploads/HkYT2icN1l.png)
+## Broadcast 
+### IPv4 
+![image](https://hackmd.io/_uploads/rkYRhi9Eyx.png)
+## Anycast 
+### IPv6 
+![image](https://hackmd.io/_uploads/ryvyTjcV1g.png)
+
+# Nhận xét đánh giá hiệu năng an toàn khi gửi nhận thông điệp 
+
+- Sau khi đã triển khai thành công các loại phương thức gửi ở IPv4 và IPv6, các kết quả cho thấy mọi phương thức đều hoạt động tốt, các thông điệp được gửi nhận thành công, tuy vậy thì sự khác nhau giữa các phương thức gửi về hiệu năng và an toàn là khác nhau, và mỗi loại sẽ phù hợp với môi trường khác nhau.
+- Đối với môi trường 3 Raspberry trong mạng nội bộ mà nhóm triển khai thì Unicast sẽ là phương thức gửi tốt nhất. Gửi trực tiếp giữa hai, ba thiết bị, hiệu năng tốt nếu có ít thiết bị, nhưng với nhiều thiết bị, băng thông sẽ bị giảm do dữ liệu phải được gửi nhiều lần đến từng thiết bị. 
+**IPv4**:
+- Ngoài ra, Multicast cũng là phương thức gửi hiệu quả nhất trong các trường hợp có nhiều thiết bị nhận thông tin giống nhau.
+- Tuy nhiên, Multicast yêu cầu cấu hình phức tạp hơn, và khả năng hỗ trợ multicast có thể không có sẵn trên tất cả các mạng hoặc router.
+Broadcast: Gửi đến tất cả thiết bị trong mạng con. Trường hợp của Raspberry, với phần cứng hạn chế, có thể gặp khó khăn trong việc xử lý quá nhiều broadcast.
+- Về độ an toàn, Unicast nếu không mã hóa và xác thực thì dễ bị tấn công, Broadcast là phương thức dễ bị tấn công nhất, do mọi thiết bị trong mạng đều nhận được thông điệp.
+Multicast là phương thức an toàn, đặc biệt là khi dùng (IGMP ở IPv4) để hạn chế truy cập, phát hiện tham gia và rời nhóm bảo vệ dữ liệu khỏi các cuộc tấn công.
+**IPv6**: 
+- Với IPv6 thì Unicast vẫn là hiệu quả nhất và an toàn nhất lí do là (IPv6 cung cấp các tính năng bảo mật mạnh mẽ hơn so với IPv4 nhờ các cơ chế như IPsec (Security Protocol).
+- Multicast ở IPv6 sử dụng ICMPv6 để thông báo các hoạt động vào nhóm hoặc rời nhóm, cũng cần các biện pháp để bảo vệ.
+Anycast có thể giúp tối ưu hóa độ trễ và tăng tính sẵn sàng cho các dịch vụ, vì nó gửi tới nút gần nhất. Khó bị tấn công vì nếu bị DoS chẳng hạn thì gói tin sẽ chuyển qua nút khác gần thứ hai.
+</div>
+    <!-- signin modal -->
+
+<div class="modal fade signin-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-top: 10px; right: 20px; position: absolute;"><span aria-hidden="true">&times;</span></button>
+            
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+<h3>Sign in</h3>
+
+<form data-toggle="validator" role="form" class="form-horizontal" method="post" enctype="application/x-www-form-urlencoded" id="signin-form">
+    <div class="hmd-dn"><input type="hidden" name="_csrf" value="Z5xPOn4x-IV3DAviqpAJCnE1k8v1924fUUmU"></div>
+    <div class="hmd-dn"><input type="hidden" name="create_team" value="false"></div>
+    <div class="hmd-dn"><input type="hidden" name="create_paid_team" value="false"></div>
+    
+    <div class="form-group  ">
+        <label for="email" class="control-label">Email</label>
+        <label for="inputEmail" class="control-label pull-right errors">
+            
+        </label>
+        <span class="help-block control-label with-errors pull-right" style="margin-top: 14px"></span>
+        <div class="input-block">
+            
+                <input type="email" class="form-control" name="email" placeholder="Your email" required autocomplete="email">
+            
+            <span class="error-sign"></span>
+        </div>
+    </div>
+    <div class="form-group ">
+        <label for="password" class="control-label">Password</label>
+        <label for="inputPassword" class="control-label pull-right errors">
+            
+        </label>
+        <span class="help-block control-label with-errors pull-right" style="margin-top: 14px"></span>
+        <div class="input-block">
+            <input type="password" class="form-control" name="password" placeholder="Your password" required autocomplete="current-password" maxlength="128">
+            <span class="error-sign"></span>
+            
+                <span class="control-label pull-right !text-normal !leading-normal !font-normal !mt-1.5"><a href="https://hackmd.io/settings/forgotPassword" style="text-decoration: underline;">Forgot password</a></span>
+            
+        </div>
+    </div>
+
+    <div style="text-align: center; padding-top: 15px; margin-bottom: 0px;">
+        <div
+            hidden
+            id="hmd-captcha"
+            data-provider=""
+            data-captcha-data=""
+            class="flex justify-center"
+        ></div>
+
+        
+            <input type="submit" class="neo-btn neo-btn-primary !justify-center !py-3.5 !mx-auto w-[180px] text-[18px]" formaction="https://hackmd.io/login" value="Sign in">
+        
+
+        
+    </div>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        <p class="separator">or</p>
+    
+
+    
+        <p>By clicking below, you agree to our <a href="https://hackmd.io/s/terms" target="_blank">terms of service</a>.</p>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="gsi-client" src="https://accounts.google.com/gsi/client" async defer nonce="5dca7693-c22d-4da1-aea3-1051f9f515e3"></script>
+<script nonce="5dca7693-c22d-4da1-aea3-1051f9f515e3">
+    function handleCredentialResponse(response) {
+        const form = document.getElementById('sign-in-with-google-form')
+        form.children.credential.value = response.credential
+        form.children.method.value = location.href.toLowerCase() === 'https://hackmd.io/settings#general' ? 'merge' : 'login'
+        form.submit()
+    }
+    var GSI_READY = new Promise(function (resolve) {
+        function initialize () {
+            google.accounts.id.initialize({
+                client_id: '911617723593-drikdibvvn63slfd6kbqigo8ql1no55s.apps.googleusercontent.com',
+                callback: handleCredentialResponse
+            })
+            const loginPath = '/login'
+            const joinPath = '/join'
+            const renderButton = function () {
+                google.accounts.id.renderButton(
+                    document.getElementById('sign-in-with-google-button'),
+                    { type: 'standard', width: 250 }
+                )
+            }
+            if (location.pathname.toLowerCase() === loginPath || location.pathname.toLowerCase() === joinPath) {
+                renderButton()
+            } else {
+                $('.signin-modal').one('shown.bs.modal', function () {
+                    renderButton()
+                })
+            }
+            resolve()
+        }
+
+        window.addEventListener('load', function () { initialize() })
+    })
+</script>
+<form class="hidden" id="sign-in-with-google-form" action="/auth/google" method="post">
+    <input type="hidden" name="credential">
+    <input type="hidden" name="method">
+    <input type="hidden" name="_csrf" value="Z5xPOn4x-IV3DAviqpAJCnE1k8v1924fUUmU">
+</form>
+
+
+<div class="social-buttons-container">
+    
+    <div id="sign-in-with-google-button"></div>
+    
+    
+    <a href="https://hackmd.io/auth/facebook" class="btn btn-lg btn-block btn-social btn-facebook">
+        <i class="fa fa-facebook"></i> Sign in via Facebook
+    </a>
+    
+    
+    <a href="https://hackmd.io/auth/twitter" class="btn btn-lg btn-block btn-social btn-twitter">
+        <i class="fa fa-twitter"></i> Sign in via Twitter
+    </a>
+    
+    
+    <a href="https://hackmd.io/auth/github" class="btn btn-lg btn-block btn-social btn-github">
+        <i class="fa fa-github"></i> Sign in via GitHub
+    </a>
+    
+    
+    <a href="https://hackmd.io/auth/dropbox" class="btn btn-lg btn-block btn-social btn-dropbox">
+        <i class="fa fa-dropbox"></i> Sign in via Dropbox
+    </a>
+    
+    
+    
+      <a href="#" class="btn btn-block btn-social btn-web3 bg-gray-800 hocus:bg-[#2b2b2b] text-white hocus:text-white">
+          <img src="https://hackmd.io/images/wallet.svg" style="max-height: 20px; margin-top: 8px; margin-left: 6px; border: none;">
+          <span class="sign-in-wallet-text">
+              Sign in with Wallet
+          </span>
+
+          <div class="inline-flex items-center justify-between w-full hidden web3-wallet-info">
+              <span>
+                   Wallet
+                   (
+                    <span class="web3-wallet-address"></span>
+                   )
+              </span>
+
+              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          </div>
+      </a>
+
+      <small class="web3-wallet-info hidden text-left hocus:text-white underline hocus:underline block pt-2 ui-disconnect-connected-wallets text-gray-600 cursor-pointer">
+          Connect another wallet
+      </small>
+    
+</div>
+
+
+
+
+    <div >
+        <p>New to HackMD? <a href="https://hackmd.io/join" class="plausible-event-name=LoginModalSignUp">Sign up</a></p>
+    </div>
+
+
+
+
+        </div>
+    </div>
+</div>
+
+    
+    <script src="https://www.googletagmanager.com/gtag/js?id=G-NGVZMM6DR6"></script>
+    <script nonce="5dca7693-c22d-4da1-aea3-1051f9f515e3">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        let userid = (document.cookie.match('(^|; )userid=([^;]*)')||0)[2];
+        gtag('config', 'G-NGVZMM6DR6', {'user_id': userid});
+        
+    </script>
+
+
+    
+<script src="https://browser.sentry-cdn.com/5.15.5/bundle.min.js" crossorigin="anonymous"></script>
+<script nonce="5dca7693-c22d-4da1-aea3-1051f9f515e3">
+  Sentry.init({ dsn: 'https://73410f1915d84abc8b2dd1f1aabd1c82@sentry.hackmd.dev/4', environment: 'production', integrations: function (intrus) { return intrus.filter(function (itr) { return itr.name !== 'TryCatch' }) } });
+  const sentryUserId = document.cookie
+    .split('; ')
+    .map(cookie => cookie.split('='))
+    .reduce((acc, [k, v]) => k === 'userid' ? v : acc, '');
+  Sentry.setUser(sentryUserId ? { id: sentryUserId } : null);
+</script>
+
+
+    
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLW9Z3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+    <script src="https://hackmd.io/api/i18n.js"></script>
+     <script src="https://assets.hackmd.io/build/font-vendor.7631cb852a460f17d568.js" defer="defer"></script><script src="https://assets.hackmd.io/build/common-vendor.3c9a3da9f8a49f6ad878.js" defer="defer"></script><script src="https://assets.hackmd.io/build/pretty-vendor.1e65e4faa04a7ebdd05b.js" defer="defer"></script><script src="https://assets.hackmd.io/build/pretty-common.fb61aa6b71cf8200ffc1.js" defer="defer"></script><script src="https://assets.hackmd.io/build/pretty.4b82ea784de626fa8622.js" defer="defer"></script>
+
+    
+
+</body>
+</html>

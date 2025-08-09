@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="dev" data-themeable="true">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="csrf-token" content="n0IouZ97-xr9FloQODOhJPCW8dL5aRq0ppQM">
+    
+    
+    <meta name="description" content="@iamproz2911">
+    
+    <title>Week2:ScapySendPacket&amp;TestFireWall - HackMD</title>
+    <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
+	<link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
+	<!--  meta value for server side given sign in boolean -->
+    <meta name="signin" content="false">
+
+    
+<script nonce="a0de7793-d1b5-4044-8d96-ad00fe8f5304">
+  window.domain = 'hackmd.io'
+  window.urlpath = ''
+  window.debug = false || window.localStorage.getItem('HMD_DEBUG_FLAG') === 'true'
+  window.version = '1.3.0'
+  window.brand = 'HackMD'
+
+  
+  window.NOTE_ID = 'LwAnc4kWQyG34VH9mJ8xqA'
+  
+
+  window.GOOGLE_DRIVE_API_KEY = 'AIzaSyAHmcP5gL_64ZafuAYOvJruFAIaYgHQaY4'
+  window.GOOGLE_DRIVE_CLIENT_ID = '65857506266-76uhhee8se8dgs1i0q8fhtj1prg0ar27.apps.googleusercontent.com'
+  window.DROPBOX_APP_KEY = 'rdoizrlnkuha23r'
+  
+  window.PLANTUML_SERVER = 'https://ptuml.hackmd.io'
+
+  window.ASSET_URL = 'https://assets.hackmd.io'
+
+  window.USER_CAN_CREATE_TEAM = true
+  window.USER_CAN_DELETE_ACCOUNT = true
+  window.USER_DELETE_ACCOUNT_VIA_EMAIL = true
+  window.PAYMENT_ENABLED = true
+  window.PAYMENT_PROMOTION_BANNER_ENABLED = false
+  window.GITHUB_SYNC_ENABLED = true
+  window.GITLAB_SYNC_ENABLED = false
+  window.GITLAB_SYNC_BASE_URL = ''
+  window.VCS_SYNC_MODE = 'github'
+  window.VCS_PROVIDER_NAME = 'GitHub'
+  window.FREE_TEAM_NUM = 20
+  window.FREE_TEAM_MEMBER_NUM = 3
+  window.FREE_PUBLIC_TEAM_NUM = 10
+  window.NEO_OVERVIEW_UI = true
+
+  
+      window.FOLDER_ENABLE = true
+  
+
+  
+  window.EE_SITE_ENABLE = false
+  window.EE_SITE_NAME = 'false'
+  window.EE_SITE_LINK = 'false'
+  window.EESITE_INFO = false
+  window.ENTERPRISE_DISCOVERY_ENABLE = false
+  window.ENTERPRISE_DISCOVERY_TEAM = true
+  window.ENTERPRISE_DISCOVERY_NOTE = true
+  window.ENTERPRISE_DISCOVERY_VIEW_PERMISSION = 'guest'
+  
+  window.ALLOW_ANONYMOUS = true
+  window.ALLOW_ANONYMOUS_EDIT = false
+  window.ALLOW_DOWNLOAD_PDF = true
+  window.PUBLIC_OVERVIEW = false
+  window.INTERNAL_PUBLIC_OVERVIEW = false
+  window.FULL_TEXT_SEARCH_ENABLE = false
+  window.ALGOLIA_SEARCH_ENABLE = true
+  window.MARKETING_EMAIL_ENABLE = true
+  window.OFFLINE_ACCESS = true
+  
+  
+  
+    window.WALLET_CONNECT_PROJECT_ID = '91d6fa182b725b5895a17a170a5878c1'
+  
+  window.API_MANAGEMENT_UI_ENABLE = true
+  window.FEEDBACK_UI_ENABLE = true
+  window.PUBLISH_ENABLE = true
+
+  
+
+  
+  window.SHOW_HOT_NOTES = false
+  
+
+  
+  window.HOT_NOTES_TIME_TYPE = 'week'
+  
+
+  
+  window.SHOW_OVERVIEW = false
+  
+
+  
+  window.MENTIONS = {"7b265489-40cf-404e-9d15-1dfb2172d410":{"id":"7b265489-40cf-404e-9d15-1dfb2172d410","targetUser":{"userpath":"kidwine29"}},"df144376-f869-4583-a640-b9794fbe3b18":{"id":"df144376-f869-4583-a640-b9794fbe3b18","targetUser":{"userpath":"iamproz2911"}}}
+  
+
+  
+  window.MENTION_ANCHORS = [["df144376-f869-4583-a640-b9794fbe3b18",0,12,1733734513165,1733734513165],["7b265489-40cf-404e-9d15-1dfb2172d410",14,10,1733734549109,1733734549109]]
+  
+
+  
+  window.COMMENT_ANCHORS = []
+  
+
+  
+  window.IS_OWNER = false
+  
+
+  
+  window.IS_TEAM_ADMIN = false
+  
+
+  
+  window.IS_TEAM_MEMBER = false
+  
+
+  
+  window.IS_INVITEE_ADMIN = false
+  
+
+  
+  window.USER_PROFILE = '%7B%22name%22%3A%22Guest%20Chandler%22%7D'
+  
+
+  
+  window.VERSION_TIME = '1733814646025'
+  
+
+  
+  window.canEdit = false
+  
+
+  
+  window.canWriteComment = false
+  
+
+  
+  window.canHideComment = false
+  
+
+  window.TRASH_NOTE_DELETE_AFTER_FREE = 3
+  window.TRASH_NOTE_DELETE_AFTER_PAID = 30
+
+  
+    window.ENABLED_PREVIEW_FEATURE = {}
+  
+
+  
+    window.ACTIVE_PREVIEW_FEATURE = ["beta-slide-preview"]
+  
+
+  
+    window.IS_OWNER_UPGRADED = false
+  
+
+  
+    window.IMGUR_FALLBACK_CDN = 'https://imgur-backup.hackmd.io'
+  
+
+  
+    window.CLOUD_META_UI = true
+  
+  
+    window.CLOUD_META_API = true
+  
+  
+    window.CLOUD_META_MIGRATION = false
+  
+  
+    window.YAML_METADATA_ENABLED = false
+  
+
+  
+    window.NOTE_CAPACITY_LIMIT = 50
+  
+
+  
+    window.DOCUMENT_MAX_LENGTH = 100000
+  
+
+  
+    window.SOCIAL_NETWORK_FEATURES_ENABLED = true
+  
+
+  
+    window.PUBLISHMENT_MODERATION_ENABLED = true
+  
+
+  
+    window.COMMENT_ENABLED = true
+  
+
+  
+    window.COMMENT_PERMISSION = "signed_in_users"
+  
+
+  window.SUGGEST_EDIT_ENABLED = true
+  
+    window.SUGGEST_EDIT_ENABLED = true
+  
+
+  window.CITATION_ENABLED = false
+
+  window.NOTE_FROM_COMMENT_ENABLED = false
+
+  
+    window.NOTE_FEATURES = {"emoji-reply":"signed_in_users","citation":"disabled"}
+  
+
+  
+    window.REALTIME_CLIENT_WITH_CREDENTIALS = false
+  
+
+  
+    window.DEBUG_DISCONNECT_SOCKET_WHEN_OFFLINE = false
+  
+
+  
+
+  
+
+  
+
+  
+    window.CUSTOM_STYLE_ENABLED = "true"
+  
+
+  
+    window.USE_NEW_LOGO = true
+  
+
+  
+    window.ITERABLE_ENABLED = true
+  
+  
+    window.ITERABLE_API_KEY = "c2c36a44c2614fb19aa3b46d660bbce2"
+  
+
+  
+    window.TEXT_SELECTION_CHANGED = false
+  
+
+  
+    window.CAN_VIEW_HISTORY_AT_REVISION = false
+  
+
+  
+    window.GUIDED_COMMENT_ENABLED = true
+  
+</script>
+
+
+    
+<!-- Google Tag Manager -->
+<script nonce="a0de7793-d1b5-4044-8d96-ad00fe8f5304">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KLW9Z3');</script>
+<!-- End Google Tag Manager -->
+
+
+    
+
+
+
+
+
+
+    <meta property="fb:app_id" content="1436904003272070">
+
+
+
+    <meta name="robots" content="index, follow">
+
+
+
+    <meta name="twitter:image:src" content="https://hackmd.io/images/media/HackMD-neo-og.jpg">
+    <meta name="twitter:image:alt" content="Week2:ScapySendPacket&amp;TestFireWall - HackMD">
+
+
+<meta name="twitter:site" content="@hackmdio" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Week2:ScapySendPacket&amp;TestFireWall - HackMD" />
+
+
+    <meta name="twitter:description" content="@iamproz2911" />
+
+
+
+    <meta property="og:image" content="https://hackmd.io/images/media/HackMD-neo-og.jpg">
+    <meta property="og:image:alt" content="Week2:ScapySendPacket&amp;TestFireWall - HackMD">
+
+
+<meta property="og:site_name" content="HackMD" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Week2:ScapySendPacket&amp;TestFireWall - HackMD" />
+
+
+    <meta property="og:description" content="@iamproz2911" />
+
+
+
+    <link rel="canonical" href="https://hackmd.io/@iamproz2911/BJOBe4EEJg" />
+    <meta property="og:url" content="https://hackmd.io/@iamproz2911/BJOBe4EEJg" />
+    <meta property="twitter:url" content="https://hackmd.io/@iamproz2911/BJOBe4EEJg" />
+
+    <link rel="alternate" type="text/markdown" href="https://hackmd.io/@iamproz2911/BJOBe4EEJg.md" title="Pure markdown version">
+    <link rel="alternate" type="text/markdown" href="https://hackmd.io/@iamproz2911/BJOBe4EEJg.md?no-meta" title="Pure markdown version without metadata">
+
+
+     <link href="https://assets.hackmd.io/build/font-vendor.ea8218d7d4f468b2c430.css" rel="stylesheet"><link href="https://assets.hackmd.io/build/common-vendor.fd34b1d1ad1390fa8864.css" rel="stylesheet"><link href="https://assets.hackmd.io/build/pretty-vendor.d39c3586ad724c4bdff1.css" rel="stylesheet"><link href="https://assets.hackmd.io/build/pretty.191080504f40238cb56f.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+<![endif]-->
+
+    
+
+
+    <script nonce="a0de7793-d1b5-4044-8d96-ad00fe8f5304">
+  window.__shouldIgnoreTracker = function() {
+    const isDebug = window.debug === true
+    const isLocal = /^localhost$|^127(\.[0-9]+){0,2}\.[0-9]+$|^\[::1?\]$|^local\.localhost$/.test(location.hostname) || location.protocol === 'file:'
+    const isAutomation = Boolean(window._phantom || window.__nightmare || window.navigator.webdriver || window.Cypress)
+    return isDebug || isLocal || isAutomation
+  }
+</script>
+
+<!-- plausible -->
+<script defer data-domain="hackmd.io" src="https://tracks.hackmd.io/js/script.js"></script>
+<script nonce="a0de7793-d1b5-4044-8d96-ad00fe8f5304">
+  window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments); }
+  const keyboardWhiteList = ['a', 'span', 'button']
+
+  function getTaggedEventAttributes (e) {
+    const eventAttrs = { name: null, props: {} }
+    if (!e || !e.classList) return eventAttrs
+    const psEvent = /plausible-event-(.+)(=|--)(.+)/
+    for (const className of [...e.classList]) {
+      const [, key, , val] = className.match(psEvent) || []
+      if (!key || !val) continue
+      const value = val.replace(/\+/g, ' ')
+      switch (key.toLowerCase()) {
+        case 'name':
+          eventAttrs.name = value
+          break
+        default:
+          eventAttrs.props[key] = value
+          break
+      }
+    }
+    return eventAttrs
+  }
+
+  function shouldIgnore () {
+    return window.__shouldIgnoreTracker() || window.localStorage.getItem('plausible_ignore') === 'true'
+  }
+
+  function handler (e) {
+    if (!window.plausible) return
+    if (!e.target || !('className' in e.target)) return
+    const ele = e.target
+
+    const eventAttrs = getTaggedEventAttributes(ele)
+    if (!eventAttrs.name) return
+    if (ele?.href) eventAttrs.props.url = ele.href
+
+    if (shouldIgnore()) {
+      if (window.debug) logDebugEventMsg(eventAttrs)
+      return
+    }
+    window.plausible(eventAttrs.name, { props: eventAttrs.props })
+  }
+
+  function logDebugEventMsg (eventAttrs) {
+    console.warn(
+      `Ignoring Event: "${eventAttrs.name}"`,
+      eventAttrs,
+    )
+  }
+
+  function keydownHandler (e) {
+    if (e.key !== 'Enter') return
+    if (e.target.nodeName.toLowerCase() === 'input') {
+      switch (e.target.type.toLowerCase()) {
+        case 'submit':
+        case 'button':
+        case 'reset':
+        case 'checkbox':
+        case 'radio':
+        case 'file':
+        case 'image':
+        case 'color':
+          break
+        default:
+          return
+      }
+    } else if (!keyboardWhiteList.includes(e.target.nodeName.toLowerCase())) {
+      return
+    }
+    handler(e)
+  }
+
+  document.addEventListener('mousedown', handler)
+  document.addEventListener('keydown', keydownHandler)
+</script>
+
+<!-- piwik pro -->
+<script type="text/javascript" nonce="a0de7793-d1b5-4044-8d96-ad00fe8f5304">
+  (function(window, document, dataLayerName, id) {
+    if (window.__shouldIgnoreTracker()) {
+      if (window.debug) {
+        console.warn('Ignoring Piwik Pro Tracker due to debug mode or local environment.')
+      }
+      return;
+    }
+
+    window[dataLayerName]=window[dataLayerName]||[];
+    window[dataLayerName].push({start:(new Date).getTime(),event:"stg.start"});
+
+    var scripts=document.getElementsByTagName('script')[0];
+    var tags=document.createElement('script');
+    var qP=[];
+    dataLayerName!=="dataLayer"&&qP.push("data_layer_name="+dataLayerName);
+    var qPString=qP.length>0?("?"+qP.join("&")):"";
+
+    tags.async=true;
+    tags.src="https://hackmd.containers.piwik.pro/"+id+".js"+qPString;
+    tags.nonce="a0de7793-d1b5-4044-8d96-ad00fe8f5304";
+    scripts.parentNode.insertBefore(tags,scripts);
+
+    !function(a,n,i){
+    a[n]=a[n]||{};
+    for(var c=0;c<i.length;c++)!function(i){
+        a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){
+        var a=[].slice.call(arguments,0);
+        "string"==typeof a[0]&&window[dataLayerName].push({
+            event:n+"."+i+":"+a[0],
+            parameters:[].slice.call(arguments,1)
+        })
+        }
+    }(i[c])
+    }(window,"ppms",["tm","cm"]);
+  })(window, document, 'dataLayer', '8b665e66-46fc-4c65-aef4-4c3429ff4551');
+</script>
+
+    
+<script nonce="a0de7793-d1b5-4044-8d96-ad00fe8f5304">
+  window.publishProps = JSON.parse(`{"isOwnerAnonymous":false,"isOwnedByTeam":false,"ownerInfo":{"name":"iamproz2911","path":"iamproz2911","avatarUrl":"https%3A%2F%2Fuploads-public.hackmd.io%2Fupload_fc16f4eeb6a70292674cb45250365447.jpg","description":"%7CPentesterWeb%20%7C%20CyberSecurity%20%7C%0D%0AWorkHard%20Become%20To%20CyberSecurity%20Engineer%20!%0D%0ADUT2020%20"},"isPublished":true,"createTime":1733734464456,"updateTime":1733814646025,"vcsSyncMode":"github","vcsProviderName":"GitHub","canEdit":false,"hardBreaks":true,"onlyOwnerCanEdit":true,"isCommentEnabled":true,"likedCount":1,"isNotificationEnabled":true,"notificationType":"never","hasEmail":false,"canWriteComment":false,"viewCount":48,"markdown":"%40iamproz2911%20%0A%40kidwine29%20%0A%5B2nd%20week%5D%20scapy%0ATrong%20ch%E1%BB%A7%20%C4%91%E1%BB%81%20n%C3%A0y%2C%20ch%C3%BAng%20ta%20s%E1%BA%BD%20t%E1%BA%ADp%20trung%20v%C3%A0o%20Scapy%20v%E1%BB%9Bi%20vi%E1%BB%87c%20g%E1%BB%ADi%20g%C3%B3i%20tin%20t%E1%BB%AB%20Windows%20%C4%91%E1%BA%BFn%20Raspberry%20Pi%204%20%C4%91%E1%BB%83%20ki%E1%BB%83m%20tra%20xem%20t%C6%B0%E1%BB%9Dng%20l%E1%BB%ADa%20c%C3%B3%20ho%E1%BA%A1t%20%C4%91%E1%BB%99ng%20t%E1%BB%91t%20hay%20kh%C3%B4ng.%0AScapy%20c%C3%B3%20th%E1%BB%83%20gi%C3%BAp%20s%E1%BB%ADa%20%C4%91%E1%BB%95i%20c%C3%A1c%20g%C3%B3i%20tin%20Ethernet%20v%E1%BB%9Bi%20tr%C6%B0%E1%BB%9Dng%20n%C3%A0y%3A%0A%0A-%20Ethernet%20(%C4%91%E1%BB%8Ba%20ch%E1%BB%89%20MAC%20ngu%E1%BB%93n%2F%C4%91%C3%ADch%2C%20Ethertype)%0A-%20ID%20Vlan%0A-%20IPv4%2FIPv6%0A-%20giao%20th%E1%BB%A9c%3A%20TCP%2FUDP%2FICMP...%0A%0ASau%20khi%20thi%E1%BA%BFt%20l%E1%BA%ADp%20IPv6%20v%C3%A0%20VLAN%20tr%C3%AAn%20Windows%20th%C3%AC%20ph%C3%A1t%20tri%E1%BB%83n%20c%C3%A1c%20ch%C6%B0%C6%A1ng%20tr%C3%ACnh%20python%20cho%20ph%C3%A9p%20thay%20%C4%91%E1%BB%95i%20c%C3%A1c%20tr%C6%B0%E1%BB%9Dng%20c%E1%BB%A7a%20g%C3%B3i%20tin%20Ethernet.%0A%20%0A%23%20Week2%3A%20ScapySendPacket%26TestFireWall%0A%0A%23%23%20Install%20Scapy%0AH%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20tri%E1%BB%83n%20khai%20scapy%20tr%C3%AAn%20Windows%3A%0A1.%20T%E1%BA%A3i%20v%E1%BB%81%20v%C3%A0%20c%C3%A0i%20%C4%91%E1%BA%B7t%20phi%C3%AAn%20b%E1%BA%A3n%20m%E1%BB%9Bi%20nh%E1%BA%A5t%20c%E1%BB%A7a%20pythong%3A%20https%3A%2F%2Fwww.python.org%0A2.%20C%C3%A0i%20%C4%91%E1%BA%B7t%20python-pip%3A%20%0A2.1.%20T%E1%BA%A3i%20v%E1%BB%81%20get-pip.py%20(https%3A%2F%2Fbootstrap.pypa.io%2Fget-pip.py)%20v%C3%A0%20l%C6%B0u%20v%C3%A0o%20c%C3%B9ng%20th%C6%B0%20m%E1%BB%A5c%20python%20%C4%91%C3%A3%20c%C3%A0i%0A2.2.%20M%E1%BB%9F%20cmd%20trong%20th%C6%B0%20m%E1%BB%A5c%20python%20%C4%91%C3%A3%20c%C3%A0i%20v%C3%A0%20g%C3%B5%20l%E1%BB%87nh%20sau%20%C4%91%E1%BB%83%20%20c%C3%A0i%20%C4%91%E1%BA%B7t%20python-pip%0Apython%20get-pip.py%0A2.3.%20Sau%20khi%20c%C3%A0i%20%C4%91%E1%BA%B7t%20th%C3%A0nh%20c%C3%B4ng%20python-pip%20th%C3%AC%20g%C3%B5%20c%C3%A1c%20l%E1%BB%87nh%20sau%20%C4%91%E1%BB%83%20c%C3%A0i%20th%C3%AAm%20c%C3%A1c%20g%C3%B3i%20c%E1%BA%A7n%20thi%E1%BA%BFt%3A%0Apip%20install%20scapy%0Apip%20install%20netaddr%0Apip%20install%20sqlalchemy%0A%23%23%20Configure%20IPv6%2C%20VlanID%0AH%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20thi%E1%BA%BFt%20l%E1%BA%ADp%20IPv6%20v%C3%A0%20VLAN%20ID%20tr%C3%AAn%20Windows%20v%C3%A0%20WebOS%20tr%C3%AAn%20Raspberry%20%C4%91%E1%BB%83%20ki%E1%BB%83m%20tra%20k%E1%BA%BFt%20qu%E1%BA%A3%20th%E1%BB%B1c%20thi%20ch%C6%B0%C6%A1ng%20tr%C3%ACnh%20(c%C3%B3%20thay%20%C4%91%E1%BB%95i%20th%C3%B4ng%20s%E1%BB%91%20IPv6%20v%C3%A0%20VLAN%20ID)%20%C4%91%C6%B0%E1%BB%A3c%20hay%20kh%C3%B4ng%3F)%0A1.%20Thi%E1%BA%BFt%20l%E1%BA%ADp%20IPv6%20tr%C3%AAn%20Windows%0A1.1.%20Tr%C3%AAn%20Windows%3A%20Control%20Panel%20--%3E%20Network%20Connection%20%E2%86%92%20Select%20Ethernet%E2%86%92%20Properties%20%E2%86%92%20Internet%20Protocol%20Version%206%20(TCP%2FIPv6)%20%0A--%3E%20Properties%20v%C3%A0%20g%C3%B5%20%C4%91%E1%BB%8Ba%20ch%E1%BB%89%20sau%20(%C4%91%C3%A2y%20ch%E1%BB%89%20l%C3%A0%20%C4%91%E1%BB%8Ba%20ch%E1%BB%89%20v%C3%AD%20d%E1%BB%A5%2C%20c%C3%B3%20th%E1%BB%83%20s%E1%BB%AD%20d%E1%BB%A5ng%20%C4%91%E1%BB%8Ba%20ch%E1%BB%89%20IPv6%20kh%C3%A1c%20tu%E1%BB%B3%20%C3%BD)%0AIPv6%20address%3A%20fd53%3Axxxx%3Axxx%3A5%3A%3A10%3B%20Subnet%20prefix%20length%3A%2064%0A1.2.%20V%C3%A0o%20Settings%20ho%E1%BA%B7c%20d%C3%B9ng%20l%E1%BB%87nh%20ifconfig%20%C4%91%E1%BB%83%20c%E1%BA%A5u%20h%C3%ACnh%20IPv6%20tr%C3%AAn%20WebOS%3A%0AIPv6%20address%3A%20fd53%3Axxxx%3Axxx%3A5%3A%3A14%3B%20Subnet%20prefix%20length%3A%2064%0A1.3.%20Ki%E1%BB%83m%20tra%20k%E1%BA%BFt%20n%E1%BB%91i%20IPv6%20gi%E1%BB%AFa%20Windows%20v%C3%A0%20WebOS%20%0AWindows%20%2B%20R%20--%3E%20cmd%20--%3E%20ping%20fd53%3Axxxx%3Axxx%3A5%3A%3A14%20-t%0A%20%0A2.%20Thi%E1%BA%BFt%20l%E1%BA%ADp%20VLAN%20ID%20tr%C3%AAn%20Windows%0AControl%20Panel%20--%3E%20Network%20Connection%20%E2%86%92%20Select%20Ethernet%20%E2%86%92%20Properties%E2%86%92%20Configure%20%E2%86%92%20Advanced%20--%3E%20Set%20VLAN%20ID%20to%205%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FrkgPMVVVyx.png)%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FrkrDf4NNJl.png)%0ATrong%201%20s%E1%BB%91%20tr%C6%B0%E1%BB%9Dng%20h%E1%BB%A3p%20c%E1%BA%A7n%20k%C3%ADch%20ho%E1%BA%A1t%20tr%C6%B0%E1%BB%9Bc%20ch%E1%BB%A9c%20n%C4%83ng%20VLAN%20%C4%91%E1%BB%83%20c%C3%B3%20th%E1%BB%83%20ki%E1%BB%83m%20tra%20VLAN%20v%C3%A0%20c%C3%B3%20th%E1%BB%83%20ph%E1%BA%A3i%20c%E1%BA%ADp%20nh%E1%BA%ADt%20driver%20c%E1%BB%A7a%20card%20m%E1%BA%A1ng.%0A%0A%23%23%20Code%20Scapy%20for%20send%20and%20receive%20packet%20%0A%23%23%23%20Code%20g%E1%BB%ADi%20g%C3%B3i%20tin%20%E1%BB%9F%20m%C3%A1y%20ngu%E1%BB%93n%20%0A%60%60%60%0A%23md_fw_declare.py%0A%0Afrom%20scapy.all%20import%20*%0Afrom%20scapy.layers.inet%20import%20*%0Afrom%20scapy.layers.inet6%20import%20*%0Afrom%20random%20import%20randint%0Afrom%20netaddr%20import%20*%0Aimport%20binascii%0Aimport%20sys%0Aimport%20signal%0Afrom%20threading%20import%20Thread%0Afrom%20sqlalchemy%20import%20false%0A%0A%23%20Interface%0A%23IFACE%20%3D%20%22Ethernet%202%22%20%23fill%20the%20ID%20of%20destination%20network%20card%0A%0A%23%20Number%20of%20threads%20used%0APKT_COUNT%20%3D%205%0A%23%20Scan%20Ports%0AFROM_PORT%20%3D%201%0ATO_PORT%20%3D%2065536%0A%0A%23%20MAC%20Address%0A%23SRC_MAC%20%3D%20%22xx%3Axx%3Axx%3Axx%3Axx%3Axx%22%09%23fill%20your%20MAC%20Address%20here%0A%23DST_MAC%20%3D%20%22ff%3Aff%3Aff%3Aff%3Aff%3Aff%22%20%23fill%20the%20destination%20MAC%0A%23INVALID_SRC_MAC%20%3D%20%22fa%3Afb%3Afc%3Afd%3Afe%3Aff%22%20%23Invalid%20MAC%0A%0A%23%20VLAN%20ID%0A%23VLAN_ID%20%3D%205%0A%0A%23%20IPv6s%0AINVALID_DST_IPv6%20%3D%20%22fd53%3Axxxx%3Axxx%3A3%3A%3Axx%22%20%23Invalid%20IPv6%0AINVALID_SRC_IPv6%20%3D%20%22fd53%3Axxxx%3Axxx%3A3%3A%3Axx%22%20%23Invalid%20IPv6%0AVALID_SRC_IPv6%20%3D%20%22fd53%3Axxxx%3Axxx%3A5%3A%3Axx%22%0AVALID_DST_IPv6%20%3D%20%22fd53%3Axxxx%3Axxx%3A5%3A%3Axx%22%0AVALID_DST_Multicast%20%3D%20%22ff02%3A%3A1%22%0AINVALID_DST_Multicast%20%3D%20%22ff02%3A%3A2%22%0A%0A%23%20Ports%0AVALID_SPORT%20%3D%2013400%0AVALID_DPORT%20%3D%2013400%0AINVALID_DPORT%20%3D%2013456%0AINVALID_SPORT%20%3D%2013456%0ARANGE%20%3D%20(1000%2C%2065535)%0Apro_type%20%3D%20TCP%0A%0A%23%20Layers%0Adot1q%20%3D%20Dot1Q(vlan%3DVLAN_ID)%0A%0A%23%20Payload%0Apayload_default%20%3D%22Default%22%0APKT_Default_Receive%20%3D%20Ether()%2Fdot1q%2FIPv6(src%3DVALID_SRC_IPv6%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20dst%3DVALID_DST_IPv6)%2Fpro_type(sport%3DVALID_SPORT%2C%20dport%3DVALID_DPORT)%2Fpayload_default%0APKT_Default_Send%20%3D%20Ether(dst%3DSRC_MAC%2Csrc%3DDST_MAC)%2Fdot1q%2FIPv6(src%3DVALID_SRC_IPv6%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20dst%3DVALID_DST_IPv6)%2Fpro_type(sport%3DVALID_SPORT%2C%20dport%3DVALID_DPORT)%2Fpayload_default%0Afor%20i%20in%20range(10)%3A%0A%20%20%20%20sendp(PKT_Default_Send)%0Aprint(%22Goi%20tin%20da%20duoc%20gui%22)%0A%60%60%60%0ACode%20g%E1%BB%ADi%20c%C3%A1c%20packet%20t%E1%BB%9Bi%20%C4%91%E1%BB%8Ba%20ch%E1%BB%89%20m%C3%A1y%20%C4%91%C3%ADch%20%0APayload%20ch%E1%BB%89%20l%C3%A0%20%22Defalt%22%0A%0AS%E1%BB%AD%20d%E1%BB%A5ng%20shell%20code%20python%20%C4%91%E1%BB%83%20%C4%91%E1%BB%95i%20ipv6%20c%E1%BB%A7a%20m%C3%A1y%20%C4%91%C3%ADch%20%0A%60%60%60%0Aimport%20os%0Aprint(%22Executing%20Raspberry%20Pi...%22)%0A%0Aos.system('ip%20-6%20addr%20del%20fd53%3Aabcd%3A5678%3A5%3A%3A14%2F64%20dev%20wlan0')%0A%0Aos.system('ip%20-6%20addr%20add%20fd53%3Aabcd%3A5678%3A5%3A%3A11%2F64%20dev%20wlan0')%0A%0Aos.system('ifconfig')%20%0A%60%60%60%0ASau%20%C4%91%C3%B3%20g%E1%BA%AFn%20v%C3%A0o%20payload%20%0A%60%60%60%0Apayload_default%20%3D%20%22%22%22%0Aimport%20os%0Aprint(%22Executing%20Raspberry%20Pi...%22)%0A%0Aos.system('ip%20-6%20addr%20del%20fd53%3Aabcd%3A5678%3A5%3A%3A14%2F64%20dev%20wlan0')%0A%0Aos.system('ip%20-6%20addr%20add%20fd53%3Aabcd%3A5678%3A5%3A%3A11%2F64%20dev%20wlan0')%0A%0Aos.system('ifconfig')%20%0A%22%22%22%0A%60%60%60%0AM%C3%A3%20ngu%E1%BB%93n%20full%20g%E1%BB%ADi%20packet%20%E1%BB%9F%20m%C3%A1y%20ngu%E1%BB%93n%20%C4%91%C3%A3%20ch%C3%A8n%20th%C3%AAm%20payload%0A%60%60%60%0Afrom%20scapy.all%20import%20*%0Afrom%20scapy.layers.inet%20import%20*%0Afrom%20scapy.layers.inet6%20import%20*%0Afrom%20random%20import%20randint%0Afrom%20netaddr%20import%20*%0Aimport%20binascii%0Aimport%20sys%0Aimport%20signal%0Afrom%20threading%20import%20Thread%0Afrom%20sqlalchemy%20import%20false%0A%0A%23%20Interface%0A%23%20IFACE%20%3D%20%22Ethernet%202%22%20%23fill%20the%20ID%20of%20destination%20network%20card%0A%0APKT_COUNT%20%3D%205%0AFROM_PORT%20%3D%201%0ATO_PORT%20%3D%2065536%0A%0A%23%20MAC%20Address%0ASRC_MAC%20%3D%20%222C%3A58%3AB9%3A8B%3A50%3ACB%22%20%23fill%20your%20MAC%20Address%20here%0ADST_MAC%20%3D%20%22D8%3A3A%3ADD%3AA4%3ABE%3AB8%22%20%23fill%20the%20destination%20MAC%0A%23%20INVALID_SRC_MAC%20%3D%20%22fa%3Afb%3Afc%3Afd%3Afe%3Aff%22%20%23Invalid%20MAC%0A%0A%23%20VLAN%20ID%0AVLAN_ID%20%3D%200%0A%0A%23IPv4%0A%23%20INVALID_DST_IPv4%20%20%20%0A%23%20INVALID_SRC_IPv4%0A%23%20VALID_DST_IPv4%20%3D%20%2210.10.22.193%22%0A%23%20VALID_SRC_IPv4%20%3D%20%2220.10.2.12%22%0A%0A%23%20IPv6s%0A%23%20INVALID_DST_IPv6%20%3D%20%22fd53%3Aefgh%3A1234%3A3%3A%3A12%22%20%20%0A%23%20INVALID_SRC_IPv6%20%3D%20%22fd53%3Aasdz%3A2345%3A3%3A%3A13%22%20%20%0AVALID_SRC_IPv6%20%3D%20%22fd53%3Aabcd%3A5678%3A5%3A%3A10%22%0AVALID_DST_IPv6%20%3D%20%22fd53%3Aabcd%3A5678%3A5%3A%3A13%22%20%0AVALID_DST_Multicast%20%3D%20%22ff02%3A%3A1%22%0AINVALID_DST_Multicast%20%3D%20%22ff02%3A%3A2%22%0A%0A%23%20Ports%0AVALID_SPORT%20%3D%2013400%0AVALID_DPORT%20%3D%2013400%0AINVALID_DPORT%20%3D%2013456%0AINVALID_SPORT%20%3D%2013456%0ARANGE%20%3D%20(1000%2C%2065535)%0Apro_type%20%3D%20TCP%0A%0A%23%20Layers%0Adot1q%20%3D%20Dot1Q(vlan%20%3D%20VLAN_ID)%0Apayload_default1%20%3D%20%22hi%22%0A%23%20Payload%0Apayload_default%20%3D%20%22%22%22%0Aimport%20os%0Aprint(%22Executing%20Raspberry%20Pi...%22)%0A%0Aos.system('ip%20-6%20addr%20del%20fd53%3Aabcd%3A5678%3A5%3A%3A14%2F64%20dev%20eth0')%0A%0Aos.system('ip%20-6%20addr%20add%20fd53%3Aabcd%3A5678%3A5%3A%3A11%2F64%20dev%20eth0')%0A%0Aos.system('ifconfig')%20%0A%22%22%22%0Apayload_change_mac%20%3D%20%22%22%22%0Aimport%20os%0A%0Aos.system('ip%20link%20set%20dev%20eth0%20down')%0A%0Aos.system('ip%20link%20set%20dev%20eth0%20address%2000%3A11%3A22%3A33%3A44%3A55')%0A%0Aos.system('ip%20link%20set%20dev%20eth0%20up')%0A%0Aos.system('ip%20addr%20show%20eth0')%0A%22%22%22%0A%0Apayload_change_ipv4%20%3D%20%22%22%22%0Aimport%20os%0A%0Aos.system('ip%20addr%20del%20192.168.1.100%2F24%20dev%20eth0')%0A%0Aos.system('ip%20addr%20add%20192.168.1.100%2F24%20dev%20eth0')%0A%0Aos.system('ip%20addr%20show%20eth0')%0A%22%22%22%0A%0A%20%20%20%0APKT_Default_Receive%20%3D%20Ether()%2Fdot1q%2FIPv6(src%3DVALID_SRC_IPv6%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20dst%3DVALID_DST_IPv6)%2Fpro_type(sport%3DVALID_SPORT%2C%20dport%3DVALID_DPORT)%2Fpayload_default%0A%0APKT_Default_Send%20%3D%20Ether(dst%3DDST_MAC%2C%20src%3DSRC_MAC)%2Fdot1q%2FIPv6(src%3DVALID_SRC_IPv6%2C%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20dst%3DVALID_DST_IPv6)%2Fpro_type(sport%3DVALID_DPORT%2C%20dport%3DVALID_SPORT)%2Fpayload_default%0A%0A%0Asendp(PKT_Default_Send)%20%20%0Aprint(%22G%C3%B3i%20tin%20nh%E1%BA%ADn%3A%22%2C%20PKT_Default_Receive.summary())%0Aprint(%22G%C3%B3i%20tin%20g%E1%BB%ADi%3A%22%2C%20PKT_Default_Send.summary())%0A%0A%60%60%60%0A%23%23%23%20Code%20th%E1%BB%B1c%20thi%20payload%20trong%20g%C3%B3i%20tin%20%E1%BB%9F%20m%C3%A1y%20%C4%91%C3%ADch%0A%60%60%60%0Afrom%20scapy.all%20import%20*%0A%0Adef%20packet_handler(pkt)%3A%0A%20%20%20%20if%20pkt.haslayer(Raw)%3A%0A%20%20%20%20%20%20%20%20payload%20%3D%20pkt%5BRaw%5D.load.decode(%22utf-8%22)%0A%20%20%20%20%20%20%20%20print(%22Received%20Payload%3A%22)%0A%20%20%20%20%20%20%20%20print(payload)%0A%0A%20%20%20%20%20%20%20%20if%20%22os.system%22%20in%20payload%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20exec(payload)%0A%0Aprint(%22Listening%20for%20packets...%22)%0Asniff(prn%3Dpacket_handler%2C%20filter%3D%22ip6%22%2C%20store%3D0)%0A%60%60%60%0AL%E1%BA%AFng%20nghe%20v%C3%A0%20x%E1%BB%AD%20l%C3%AD%20c%C3%A1c%20l%E1%BB%87nh%20os.system%20%0AL%C3%BAc%20n%C3%A0y%20c%C3%B3%20th%E1%BB%83%20%C4%91%E1%BB%95i%20%C4%91%C6%B0%E1%BB%A3c%20ip%20c%E1%BB%A7a%20m%C3%A1y%20%C4%91%C3%ADch.%20%0A%0A**%C4%90%C3%A2y%20ch%E1%BB%89%20l%C3%A0%20tr%C6%B0%E1%BB%9Dng%20h%E1%BB%A3p%20gi%E1%BA%A3%20l%E1%BA%ADp%2C%20trong%20th%E1%BB%B1c%20t%E1%BA%BF%20kh%C3%B4ng%20d%E1%BB%85%20d%C3%A0ng%20c%C3%B3%20%C4%91%C6%B0%E1%BB%A3c%20%C4%91i%E1%BB%81u%20n%C3%A0y%20m%C3%A0%20ph%E1%BA%A3i%20khai%20th%C3%A1c%20%C4%91%E1%BB%83%20t%C3%ACm%20l%E1%BB%95%20h%E1%BB%97ng.%20**%0A%0A%23%23%23%20Code%20Full%0ACh%C3%BA%20%C3%BD%3A%20C%C3%A1c%20file%20for_testing_sending_packet%20v%C3%A0%20for_testing_receiving_packet.py%20s%E1%BA%BD%20ch%E1%BA%A1y%20tr%C3%AAn%20Raspberry.%0AWindows%3A%0Amd_fw_declare.py%20%0A%60%60%60%0A%23md_fw_declare.py%0A%0Afrom%20scapy.all%20import%20*%0Afrom%20scapy.layers.inet%20import%20*%0Afrom%20scapy.layers.inet6%20import%20*%0Afrom%20random%20import%20randint%0Afrom%20netaddr%20import%20*%0Aimport%20binascii%0Aimport%20sys%0Aimport%20signal%0Afrom%20threading%20import%20Thread%0Afrom%20sqlalchemy%20import%20false%0A%0A%23%20Interface%0AIFACE%20%3D%20%22Ethernet%22%0A%0A%23%20Number%20of%20threads%20used%0APKT_COUNT%20%3D%205%0A%23%20Scan%20Ports%0AFROM_PORT%20%3D%201%0ATO_PORT%20%3D%2065536%0A%0A%23%20MAC%20Address%0ASRC_MAC%20%3D%20%221C%3A58%3AG9%3A4B%3A50%3AEB%22%0ADST_MAC%20%3D%20%22D8%3A3A%3ADD%3AA4%3ABE%3AB9%22%20%0AINVALID_SRC_MAC%20%3D%20%22fa%3Afb%3Afc%3Afd%3Afe%3Aff%22%20%23Invalid%20MAC%0A%0A%23%20VLAN%20ID%0AVLAN_ID%20%3D%200%0A%0A%23%20IPv6s%0AINVALID_DST_IPv6%20%3D%20%22fd53%3Aabcd%3A5678%3A3%3A%3A10%22%20%23Invalid%20IPv6%0AINVALID_SRC_IPv6%20%3D%20%22fd53%3Aabcd%3A5678%3A3%3A%3A13%22%20%23Invalid%20IPv6%0AVALID_SRC_IPv6%20%3D%20%22fd53%3Aabcd%3A5678%3A5%3A%3A10%22%0AVALID_DST_IPv6%20%3D%20%22fd53%3Aabcd%3A5678%3A5%3A%3A13%22%0AVALID_DST_Multicast%20%3D%20%22ff02%3A%3A1%22%0AINVALID_DST_Multicast%20%3D%20%22ff02%3A%3A2%22%0A%0A%23%20Ports%0AVALID_SPORT%20%3D%2013400%0AVALID_DPORT%20%3D%2013400%0AINVALID_DPORT%20%3D%2013456%0AINVALID_SPORT%20%3D%2013456%0ARANGE%20%3D%20(1000%2C%2065535)%0Apro_type%20%3D%20TCP%0A%0Adot1q%20%3D%20Dot1Q(vlan%3DVLAN_ID)%0A%0Apayload_default%20%3D%22Default%22%0APKT_Default_Receive%20%3D%20Ether()%2Fdot1q%2FIPv6(src%3DVALID_SRC_IPv6%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20dst%3DVALID_DST_IPv6)%2Fpro_type(sport%3DVALID_SPORT%2C%20dport%3DVALID_DPORT)%2Fpayload_default%0APKT_Default_Send%20%3D%20Ether(dst%3DDST_MAC%2Csrc%3DSRC_MAC)%2Fdot1q%2FIPv6(src%3DVALID_SRC_IPv6%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20dst%3DVALID_DST_IPv6)%2Fpro_type(sport%3DVALID_SPORT%2C%20dport%3DVALID_DPORT)%2Fpayload_default%0A%60%60%60%0Amd_fw_menu.py%0A%60%60%60%0A%23%20This%20file%20will%20contain%20a%20menu%20option.%0A%23%20It%20just%20has%20a%20common%20menu%20with%20packet%20information%20and%20send%20packet.%0A%23%20If%20your%20program%20(Send%2FReceive)%20requires%20more%20than%20that%2C%20please%20refer%20to%20it%20and%20create%20another%20one%20in%20the%20main%20file.%0A%0Adef%20print_menu()%3A%0A%20%20%20%20cloop%20%3D%20True%0A%20%20%20%20while%20cloop%3A%0A%20%20%20%20%20%20%20%20print(22%20*%20%22-%22%2C%20%22MENU%22%2C%2022%20*%20%22-%22)%0A%20%20%20%20%20%20%20%20print(%22%5Ct1.%20%5BInfor%5D%20%7B%3A%3C24%7D%22.format(%22Packet%20information%22))%0A%20%20%20%20%20%20%20%20print(%22%5Ct2.%20%5BSend%5D%20%7B%3A%3C24%7D%22.format(%22Packet%20Send%22))%0A%20%20%20%20%20%20%20%20print(%22%5Ct0.%20%5BExit%5D%20%7B%3A%3C24%7D%22.format(%22Exit%22))%0A%20%20%20%20%20%20%20%20print(50%20*%20%22-%22)%0A%20%20%20%20%20%20%20%20try%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20choice%20%3D%20input(%22Enter%20your%20choice%20%5B0-2%5D%3A%20%22)%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20(int(choice)%20%3E%3D%200%20and%20int(choice)%20%3C%3D%202)%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20cloop%20%3D%20False%0A%20%20%20%20%20%20%20%20except%20ValueError%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20print('Invalid%20input%2C%20please%20try%20again.')%0A%20%20%20%20%0A%20%20%20%20return%20choice%0A%0Aif%20__name__%20%3D%3D%20'__main__'%3A%0A%20%20%20%20print_menu()%0A%0A%60%60%60%0Afor_testing_my_send_receive_packet.py%0A%60%60%60%0A%23%20This%20is%20the%20main%20file%20of%20the%20script.%0A%23%20It%20uses%20Scapy%20to%20create%20packets%20and%20send%20them%20via%20Ethernet.%0A%0Afrom%20md_fw_declare%20import%20*%0Afrom%20md_fw_menu%20import%20*%0A%0A%23%20Valid%20UDP%20Port%3A%0A%23%20PKT_Default_Receive%20%3D%20Ether()%20%2F%20dot1q%20%2F%20IPv6(src%3DVALID_SRC_IPv6%2C%20dst%3DVALID_DST_IPv6)%20%2F%20UDP(sport%3DVALID_SPORT%2C%20dport%3DVALID_DPORT)%20%2F%20payload_default%0A%0A%23%20Invalid%20UDP%20Port%20(for%20testing%20purposes)%0APKT_Default_Receive%20%3D%20Ether()%20%2F%20dot1q%20%2F%20IPv6(src%3DVALID_SRC_IPv6%2C%20dst%3DVALID_DST_IPv6)%20%2F%20UDP(sport%3DVALID_SPORT%2C%20dport%3D12345)%20%2F%20payload_default%0A%0Adef%20print_infor()%3A%0A%20%20%20%20try%3A%0A%20%20%20%20%20%20%20%20global%20PKT_Default_Receive%0A%20%20%20%20%20%20%20%20print(%22%5Cn----------%20Packet%20Information%20-------------%22)%0A%20%20%20%20%20%20%20%20PKT_Default_Receive.show()%0A%20%20%20%20except%20Exception%20as%20ex%3A%0A%20%20%20%20%20%20%20%20print(f%22Error%3A%20%7Bstr(ex)%7D%22)%0A%0A%23%2016.1.15.2%20Undefined%20UDP%20port%20message%20handling%0Adef%20send_packet()%3A%0A%20%20%20%20global%20PKT_Default_Receive%0A%20%20%20%20try%3A%0A%20%20%20%20%20%20%20%20PKT_Default_Receive.show()%0A%20%20%20%20%20%20%20%20sendp(PKT_Default_Receive%2C%20iface%3DIFACE)%0A%20%20%20%20except%20Exception%20as%20ex%3A%0A%20%20%20%20%20%20%20%20print(f%22Error%3A%20Please%20Connect%20Ethernet.%20%7Bstr(ex)%7D%22)%0A%0Adef%20main()%3A%0A%20%20%20%20cloop%20%3D%20True%0A%20%20%20%20while%20cloop%3A%0A%20%20%20%20%20%20%20%20try%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20choice%20%3D%20print_menu()%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20int(choice)%20%3D%3D%201%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20print_infor()%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20elif%20int(choice)%20%3D%3D%202%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20send_packet()%20%0A%20%20%20%20%20%20%20%20%20%20%20%20elif%20int(choice)%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20cloop%20%3D%20False%0A%20%20%20%20%20%20%20%20except%20KeyboardInterrupt%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20print('%5CnThanks!%20See%20you%20later!%5Cn%5Cn')%0A%20%20%20%20%20%20%20%20%20%20%20%20cloop%20%3D%20False%20%0A%0Aif%20__name__%20%3D%3D%20'__main__'%3A%0A%20%20%20%20main()%0A%0A%60%60%60%0ARasp4%3A%0Afor_testing_sending_packet.py%0A%60%60%60%0Aimport%20socket%2C%20time%2C%20os%2C%20struct%0Afrom%20ipaddress%20import%20ip_address%0A%0Atry%3A%0A%20%20%20%20from%20itertools%20import%20izip_longest%20as%20zip_longest%0Aexcept%20ImportError%3A%0A%20%20%20%20from%20itertools%20import%20zip_longest%0A%0A%23%20IPv6s%0AINVALID_DST_IPv6%20%3D%20%22fd53%3Axxxx%3Axxx%3A3%3A%3A15%22%20%20%23%20Invalid%20IPv6%0AINVALID_SRC_IPv6%20%3D%20%22fd53%3Axxxx%3Axxx%3A3%3A%3A12%22%20%20%23%20Invalid%20IPv6%0AVALID_SRC_IPv6%20%3D%20%22fd53%3Axxxx%3Axxx%3A5%3A%3A14%22%0AVALID_DST_IPv6%20%3D%20%22fd53%3Axxxx%3Axxx%3A5%3A%3A10%22%0AVALID_SPORT%20%3D%2013400%0AVALID_DPORT%20%3D%2013400%0AINVALID_SPORT%20%3D%2013455%0AINVALID_DPORT%20%3D%2013455%0AMULTICAST_TTL%20%3D%2032%0AVALID_MULTICAST%20%3D%20%22ff02%3A%3A1%22%0AINVALID_MULTICAST%20%3D%20%22ff02%3A%3A2%22%0Ames%20%3D%20%22Default%22%0A%0A%23%20Next%20headers%20for%20IPv6%20protocols%0AIPV6_NEXT_HEADER_HOP_BY_HOP%20%3D%200%0AIPV6_NEXT_HEADER_TCP%20%3D%206%0AIPV6_NEXT_HEADER_UDP%20%3D%2017%0AIPV6_NEXT_HEADER_ICMP%20%3D%2058%0AUPPER_LAYER_PROTOCOLS%20%3D%20%5B%0A%20%20%20%20IPV6_NEXT_HEADER_TCP%2C%0A%20%20%20%20IPV6_NEXT_HEADER_UDP%2C%0A%20%20%20%20IPV6_NEXT_HEADER_ICMP%2C%0A%5D%0A%0A%23%20ICMP%20Protocol%20codes%0AICMP_ECHO_REQUEST%20%3D%20128%0AICMP_ECHO_RESPONSE%20%3D%20129%0A%0A%23%20Default%20hop%20limit%20for%20IPv6%0AHOP_LIMIT_DEFAULT%20%3D%2064%0A%0Adef%20checksum_calculate(data)%3A%0A%20%20%20%20%23%20Create%20halfwords%20from%20data%20bytes.%20Example%3A%20data%5B0%5D%20%3D%200x01%2C%20data%5B1%5D%20%3D%200xb2%20%3D%3E%200x01b2%0A%20%20%20%20halfwords%20%3D%20%5B%0A%20%20%20%20%20%20%20%20((byte0%20%3C%3C%208)%20%7C%20byte1)%0A%20%20%20%20%20%20%20%20for%20byte0%2C%20byte1%20in%20zip_longest(data%5B%3A%3A2%5D%2C%20data%5B1%3A%3A2%5D%2C%20fillvalue%3D0x00)%0A%20%20%20%20%5D%0A%20%20%20%20checksum%20%3D%200%0A%20%20%20%20for%20halfword%20in%20halfwords%3A%0A%20%20%20%20%20%20%20%20checksum%20%2B%3D%20halfword%0A%20%20%20%20checksum%20%3D%20(checksum%20%26%200xFFFF)%20%2B%20(checksum%20%3E%3E%2016)%0A%20%20%20%20checksum%20%5E%3D%200xFFFF%0A%20%20%20%20if%20checksum%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20return%200xFFFF%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20return%20checksum%0A%0Aclass%20IPv6Header()%3A%0A%20%20%20%20_version%20%3D%206%0A%20%20%20%20_header_length%20%3D%2040%0A%0A%20%20%20%20def%20__init__(self%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20source_address%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20destination_address%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20traffic_class%3D0%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20flow_label%3D0%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20hop_limit%3D64%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20payload_length%3D0%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20next_header%3D0)%3A%0A%20%20%20%20%20%20%20%20self.version%20%3D%20self._version%0A%20%20%20%20%20%20%20%20self._source_address%20%3D%20self._convert_to_ipaddress(source_address)%0A%20%20%20%20%20%20%20%20self._destination_address%20%3D%20self._convert_to_ipaddress(destination_address)%0A%20%20%20%20%20%20%20%20self.traffic_class%20%3D%20traffic_class%0A%20%20%20%20%20%20%20%20self.flow_label%20%3D%20flow_label%0A%20%20%20%20%20%20%20%20self.hop_limit%20%3D%20hop_limit%0A%20%20%20%20%20%20%20%20self.payload_length%20%3D%20payload_length%0A%20%20%20%20%20%20%20%20self.next_header%20%3D%20next_header%0A%0A%20%20%20%20def%20_convert_to_ipaddress(self%2C%20value)%3A%0A%20%20%20%20%20%20%20%20if%20isinstance(value%2C%20bytearray)%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20value%20%3D%20bytes(value)%0A%20%20%20%20%20%20%20%20return%20ip_address(value)%0A%0A%20%20%20%20%40property%0A%20%20%20%20def%20source_address(self)%3A%0A%20%20%20%20%20%20%20%20return%20self._source_address%0A%0A%20%20%20%20%40source_address.setter%0A%20%20%20%20def%20source_address(self%2C%20value)%3A%0A%20%20%20%20%20%20%20%20self._source_address%20%3D%20self._convert_to_ipaddress(value)%0A%0A%20%20%20%20%40property%0A%20%20%20%20def%20destination_address(self)%3A%0A%20%20%20%20%20%20%20%20return%20self._destination_address%0A%0A%20%20%20%20def%20pack(self)%3A%0A%20%20%20%20%20%20%20%20data%20%3D%20bytearray(%5B%0A%20%20%20%20%20%20%20%20%20%20%20%20((self.version%20%26%200x0F)%20%3C%3C%204)%20%7C%20((self.traffic_class%20%3E%3E%204)%20%26%200x0F)%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20((self.traffic_class%20%26%200x0F)%20%3C%3C%204)%20%7C%0A%20%20%20%20%20%20%20%20%20%20%20%20((self.flow_label%20%3E%3E%2016)%20%26%200x0F)%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20((self.flow_label%20%3E%3E%208)%20%26%200xFF)%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20((self.flow_label%20%26%200xFF))%0A%20%20%20%20%20%20%20%20%5D)%0A%20%20%20%20%20%20%20%20data%20%2B%3D%20struct.pack(%22%3EH%22%2C%20self.payload_length)%0A%20%20%20%20%20%20%20%20data%20%2B%3D%20bytearray(%5Bself.next_header%2C%20self.hop_limit%5D)%0A%20%20%20%20%20%20%20%20data%20%2B%3D%20self.source_address.packed%0A%20%20%20%20%20%20%20%20data%20%2B%3D%20self.destination_address.packed%0A%20%20%20%20%20%20%20%20return%20data%0A%0A%20%20%20%20%40classmethod%0A%20%20%20%20def%20unpack(cls%2C%20data)%3A%0A%20%20%20%20%20%20%20%20b%20%3D%20bytearray(data.read(4))%0A%20%20%20%20%20%20%20%20version%20%3D%20(b%5B0%5D%20%3E%3E%204)%20%26%200x0F%0A%20%20%20%20%20%20%20%20traffic_class%20%3D%20((b%5B0%5D%20%26%200x0F)%20%3C%3C%204)%20%7C%20((b%5B1%5D%20%3E%3E%204)%20%26%200x0F)%0A%20%20%20%20%20%20%20%20flow_label%20%3D%20((b%5B1%5D%20%26%200x0F)%20%3C%3C%2016)%20%7C%20(b%5B2%5D%20%3C%3C%208)%20%7C%20b%5B3%5D%0A%20%20%20%20%20%20%20%20payload_length%20%3D%20struct.unpack(%22%3EH%22%2C%20data.read(2))%5B0%5D%0A%20%20%20%20%20%20%20%20next_header%20%3D%20ord(data.read(1))%0A%20%20%20%20%20%20%20%20hop_limit%20%3D%20ord(data.read(1))%0A%20%20%20%20%20%20%20%20src_addr%20%3D%20bytearray(data.read(16))%0A%20%20%20%20%20%20%20%20dst_addr%20%3D%20bytearray(data.read(16))%0A%20%20%20%20%20%20%20%20return%20cls(src_addr%2C%20dst_addr%2C%20traffic_class%2C%20flow_label%2C%20hop_limit%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20payload_length%2C%20next_header)%0A%0A%20%20%20%20def%20__repr__(self)%3A%0A%20%20%20%20%20%20%20%20return%20%22IPv6Header(source_address%3D%7B%7D%2C%20destination_address%3D%7B%7D%2C%20next_header%3D%7B%7D%2C%20payload_length%3D%7B%7D%2C%20hop_limit%3D%7B%7D%2C%20traffic_class%3D%7B%7D%2C%20flow_label%3D%7B%7D)%22.format(%0A%20%20%20%20%20%20%20%20%20%20%20%20self.source_address.compressed%2C%20self.destination_address.compressed%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20self.next_header%2C%20self.payload_length%2C%20self.hop_limit%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20self.traffic_class%2C%20self.flow_label)%0A%0A%20%20%20%20def%20__len__(self)%3A%0A%20%20%20%20%20%20%20%20return%20self._header_length%0A%0A%20%20%20%20def%20display_info(self)%3A%0A%20%20%20%20%20%20%20%20print(%22%23%23%23%5B%20IPv6%20%5D%23%23%23%22)%0A%20%20%20%20%20%20%20%20print(%22version%20%3D%20%22%20%2B%20str(self.version))%0A%20%20%20%20%20%20%20%20print(%22tc%20%3D%20%22%20%2B%20str(self.traffic_class))%0A%20%20%20%20%20%20%20%20print(%22fl%20%3D%20%22%20%2B%20str(self.flow_label))%0A%20%20%20%20%20%20%20%20print(%22plen%20%3D%20%22%20%2B%20str(self.payload_length))%0A%20%20%20%20%20%20%20%20print(%22nh%20%3D%20%22%20%2B%20str(self.next_header))%0A%20%20%20%20%20%20%20%20print(%22hlim%20%3D%20%22%20%2B%20str(self.hop_limit))%0A%20%20%20%20%20%20%20%20print(%22src%20%3D%20%22%20%2B%20str(self._source_address))%0A%20%20%20%20%20%20%20%20print(%22dst%20%3D%20%22%20%2B%20str(self._destination_address))%0A%0A%23%20(Other%20classes%20such%20as%20TCPHeader%2C%20UDPHeader%20remain%20the%20same.)%0A%0A%0Adef%20print_menu()%3A%0A%20%20%20%20cloop%20%3D%20True%0A%20%20%20%20while%20cloop%3A%0A%20%20%20%20%20%20%20%20print(22%20*%20%22-%22%2C%20%22MENU%22%2C%2022%20*%20%22-%22)%0A%20%20%20%20%20%20%20%20print(%22%5Ct1.%20%5BSend%5D%20%7B%3A%3C24%7D%22.format(%22Send%20A%20Valid%20UDP%20Packet%22))%0A%20%20%20%20%20%20%20%20print(%22%5Ct2.%20%5BSend%5D%20%7B%3A%3C24%7D%22.format(%22Send%20An%20Invalid%20destination%20IPv6%20UDP%20Packet%22))%0A%20%20%20%20%20%20%20%20print(%22%5Ct3.%20%5BSend%5D%20%7B%3A%3C24%7D%22.format(%22View%20log%20(%2Flog%2Flog_data%2Fulogd%2Ffull.log)%22))%0A%20%20%20%20%20%20%20%20print(%22%5Ct4.%20%5BSend%5D%20%7B%3A%3C24%7D%22.format(%22View%20valid%20packet%20counter%22))%0A%20%20%20%20%20%20%20%20print(%22%5Ct5.%20%5BSend%5D%20%7B%3A%3C24%7D%22.format(%22View%20invalid%20packet%20counter%22))%0A%20%20%20%20%20%20%20%20print(%22%5Ct0.%20%5BExit%5D%20%7B%3A%3C24%7D%22.format(%22Exit%22))%0A%20%20%20%20%20%20%20%20print(50%20*%20%22-%22)%0A%20%20%20%20%20%20%20%20try%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20choice%20%3D%20input(%22Enter%20your%20choice%20%5B0-5%5D%3A%20%22)%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20(int(choice)%20%3E%3D%200%20and%20int(choice)%20%3C%3D%205)%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20cloop%20%3D%20False%0A%20%20%20%20%20%20%20%20except%20ValueError%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20print('')%0A%20%20%20%20return%20choice%0A%0Adef%20main()%3A%0A%20%20%20%20cloop%20%3D%20True%0A%20%20%20%20while%20cloop%3A%0A%20%20%20%20%20%20%20%20try%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20choice%20%3D%20print_menu()%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20int(choice)%20%3D%3D%201%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20send_udp_packet(src_addr%3DVALID_SRC_IPv6%2C%20dst_addr%3DVALID_DST_IPv6%2C%20src_port%3DVALID_SPORT%2C%20dst_port%3DVALID_DPORT)%0A%20%20%20%20%20%20%20%20%20%20%20%20elif%20int(choice)%20%3D%3D%202%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20UDP%20invalid%20destination%20IP%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20send_udp_packet(src_addr%3DVALID_SRC_IPv6%2C%20dst_addr%3DINVALID_DST_IPv6%2C%20src_port%3DVALID_SPORT%2C%20dst_port%3DVALID_DPORT)%0A%20%20%20%20%20%20%20%20%20%20%20%20elif%20int(choice)%20%3D%3D%203%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20try%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20os.system('tail%20%2Flog%2Flog_data%2Fulogd%2Ffull.log')%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20except%20Exception%20as%20exx%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20print(exx)%0A%20%20%20%20%20%20%20%20%20%20%20%20elif%20int(choice)%20%3D%3D%204%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20try%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20os.system('ip6tables%20-nvL%20wl_uo_5_14_to_5_10')%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20except%20Exception%20as%20exx%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20print(exx)%0A%20%20%20%20%20%20%20%20%20%20%20%20elif%20int(choice)%20%3D%3D%205%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20try%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20os.system('ip6tables%20-nvL%20INVALID_IPV6')%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20except%20Exception%20as%20exx%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20print(exx)%0A%20%20%20%20%20%20%20%20%20%20%20%20elif%20int(choice)%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20cloop%20%3D%20False%0A%20%20%20%20%20%20%20%20except%20KeyboardInterrupt%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20print('%5CnThanks!%20See%20you%20later!%5Cn%5Cn')%0A%20%20%20%20%20%20%20%20%20%20%20%20cloop%20%3D%20False%0A%0Aif%20__name__%20%3D%3D%20'__main__'%3A%0A%20%20%20%20main()%0A%0A%60%60%60%0Afor_testing_receiving_packet.py%0A%60%60%60%0A%23%20***TEST%20RECEIVING%20PACKET****%0A%23%20%5BTest%20Steps%5D%0A%23%201.%20Read%20current%20packet%20record.%0A%23%20%20%20%20%24%20ip6tables%20-nvL%20INPUT%0A%23%20%20%20%20%24%20ip6tables%20-nvL%20INVALID_IPV6%0A%23%202.%20Run%20script%20to%20send%20an%20Invalid%20data%20definition%20packet.%0A%23%20%20%20%20a.%20Open%20command%20prompt%20in%20the%20Python%20script%20folder.%0A%23%20%20%20%20b.%20Run%20command%3A%20python%20for_testing_receiving_packet.py%0A%23%20%20%20%20c.%20Input%202%20to%20send%20an%20Invalid%20TCP%20flags%20packet.%0A%0Afrom%20md_fw_declare%20import%20*%0Afrom%20md_fw_menu%20import%20*%0A%0A%23%20Set%20the%20source%20address%20to%20an%20invalid%20IPv6%20address%0APKT_Default_Receive%5BIPv6%5D.src%20%3D%20INVALID_SRC_IPv6%0A%0Adef%20print_infor()%3A%0A%20%20%20%20try%3A%0A%20%20%20%20%20%20%20%20global%20PKT_Default_Receive%0A%20%20%20%20%20%20%20%20print(%22%5Cn----------Packet-information-------------%22)%0A%20%20%20%20%20%20%20%20PKT_Default_Receive.show()%0A%20%20%20%20except%20Exception%20as%20ex%3A%0A%20%20%20%20%20%20%20%20print(%22Error%3A%20%22%20%2B%20str(ex))%0A%0A%23%20Function%20to%20send%20a%20packet%0Adef%20send_packet()%3A%0A%20%20%20%20global%20PKT_Default_Receive%0A%20%20%20%20try%3A%0A%20%20%20%20%20%20%20%20PKT_Default_Receive.show()%0A%20%20%20%20%20%20%20%20sendp(PKT_Default_Receive%2C%20iface%3DIFACE)%0A%20%20%20%20except%3A%0A%20%20%20%20%20%20%20%20print(%22Error%3A%20Please%20Connect%20Ethernet...%22)%0A%0A%23%20Main%20function%20to%20handle%20menu%20and%20actions%0Adef%20main()%3A%0A%20%20%20%20cloop%20%3D%20True%0A%20%20%20%20while%20cloop%3A%0A%20%20%20%20%20%20%20%20try%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20choice%20%3D%20print_menu()%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20int(choice)%20%3D%3D%201%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20print_infor()%20%20%23%20Option%201%3A%20Show%20packet%20information%0A%20%20%20%20%20%20%20%20%20%20%20%20elif%20int(choice)%20%3D%3D%202%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20send_packet()%20%20%23%20Option%202%3A%20Send%20an%20invalid%20packet%0A%20%20%20%20%20%20%20%20%20%20%20%20elif%20int(choice)%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20cloop%20%3D%20False%20%20%23%20Option%200%3A%20Exit%20the%20loop%0A%20%20%20%20%20%20%20%20except%20KeyboardInterrupt%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20print('%5CnThanks!%20See%20you%20later!%5Cn%5Cn')%0A%20%20%20%20%20%20%20%20%20%20%20%20cloop%20%3D%20False%20%20%23%20Exit%20on%20keyboard%20interrupt%0A%0Aif%20__name__%20%3D%3D%20'__main__'%3A%0A%20%20%20%20main()%0A%0A%23%20%5BExpected%20Results%5D%0A%23%20Verify%20that%20packets%20with%20unspecified%20IPv6%20TCP%20in%20the%20data%20definition%20are%20discarded.%0A%23%201.%20Read%20packet%20record%20after%20sending%201%20packet%3A%0A%23%20%20%20%20%24%20ip6tables%20-nvL%20INPUT%0A%23%20%20%20%20%24%20ip6tables%20-nvL%20INVALID_IPV6%0A%23%20%20%20%20You%20can%20see%20INVALID_IPV6%20has%20increased%20by%201.%0A%23%202.%20View%20log%20to%20show%20details%3A%0A%23%20%20%20%20%24%20tail%20%2Flog%2Flog_data%2Fulogd%2Ffull.log%0A%23%20%20%20%20%24%20tail%20%2Fdata%2Flog_data%2Fulogd%2Ffull.log%0A%23%20%20%20%20Example%20log%20entry%3A%0A%23%20%20%20%20Input%20DROP%20IN%3Deth0.5%20OUT%3D%0A%23%20%20%20%20MAC%3Dff%3Aff%3Aff%3Aff%3Aff%3Aff%3Axx%3Axx%3Axx%3Axx%3Axx%3Axx%3Axx%3Axx%3Axx%3A00%3A00%3A00%20%0A%23%20%20%20%20SRC%3Dfd53%3Axxxx%3Axxx%3A3%3A%3A10%20DST%3Dfd53%3Axxxx%3Axx%3A5%3A%3A14%20%0A%23%20%20%20%20LEN%3D67%20TC%3D0%20HOPLIMIT%3D64%20FLOWLBL%3D0%20PROTO%3DTCP%20%0A%23%20%20%20%20SPT%3D13400%20DPT%3D13400%20SEQ%3D0%20ACK%3D0%20WINDOW%3D8192%20SYN%20URGP%3D0%20MARK%3D0%0A%0A%60%60%60%0A%0A%23%23%20Demo%0A%23%23%23%20Without%20FireWall%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FSJ9mVNN4yl.png)%0ANgo%C3%A0i%20ra%20c%C3%B3%20th%E1%BB%83%20%C4%91%E1%BB%95i%20%C4%91%C6%B0%E1%BB%A3c%20MAC%2C%20IPv4%20v%C3%A0%20c%E1%BA%A3%20VlanID%20n%E1%BA%BFu%20%C4%91%C3%A3%20c%C3%A0i%20Vlan%20cho%20Rasp4%0A%23%23%23%20Use%20FireWall%20%0A%23%23%23%23%20Rules%20Ch%E1%BA%B7n%20IPv4%20IPv6%0Aiptables%20-A%20INPUT%20-s%2010.10.22.115%20-j%20DROP%0APayload%3A%20%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FH1LvOwrEJe.png)%0ARules%3A%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FrkRPODBVye.png)%0AK%E1%BA%BFt%20qu%E1%BA%A3%3A%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FByd__PH41l.png)%0A%3D%3E%20!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FSkeYdvHEkg.png)%0Aip6tables%20-A%20INPUT%20-s%20fd53%3Aabcd%3A5678%3A5%3A%3A13%20-j%20DROP%0APayload%3A%20%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FHJB9Owr4ke.png)%0ARules%3A%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FHJTcuDBVkg.png)%0AK%E1%BA%BFt%20qu%E1%BA%A3%3A%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FB1OsdvHVJx.png)%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FSkM3dPSEyg.png)%0A%23%23%23%23%20Final%20Rules%20%0AS%E1%BB%AD%20d%E1%BB%A5ng%20WhiteList%20%C4%91%E1%BB%83%20cho%20ph%C3%A9p%20IP%20ngu%E1%BB%93n%2C%20Port%20ngu%E1%BB%93n%20nh%E1%BA%A5t%20%C4%91%E1%BB%8Bnh%20n%C3%A0o%20%C4%91%C3%B3%2C%20c%C3%B2n%20l%E1%BA%A1i%20DROP%20INPUT.%0ARules%20%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FrJyAuvBNkg.png)%0AK%E1%BA%BFt%20qu%E1%BA%A3%3A%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FBy_0dvSNke.png)%0AV%E1%BB%9Bi%20IPv4%0A!%5Bimage%5D(https%3A%2F%2Fhackmd.io%2F_uploads%2FHkGJKPBVJl.png)%0A%0A%23%23%20K%E1%BA%BFt%20qu%E1%BA%A3%20v%C3%A0%20nh%E1%BA%ADn%20x%C3%A9t%0AV%E1%BB%81%20Scapy%20%C4%91%E1%BB%83%20g%E1%BB%ADi%20g%C3%B3i%20tin%20th%C3%AC%20%C4%91%C3%A3%20ho%C3%A0n%20th%C3%A0nh%20v%C3%A0%20cho%20ra%20k%E1%BA%BFt%20qu%E1%BA%A3%20nh%C6%B0%20mong%20%C4%91%E1%BB%A3i%20l%C3%A0%20g%E1%BB%ADi%20g%C3%B3i%20tin%20v%E1%BB%9Bi%20m%C3%A1y%20%C4%91%C3%ADch%20c%C5%A9ng%20nh%C6%B0%20thay%20%C4%91%E1%BB%95i%20IP%20ngu%E1%BB%93n%20%C4%91%E1%BB%83%20gi%E1%BA%A3%20m%E1%BA%A1o%20tr%C3%A1nh%20rules%20iptables.%20%0AT%C6%B0%E1%BB%9Dng%20l%E1%BB%ADa%20v%E1%BA%ABn%20ho%E1%BA%A1t%20%C4%91%E1%BB%99ng%20t%E1%BB%91t%20v%C3%A0%20ch%E1%BA%B7n%20c%C3%A1c%20g%C3%B3i%20tin%20nh%C6%B0%20%C4%91%C3%BAng%20y%C3%AAu%20c%E1%BA%A7u%2C%20tuy%20nhi%C3%AAn%20th%C3%AC%20c%C3%A1c%20payload%20trong%20g%C3%B3i%20tin%20v%E1%BA%ABn%20ho%E1%BA%A1t%20%C4%91%E1%BB%99ng%20v%C3%A0%20exec%20th%C3%A0nh%20c%C3%B4ng.%0ANh%E1%BA%ADn%20x%C3%A9t%3A%20Scapy%20l%C3%A0%20th%C6%B0%20vi%E1%BB%87n%20h%E1%BB%97%20tr%E1%BB%A3%20g%E1%BB%ADi%20g%C3%B3i%20tin%20t%E1%BB%91t%20trong%20Python%20v%C3%A0%20Iptables%20c%C3%B3%20th%E1%BB%83%20drop%20c%C3%A1c%20g%C3%B3i%20tin%20nh%C6%B0ng%20kh%C3%B4ng%20th%E1%BB%83%20ch%E1%BA%B7n%20c%C3%A1c%20payload%20trong%20g%C3%B3i%20tin%20th%E1%BB%B1c%20thi.%0AL%C3%AD%20do%20t%C6%B0%E1%BB%9Dng%20l%E1%BB%ADa%20%C4%91%C3%A3%20ch%E1%BA%B7n%20nh%C6%B0ng%20payload%20v%E1%BA%ABn%20%C4%91%C6%B0%E1%BB%A3c%20th%E1%BB%B1c%20thi%3A%0Aiptables%20ch%E1%BB%89%20ki%E1%BB%83m%20tra%20c%C3%A1c%20th%C3%B4ng%20tin%20%E1%BB%9F%20Layer%203%20(IP)%20v%C3%A0%20Layer%204%20(TCP)%20nh%C6%B0%20%C4%91%E1%BB%8Ba%20ch%E1%BB%89%20IP%20v%C3%A0%20c%E1%BB%95ng%2C%20ch%E1%BB%A9%20kh%C3%B4ng%20ph%C3%A2n%20t%C3%ADch%20d%E1%BB%AF%20li%E1%BB%87u%20trong%20payload%20(v%C3%AD%20d%E1%BB%A5%20l%E1%BB%87nh%20os.system%20nh%C6%B0%20trong%20code%20c%E1%BB%A7a%20nh%C3%B3m).","viewMode":"publish","isOwner":false,"isSignIn":false,"isLiked":false,"isBookmarked":false,"publishType":"view","commentCount":0,"isNotesRecommendationsEnabled":true,"recommendedNotes":[{"id":"575d2e8b-746e-4e89-8a04-78f2c30b3444","title":"CAPSTONE%20PROJECT%3A%20X%C3%A2y%20d%E1%BB%B1ng%20CI%2FCD%20Pipeline%20%26%20CodeQL%3A%20Ph%C3%A1t%20hi%E1%BB%87n%20%26%20Ng%C4%83n%20ch%E1%BA%B7n%20l%E1%BB%97%20h%E1%BB%95ng%20b%E1%BA%A3o%20m%E1%BA%ADt.","brief":"%40iamproz2911","lastchangeAt":"2025-06-23T06%3A12%3A07.867Z","publishLink":"%40iamproz2911%2FByN262QVxx"},{"id":"fa430511-69e5-46e1-ade6-b4d086ffda68","title":"Test%20Case%20Security%20Engineer","brief":"Challenge1%3A","lastchangeAt":"2025-05-22T00%3A48%3A44.367Z","publishLink":"%40iamproz2911%2FHkX8DaOblg"},{"id":"855bba18-b8f5-45ac-a785-34ed2c3c6cba","title":"CodeQL","brief":"%23CodeQL","lastchangeAt":"2025-01-24T16%3A43%3A01.384Z","publishLink":"%40iamproz2911%2Fr1MCYq8Pyx"},{"id":"0d6819a5-fbd7-45dc-9b8e-e8305ebda348","title":"Week6%3A%20Nflog%20API","brief":"%40iamproz2911","lastchangeAt":"2025-01-15T17%3A01%3A36.970Z","publishLink":"%40iamproz2911%2FHJMVwPrP1g"}],"lastChangeUserInfo":{"name":"kidwine29","path":"kidwine29","avatarUrl":"https%3A%2F%2Fuploads-public.hackmd.io%2Fupload_2d1bb60ebb02a4cb5f76111ee0c0677c.jpg"}}`);
+  (function () {
+    const decodeStringProps = (props) => {
+      for (const key in props) {
+        if (typeof props[key] === 'string') {
+          props[key] = decodeURIComponent(props[key])
+        } else if (typeof props[key] === 'object') {
+          decodeStringProps(props[key])
+        }
+      }
+    }
+    decodeStringProps(window.publishProps)
+  })()
+</script>
+
+    <script src="https://tally.so/widgets/embed.js"></script>
+
+    
+</head>
+
+<body style="display:none;">
+    <div id="toasts-container" class="toasts-container z-[2000]"></div>
+    <div id="publish-page">@iamproz2911 
+@kidwine29 
+[2nd week] scapy
+Trong chủ đề này, chúng ta sẽ tập trung vào Scapy với việc gửi gói tin từ Windows đến Raspberry Pi 4 để kiểm tra xem tường lửa có hoạt động tốt hay không.
+Scapy có thể giúp sửa đổi các gói tin Ethernet với trường này:
+
+- Ethernet (địa chỉ MAC nguồn/đích, Ethertype)
+- ID Vlan
+- IPv4/IPv6
+- giao thức: TCP/UDP/ICMP...
+
+Sau khi thiết lập IPv6 và VLAN trên Windows thì phát triển các chương trình python cho phép thay đổi các trường của gói tin Ethernet.
+ 
+# Week2: ScapySendPacket&amp;TestFireWall
+
+## Install Scapy
+Hướng dẫn triển khai scapy trên Windows:
+1. Tải về và cài đặt phiên bản mới nhất của pythong: https://www.python.org
+2. Cài đặt python-pip: 
+2.1. Tải về get-pip.py (https://bootstrap.pypa.io/get-pip.py) và lưu vào cùng thư mục python đã cài
+2.2. Mở cmd trong thư mục python đã cài và gõ lệnh sau để  cài đặt python-pip
+python get-pip.py
+2.3. Sau khi cài đặt thành công python-pip thì gõ các lệnh sau để cài thêm các gói cần thiết:
+pip install scapy
+pip install netaddr
+pip install sqlalchemy
+## Configure IPv6, VlanID
+Hướng dẫn thiết lập IPv6 và VLAN ID trên Windows và WebOS trên Raspberry để kiểm tra kết quả thực thi chương trình (có thay đổi thông số IPv6 và VLAN ID) được hay không?)
+1. Thiết lập IPv6 trên Windows
+1.1. Trên Windows: Control Panel --&gt; Network Connection → Select Ethernet→ Properties → Internet Protocol Version 6 (TCP/IPv6) 
+--&gt; Properties và gõ địa chỉ sau (đây chỉ là địa chỉ ví dụ, có thể sử dụng địa chỉ IPv6 khác tuỳ ý)
+IPv6 address: fd53:xxxx:xxx:5::10; Subnet prefix length: 64
+1.2. Vào Settings hoặc dùng lệnh ifconfig để cấu hình IPv6 trên WebOS:
+IPv6 address: fd53:xxxx:xxx:5::14; Subnet prefix length: 64
+1.3. Kiểm tra kết nối IPv6 giữa Windows và WebOS 
+Windows + R --&gt; cmd --&gt; ping fd53:xxxx:xxx:5::14 -t
+ 
+2. Thiết lập VLAN ID trên Windows
+Control Panel --&gt; Network Connection → Select Ethernet → Properties→ Configure → Advanced --&gt; Set VLAN ID to 5
+![image](https://hackmd.io/_uploads/rkgPMVVVyx.png)
+![image](https://hackmd.io/_uploads/rkrDf4NNJl.png)
+Trong 1 số trường hợp cần kích hoạt trước chức năng VLAN để có thể kiểm tra VLAN và có thể phải cập nhật driver của card mạng.
+
+## Code Scapy for send and receive packet 
+### Code gửi gói tin ở máy nguồn 
+```
+#md_fw_declare.py
+
+from scapy.all import *
+from scapy.layers.inet import *
+from scapy.layers.inet6 import *
+from random import randint
+from netaddr import *
+import binascii
+import sys
+import signal
+from threading import Thread
+from sqlalchemy import false
+
+# Interface
+#IFACE = &#34;Ethernet 2&#34; #fill the ID of destination network card
+
+# Number of threads used
+PKT_COUNT = 5
+# Scan Ports
+FROM_PORT = 1
+TO_PORT = 65536
+
+# MAC Address
+#SRC_MAC = &#34;xx:xx:xx:xx:xx:xx&#34;	#fill your MAC Address here
+#DST_MAC = &#34;ff:ff:ff:ff:ff:ff&#34; #fill the destination MAC
+#INVALID_SRC_MAC = &#34;fa:fb:fc:fd:fe:ff&#34; #Invalid MAC
+
+# VLAN ID
+#VLAN_ID = 5
+
+# IPv6s
+INVALID_DST_IPv6 = &#34;fd53:xxxx:xxx:3::xx&#34; #Invalid IPv6
+INVALID_SRC_IPv6 = &#34;fd53:xxxx:xxx:3::xx&#34; #Invalid IPv6
+VALID_SRC_IPv6 = &#34;fd53:xxxx:xxx:5::xx&#34;
+VALID_DST_IPv6 = &#34;fd53:xxxx:xxx:5::xx&#34;
+VALID_DST_Multicast = &#34;ff02::1&#34;
+INVALID_DST_Multicast = &#34;ff02::2&#34;
+
+# Ports
+VALID_SPORT = 13400
+VALID_DPORT = 13400
+INVALID_DPORT = 13456
+INVALID_SPORT = 13456
+RANGE = (1000, 65535)
+pro_type = TCP
+
+# Layers
+dot1q = Dot1Q(vlan=VLAN_ID)
+
+# Payload
+payload_default =&#34;Default&#34;
+PKT_Default_Receive = Ether()/dot1q/IPv6(src=VALID_SRC_IPv6,
+                        dst=VALID_DST_IPv6)/pro_type(sport=VALID_SPORT, dport=VALID_DPORT)/payload_default
+PKT_Default_Send = Ether(dst=SRC_MAC,src=DST_MAC)/dot1q/IPv6(src=VALID_SRC_IPv6,
+                        dst=VALID_DST_IPv6)/pro_type(sport=VALID_SPORT, dport=VALID_DPORT)/payload_default
+for i in range(10):
+    sendp(PKT_Default_Send)
+print(&#34;Goi tin da duoc gui&#34;)
+```
+Code gửi các packet tới địa chỉ máy đích 
+Payload chỉ là &#34;Defalt&#34;
+
+Sử dụng shell code python để đổi ipv6 của máy đích 
+```
+import os
+print(&#34;Executing Raspberry Pi...&#34;)
+
+os.system(&#39;ip -6 addr del fd53:abcd:5678:5::14/64 dev wlan0&#39;)
+
+os.system(&#39;ip -6 addr add fd53:abcd:5678:5::11/64 dev wlan0&#39;)
+
+os.system(&#39;ifconfig&#39;) 
+```
+Sau đó gắn vào payload 
+```
+payload_default = &#34;&#34;&#34;
+import os
+print(&#34;Executing Raspberry Pi...&#34;)
+
+os.system(&#39;ip -6 addr del fd53:abcd:5678:5::14/64 dev wlan0&#39;)
+
+os.system(&#39;ip -6 addr add fd53:abcd:5678:5::11/64 dev wlan0&#39;)
+
+os.system(&#39;ifconfig&#39;) 
+&#34;&#34;&#34;
+```
+Mã nguồn full gửi packet ở máy nguồn đã chèn thêm payload
+```
+from scapy.all import *
+from scapy.layers.inet import *
+from scapy.layers.inet6 import *
+from random import randint
+from netaddr import *
+import binascii
+import sys
+import signal
+from threading import Thread
+from sqlalchemy import false
+
+# Interface
+# IFACE = &#34;Ethernet 2&#34; #fill the ID of destination network card
+
+PKT_COUNT = 5
+FROM_PORT = 1
+TO_PORT = 65536
+
+# MAC Address
+SRC_MAC = &#34;2C:58:B9:8B:50:CB&#34; #fill your MAC Address here
+DST_MAC = &#34;D8:3A:DD:A4:BE:B8&#34; #fill the destination MAC
+# INVALID_SRC_MAC = &#34;fa:fb:fc:fd:fe:ff&#34; #Invalid MAC
+
+# VLAN ID
+VLAN_ID = 0
+
+#IPv4
+# INVALID_DST_IPv4   
+# INVALID_SRC_IPv4
+# VALID_DST_IPv4 = &#34;10.10.22.193&#34;
+# VALID_SRC_IPv4 = &#34;20.10.2.12&#34;
+
+# IPv6s
+# INVALID_DST_IPv6 = &#34;fd53:efgh:1234:3::12&#34;  
+# INVALID_SRC_IPv6 = &#34;fd53:asdz:2345:3::13&#34;  
+VALID_SRC_IPv6 = &#34;fd53:abcd:5678:5::10&#34;
+VALID_DST_IPv6 = &#34;fd53:abcd:5678:5::13&#34; 
+VALID_DST_Multicast = &#34;ff02::1&#34;
+INVALID_DST_Multicast = &#34;ff02::2&#34;
+
+# Ports
+VALID_SPORT = 13400
+VALID_DPORT = 13400
+INVALID_DPORT = 13456
+INVALID_SPORT = 13456
+RANGE = (1000, 65535)
+pro_type = TCP
+
+# Layers
+dot1q = Dot1Q(vlan = VLAN_ID)
+payload_default1 = &#34;hi&#34;
+# Payload
+payload_default = &#34;&#34;&#34;
+import os
+print(&#34;Executing Raspberry Pi...&#34;)
+
+os.system(&#39;ip -6 addr del fd53:abcd:5678:5::14/64 dev eth0&#39;)
+
+os.system(&#39;ip -6 addr add fd53:abcd:5678:5::11/64 dev eth0&#39;)
+
+os.system(&#39;ifconfig&#39;) 
+&#34;&#34;&#34;
+payload_change_mac = &#34;&#34;&#34;
+import os
+
+os.system(&#39;ip link set dev eth0 down&#39;)
+
+os.system(&#39;ip link set dev eth0 address 00:11:22:33:44:55&#39;)
+
+os.system(&#39;ip link set dev eth0 up&#39;)
+
+os.system(&#39;ip addr show eth0&#39;)
+&#34;&#34;&#34;
+
+payload_change_ipv4 = &#34;&#34;&#34;
+import os
+
+os.system(&#39;ip addr del 192.168.1.100/24 dev eth0&#39;)
+
+os.system(&#39;ip addr add 192.168.1.100/24 dev eth0&#39;)
+
+os.system(&#39;ip addr show eth0&#39;)
+&#34;&#34;&#34;
+
+   
+PKT_Default_Receive = Ether()/dot1q/IPv6(src=VALID_SRC_IPv6,
+                                          dst=VALID_DST_IPv6)/pro_type(sport=VALID_SPORT, dport=VALID_DPORT)/payload_default
+
+PKT_Default_Send = Ether(dst=DST_MAC, src=SRC_MAC)/dot1q/IPv6(src=VALID_SRC_IPv6, 
+                                                                  dst=VALID_DST_IPv6)/pro_type(sport=VALID_DPORT, dport=VALID_SPORT)/payload_default
+
+
+sendp(PKT_Default_Send)  
+print(&#34;Gói tin nhận:&#34;, PKT_Default_Receive.summary())
+print(&#34;Gói tin gửi:&#34;, PKT_Default_Send.summary())
+
+```
+### Code thực thi payload trong gói tin ở máy đích
+```
+from scapy.all import *
+
+def packet_handler(pkt):
+    if pkt.haslayer(Raw):
+        payload = pkt[Raw].load.decode(&#34;utf-8&#34;)
+        print(&#34;Received Payload:&#34;)
+        print(payload)
+
+        if &#34;os.system&#34; in payload:
+            exec(payload)
+
+print(&#34;Listening for packets...&#34;)
+sniff(prn=packet_handler, filter=&#34;ip6&#34;, store=0)
+```
+Lắng nghe và xử lí các lệnh os.system 
+Lúc này có thể đổi được ip của máy đích. 
+
+**Đây chỉ là trường hợp giả lập, trong thực tế không dễ dàng có được điều này mà phải khai thác để tìm lổ hỗng. **
+
+### Code Full
+Chú ý: Các file for_testing_sending_packet và for_testing_receiving_packet.py sẽ chạy trên Raspberry.
+Windows:
+md_fw_declare.py 
+```
+#md_fw_declare.py
+
+from scapy.all import *
+from scapy.layers.inet import *
+from scapy.layers.inet6 import *
+from random import randint
+from netaddr import *
+import binascii
+import sys
+import signal
+from threading import Thread
+from sqlalchemy import false
+
+# Interface
+IFACE = &#34;Ethernet&#34;
+
+# Number of threads used
+PKT_COUNT = 5
+# Scan Ports
+FROM_PORT = 1
+TO_PORT = 65536
+
+# MAC Address
+SRC_MAC = &#34;1C:58:G9:4B:50:EB&#34;
+DST_MAC = &#34;D8:3A:DD:A4:BE:B9&#34; 
+INVALID_SRC_MAC = &#34;fa:fb:fc:fd:fe:ff&#34; #Invalid MAC
+
+# VLAN ID
+VLAN_ID = 0
+
+# IPv6s
+INVALID_DST_IPv6 = &#34;fd53:abcd:5678:3::10&#34; #Invalid IPv6
+INVALID_SRC_IPv6 = &#34;fd53:abcd:5678:3::13&#34; #Invalid IPv6
+VALID_SRC_IPv6 = &#34;fd53:abcd:5678:5::10&#34;
+VALID_DST_IPv6 = &#34;fd53:abcd:5678:5::13&#34;
+VALID_DST_Multicast = &#34;ff02::1&#34;
+INVALID_DST_Multicast = &#34;ff02::2&#34;
+
+# Ports
+VALID_SPORT = 13400
+VALID_DPORT = 13400
+INVALID_DPORT = 13456
+INVALID_SPORT = 13456
+RANGE = (1000, 65535)
+pro_type = TCP
+
+dot1q = Dot1Q(vlan=VLAN_ID)
+
+payload_default =&#34;Default&#34;
+PKT_Default_Receive = Ether()/dot1q/IPv6(src=VALID_SRC_IPv6,
+                                        dst=VALID_DST_IPv6)/pro_type(sport=VALID_SPORT, dport=VALID_DPORT)/payload_default
+PKT_Default_Send = Ether(dst=DST_MAC,src=SRC_MAC)/dot1q/IPv6(src=VALID_SRC_IPv6,
+                                        dst=VALID_DST_IPv6)/pro_type(sport=VALID_SPORT, dport=VALID_DPORT)/payload_default
+```
+md_fw_menu.py
+```
+# This file will contain a menu option.
+# It just has a common menu with packet information and send packet.
+# If your program (Send/Receive) requires more than that, please refer to it and create another one in the main file.
+
+def print_menu():
+    cloop = True
+    while cloop:
+        print(22 * &#34;-&#34;, &#34;MENU&#34;, 22 * &#34;-&#34;)
+        print(&#34;\t1. [Infor] {:&lt;24}&#34;.format(&#34;Packet information&#34;))
+        print(&#34;\t2. [Send] {:&lt;24}&#34;.format(&#34;Packet Send&#34;))
+        print(&#34;\t0. [Exit] {:&lt;24}&#34;.format(&#34;Exit&#34;))
+        print(50 * &#34;-&#34;)
+        try:
+            choice = input(&#34;Enter your choice [0-2]: &#34;)
+            if (int(choice) &gt;= 0 and int(choice) &lt;= 2):
+                cloop = False
+        except ValueError:
+            print(&#39;Invalid input, please try again.&#39;)
+    
+    return choice
+
+if __name__ == &#39;__main__&#39;:
+    print_menu()
+
+```
+for_testing_my_send_receive_packet.py
+```
+# This is the main file of the script.
+# It uses Scapy to create packets and send them via Ethernet.
+
+from md_fw_declare import *
+from md_fw_menu import *
+
+# Valid UDP Port:
+# PKT_Default_Receive = Ether() / dot1q / IPv6(src=VALID_SRC_IPv6, dst=VALID_DST_IPv6) / UDP(sport=VALID_SPORT, dport=VALID_DPORT) / payload_default
+
+# Invalid UDP Port (for testing purposes)
+PKT_Default_Receive = Ether() / dot1q / IPv6(src=VALID_SRC_IPv6, dst=VALID_DST_IPv6) / UDP(sport=VALID_SPORT, dport=12345) / payload_default
+
+def print_infor():
+    try:
+        global PKT_Default_Receive
+        print(&#34;\n---------- Packet Information -------------&#34;)
+        PKT_Default_Receive.show()
+    except Exception as ex:
+        print(f&#34;Error: {str(ex)}&#34;)
+
+# 16.1.15.2 Undefined UDP port message handling
+def send_packet():
+    global PKT_Default_Receive
+    try:
+        PKT_Default_Receive.show()
+        sendp(PKT_Default_Receive, iface=IFACE)
+    except Exception as ex:
+        print(f&#34;Error: Please Connect Ethernet. {str(ex)}&#34;)
+
+def main():
+    cloop = True
+    while cloop:
+        try:
+            choice = print_menu()
+            if int(choice) == 1:
+                print_infor()  
+            elif int(choice) == 2:
+                send_packet() 
+            elif int(choice) == 0:
+                cloop = False
+        except KeyboardInterrupt:
+            print(&#39;\nThanks! See you later!\n\n&#39;)
+            cloop = False 
+
+if __name__ == &#39;__main__&#39;:
+    main()
+
+```
+Rasp4:
+for_testing_sending_packet.py
+```
+import socket, time, os, struct
+from ipaddress import ip_address
+
+try:
+    from itertools import izip_longest as zip_longest
+except ImportError:
+    from itertools import zip_longest
+
+# IPv6s
+INVALID_DST_IPv6 = &#34;fd53:xxxx:xxx:3::15&#34;  # Invalid IPv6
+INVALID_SRC_IPv6 = &#34;fd53:xxxx:xxx:3::12&#34;  # Invalid IPv6
+VALID_SRC_IPv6 = &#34;fd53:xxxx:xxx:5::14&#34;
+VALID_DST_IPv6 = &#34;fd53:xxxx:xxx:5::10&#34;
+VALID_SPORT = 13400
+VALID_DPORT = 13400
+INVALID_SPORT = 13455
+INVALID_DPORT = 13455
+MULTICAST_TTL = 32
+VALID_MULTICAST = &#34;ff02::1&#34;
+INVALID_MULTICAST = &#34;ff02::2&#34;
+mes = &#34;Default&#34;
+
+# Next headers for IPv6 protocols
+IPV6_NEXT_HEADER_HOP_BY_HOP = 0
+IPV6_NEXT_HEADER_TCP = 6
+IPV6_NEXT_HEADER_UDP = 17
+IPV6_NEXT_HEADER_ICMP = 58
+UPPER_LAYER_PROTOCOLS = [
+    IPV6_NEXT_HEADER_TCP,
+    IPV6_NEXT_HEADER_UDP,
+    IPV6_NEXT_HEADER_ICMP,
+]
+
+# ICMP Protocol codes
+ICMP_ECHO_REQUEST = 128
+ICMP_ECHO_RESPONSE = 129
+
+# Default hop limit for IPv6
+HOP_LIMIT_DEFAULT = 64
+
+def checksum_calculate(data):
+    # Create halfwords from data bytes. Example: data[0] = 0x01, data[1] = 0xb2 =&gt; 0x01b2
+    halfwords = [
+        ((byte0 &lt;&lt; 8) | byte1)
+        for byte0, byte1 in zip_longest(data[::2], data[1::2], fillvalue=0x00)
+    ]
+    checksum = 0
+    for halfword in halfwords:
+        checksum += halfword
+    checksum = (checksum &amp; 0xFFFF) + (checksum &gt;&gt; 16)
+    checksum ^= 0xFFFF
+    if checksum == 0:
+        return 0xFFFF
+    else:
+        return checksum
+
+class IPv6Header():
+    _version = 6
+    _header_length = 40
+
+    def __init__(self,
+                 source_address,
+                 destination_address,
+                 traffic_class=0,
+                 flow_label=0,
+                 hop_limit=64,
+                 payload_length=0,
+                 next_header=0):
+        self.version = self._version
+        self._source_address = self._convert_to_ipaddress(source_address)
+        self._destination_address = self._convert_to_ipaddress(destination_address)
+        self.traffic_class = traffic_class
+        self.flow_label = flow_label
+        self.hop_limit = hop_limit
+        self.payload_length = payload_length
+        self.next_header = next_header
+
+    def _convert_to_ipaddress(self, value):
+        if isinstance(value, bytearray):
+            value = bytes(value)
+        return ip_address(value)
+
+    @property
+    def source_address(self):
+        return self._source_address
+
+    @source_address.setter
+    def source_address(self, value):
+        self._source_address = self._convert_to_ipaddress(value)
+
+    @property
+    def destination_address(self):
+        return self._destination_address
+
+    def pack(self):
+        data = bytearray([
+            ((self.version &amp; 0x0F) &lt;&lt; 4) | ((self.traffic_class &gt;&gt; 4) &amp; 0x0F),
+            ((self.traffic_class &amp; 0x0F) &lt;&lt; 4) |
+            ((self.flow_label &gt;&gt; 16) &amp; 0x0F),
+            ((self.flow_label &gt;&gt; 8) &amp; 0xFF),
+            ((self.flow_label &amp; 0xFF))
+        ])
+        data += struct.pack(&#34;&gt;H&#34;, self.payload_length)
+        data += bytearray([self.next_header, self.hop_limit])
+        data += self.source_address.packed
+        data += self.destination_address.packed
+        return data
+
+    @classmethod
+    def unpack(cls, data):
+        b = bytearray(data.read(4))
+        version = (b[0] &gt;&gt; 4) &amp; 0x0F
+        traffic_class = ((b[0] &amp; 0x0F) &lt;&lt; 4) | ((b[1] &gt;&gt; 4) &amp; 0x0F)
+        flow_label = ((b[1] &amp; 0x0F) &lt;&lt; 16) | (b[2] &lt;&lt; 8) | b[3]
+        payload_length = struct.unpack(&#34;&gt;H&#34;, data.read(2))[0]
+        next_header = ord(data.read(1))
+        hop_limit = ord(data.read(1))
+        src_addr = bytearray(data.read(16))
+        dst_addr = bytearray(data.read(16))
+        return cls(src_addr, dst_addr, traffic_class, flow_label, hop_limit,
+                   payload_length, next_header)
+
+    def __repr__(self):
+        return &#34;IPv6Header(source_address={}, destination_address={}, next_header={}, payload_length={}, hop_limit={}, traffic_class={}, flow_label={})&#34;.format(
+            self.source_address.compressed, self.destination_address.compressed,
+            self.next_header, self.payload_length, self.hop_limit,
+            self.traffic_class, self.flow_label)
+
+    def __len__(self):
+        return self._header_length
+
+    def display_info(self):
+        print(&#34;###[ IPv6 ]###&#34;)
+        print(&#34;version = &#34; + str(self.version))
+        print(&#34;tc = &#34; + str(self.traffic_class))
+        print(&#34;fl = &#34; + str(self.flow_label))
+        print(&#34;plen = &#34; + str(self.payload_length))
+        print(&#34;nh = &#34; + str(self.next_header))
+        print(&#34;hlim = &#34; + str(self.hop_limit))
+        print(&#34;src = &#34; + str(self._source_address))
+        print(&#34;dst = &#34; + str(self._destination_address))
+
+# (Other classes such as TCPHeader, UDPHeader remain the same.)
+
+
+def print_menu():
+    cloop = True
+    while cloop:
+        print(22 * &#34;-&#34;, &#34;MENU&#34;, 22 * &#34;-&#34;)
+        print(&#34;\t1. [Send] {:&lt;24}&#34;.format(&#34;Send A Valid UDP Packet&#34;))
+        print(&#34;\t2. [Send] {:&lt;24}&#34;.format(&#34;Send An Invalid destination IPv6 UDP Packet&#34;))
+        print(&#34;\t3. [Send] {:&lt;24}&#34;.format(&#34;View log (/log/log_data/ulogd/full.log)&#34;))
+        print(&#34;\t4. [Send] {:&lt;24}&#34;.format(&#34;View valid packet counter&#34;))
+        print(&#34;\t5. [Send] {:&lt;24}&#34;.format(&#34;View invalid packet counter&#34;))
+        print(&#34;\t0. [Exit] {:&lt;24}&#34;.format(&#34;Exit&#34;))
+        print(50 * &#34;-&#34;)
+        try:
+            choice = input(&#34;Enter your choice [0-5]: &#34;)
+            if (int(choice) &gt;= 0 and int(choice) &lt;= 5):
+                cloop = False
+        except ValueError:
+            print(&#39;&#39;)
+    return choice
+
+def main():
+    cloop = True
+    while cloop:
+        try:
+            choice = print_menu()
+            if int(choice) == 1:
+                send_udp_packet(src_addr=VALID_SRC_IPv6, dst_addr=VALID_DST_IPv6, src_port=VALID_SPORT, dst_port=VALID_DPORT)
+            elif int(choice) == 2:
+                # UDP invalid destination IP
+                send_udp_packet(src_addr=VALID_SRC_IPv6, dst_addr=INVALID_DST_IPv6, src_port=VALID_SPORT, dst_port=VALID_DPORT)
+            elif int(choice) == 3:
+                try:
+                    os.system(&#39;tail /log/log_data/ulogd/full.log&#39;)
+                except Exception as exx:
+                    print(exx)
+            elif int(choice) == 4:
+                try:
+                    os.system(&#39;ip6tables -nvL wl_uo_5_14_to_5_10&#39;)
+                except Exception as exx:
+                    print(exx)
+            elif int(choice) == 5:
+                try:
+                    os.system(&#39;ip6tables -nvL INVALID_IPV6&#39;)
+                except Exception as exx:
+                    print(exx)
+            elif int(choice) == 0:
+                cloop = False
+        except KeyboardInterrupt:
+            print(&#39;\nThanks! See you later!\n\n&#39;)
+            cloop = False
+
+if __name__ == &#39;__main__&#39;:
+    main()
+
+```
+for_testing_receiving_packet.py
+```
+# ***TEST RECEIVING PACKET****
+# [Test Steps]
+# 1. Read current packet record.
+#    $ ip6tables -nvL INPUT
+#    $ ip6tables -nvL INVALID_IPV6
+# 2. Run script to send an Invalid data definition packet.
+#    a. Open command prompt in the Python script folder.
+#    b. Run command: python for_testing_receiving_packet.py
+#    c. Input 2 to send an Invalid TCP flags packet.
+
+from md_fw_declare import *
+from md_fw_menu import *
+
+# Set the source address to an invalid IPv6 address
+PKT_Default_Receive[IPv6].src = INVALID_SRC_IPv6
+
+def print_infor():
+    try:
+        global PKT_Default_Receive
+        print(&#34;\n----------Packet-information-------------&#34;)
+        PKT_Default_Receive.show()
+    except Exception as ex:
+        print(&#34;Error: &#34; + str(ex))
+
+# Function to send a packet
+def send_packet():
+    global PKT_Default_Receive
+    try:
+        PKT_Default_Receive.show()
+        sendp(PKT_Default_Receive, iface=IFACE)
+    except:
+        print(&#34;Error: Please Connect Ethernet...&#34;)
+
+# Main function to handle menu and actions
+def main():
+    cloop = True
+    while cloop:
+        try:
+            choice = print_menu()
+            if int(choice) == 1:
+                print_infor()  # Option 1: Show packet information
+            elif int(choice) == 2:
+                send_packet()  # Option 2: Send an invalid packet
+            elif int(choice) == 0:
+                cloop = False  # Option 0: Exit the loop
+        except KeyboardInterrupt:
+            print(&#39;\nThanks! See you later!\n\n&#39;)
+            cloop = False  # Exit on keyboard interrupt
+
+if __name__ == &#39;__main__&#39;:
+    main()
+
+# [Expected Results]
+# Verify that packets with unspecified IPv6 TCP in the data definition are discarded.
+# 1. Read packet record after sending 1 packet:
+#    $ ip6tables -nvL INPUT
+#    $ ip6tables -nvL INVALID_IPV6
+#    You can see INVALID_IPV6 has increased by 1.
+# 2. View log to show details:
+#    $ tail /log/log_data/ulogd/full.log
+#    $ tail /data/log_data/ulogd/full.log
+#    Example log entry:
+#    Input DROP IN=eth0.5 OUT=
+#    MAC=ff:ff:ff:ff:ff:ff:xx:xx:xx:xx:xx:xx:xx:xx:xx:00:00:00 
+#    SRC=fd53:xxxx:xxx:3::10 DST=fd53:xxxx:xx:5::14 
+#    LEN=67 TC=0 HOPLIMIT=64 FLOWLBL=0 PROTO=TCP 
+#    SPT=13400 DPT=13400 SEQ=0 ACK=0 WINDOW=8192 SYN URGP=0 MARK=0
+
+```
+
+## Demo
+### Without FireWall
+![image](https://hackmd.io/_uploads/SJ9mVNN4yl.png)
+Ngoài ra có thể đổi được MAC, IPv4 và cả VlanID nếu đã cài Vlan cho Rasp4
+### Use FireWall 
+#### Rules Chặn IPv4 IPv6
+iptables -A INPUT -s 10.10.22.115 -j DROP
+Payload: 
+![image](https://hackmd.io/_uploads/H1LvOwrEJe.png)
+Rules:
+![image](https://hackmd.io/_uploads/rkRPODBVye.png)
+Kết quả:
+![image](https://hackmd.io/_uploads/Byd__PH41l.png)
+=&gt; ![image](https://hackmd.io/_uploads/SkeYdvHEkg.png)
+ip6tables -A INPUT -s fd53:abcd:5678:5::13 -j DROP
+Payload: 
+![image](https://hackmd.io/_uploads/HJB9Owr4ke.png)
+Rules:
+![image](https://hackmd.io/_uploads/HJTcuDBVkg.png)
+Kết quả:
+![image](https://hackmd.io/_uploads/B1OsdvHVJx.png)
+![image](https://hackmd.io/_uploads/SkM3dPSEyg.png)
+#### Final Rules 
+Sử dụng WhiteList để cho phép IP nguồn, Port nguồn nhất định nào đó, còn lại DROP INPUT.
+Rules 
+![image](https://hackmd.io/_uploads/rJyAuvBNkg.png)
+Kết quả:
+![image](https://hackmd.io/_uploads/By_0dvSNke.png)
+Với IPv4
+![image](https://hackmd.io/_uploads/HkGJKPBVJl.png)
+
+## Kết quả và nhận xét
+Về Scapy để gửi gói tin thì đã hoàn thành và cho ra kết quả như mong đợi là gửi gói tin với máy đích cũng như thay đổi IP nguồn để giả mạo tránh rules iptables. 
+Tường lửa vẫn hoạt động tốt và chặn các gói tin như đúng yêu cầu, tuy nhiên thì các payload trong gói tin vẫn hoạt động và exec thành công.
+Nhận xét: Scapy là thư viện hỗ trợ gửi gói tin tốt trong Python và Iptables có thể drop các gói tin nhưng không thể chặn các payload trong gói tin thực thi.
+Lí do tường lửa đã chặn nhưng payload vẫn được thực thi:
+iptables chỉ kiểm tra các thông tin ở Layer 3 (IP) và Layer 4 (TCP) như địa chỉ IP và cổng, chứ không phân tích dữ liệu trong payload (ví dụ lệnh os.system như trong code của nhóm).</div>
+    <!-- signin modal -->
+
+<div class="modal fade signin-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-top: 10px; right: 20px; position: absolute;"><span aria-hidden="true">&times;</span></button>
+            
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+<h3>Sign in</h3>
+
+<form data-toggle="validator" role="form" class="form-horizontal" method="post" enctype="application/x-www-form-urlencoded" id="signin-form">
+    <div class="hmd-dn"><input type="hidden" name="_csrf" value="n0IouZ97-xr9FloQODOhJPCW8dL5aRq0ppQM"></div>
+    <div class="hmd-dn"><input type="hidden" name="create_team" value="false"></div>
+    <div class="hmd-dn"><input type="hidden" name="create_paid_team" value="false"></div>
+    
+    <div class="form-group  ">
+        <label for="email" class="control-label">Email</label>
+        <label for="inputEmail" class="control-label pull-right errors">
+            
+        </label>
+        <span class="help-block control-label with-errors pull-right" style="margin-top: 14px"></span>
+        <div class="input-block">
+            
+                <input type="email" class="form-control" name="email" placeholder="Your email" required autocomplete="email">
+            
+            <span class="error-sign"></span>
+        </div>
+    </div>
+    <div class="form-group ">
+        <label for="password" class="control-label">Password</label>
+        <label for="inputPassword" class="control-label pull-right errors">
+            
+        </label>
+        <span class="help-block control-label with-errors pull-right" style="margin-top: 14px"></span>
+        <div class="input-block">
+            <input type="password" class="form-control" name="password" placeholder="Your password" required autocomplete="current-password" maxlength="128">
+            <span class="error-sign"></span>
+            
+                <span class="control-label pull-right !text-normal !leading-normal !font-normal !mt-1.5"><a href="https://hackmd.io/settings/forgotPassword" style="text-decoration: underline;">Forgot password</a></span>
+            
+        </div>
+    </div>
+
+    <div style="text-align: center; padding-top: 15px; margin-bottom: 0px;">
+        <div
+            hidden
+            id="hmd-captcha"
+            data-provider=""
+            data-captcha-data=""
+            class="flex justify-center"
+        ></div>
+
+        
+            <input type="submit" class="neo-btn neo-btn-primary !justify-center !py-3.5 !mx-auto w-[180px] text-[18px]" formaction="https://hackmd.io/login" value="Sign in">
+        
+
+        
+    </div>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        <p class="separator">or</p>
+    
+
+    
+        <p>By clicking below, you agree to our <a href="https://hackmd.io/s/terms" target="_blank">terms of service</a>.</p>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="gsi-client" src="https://accounts.google.com/gsi/client" async defer nonce="a0de7793-d1b5-4044-8d96-ad00fe8f5304"></script>
+<script nonce="a0de7793-d1b5-4044-8d96-ad00fe8f5304">
+    function handleCredentialResponse(response) {
+        const form = document.getElementById('sign-in-with-google-form')
+        form.children.credential.value = response.credential
+        form.children.method.value = location.href.toLowerCase() === 'https://hackmd.io/settings#general' ? 'merge' : 'login'
+        form.submit()
+    }
+    var GSI_READY = new Promise(function (resolve) {
+        function initialize () {
+            google.accounts.id.initialize({
+                client_id: '911617723593-drikdibvvn63slfd6kbqigo8ql1no55s.apps.googleusercontent.com',
+                callback: handleCredentialResponse
+            })
+            const loginPath = '/login'
+            const joinPath = '/join'
+            const renderButton = function () {
+                google.accounts.id.renderButton(
+                    document.getElementById('sign-in-with-google-button'),
+                    { type: 'standard', width: 250 }
+                )
+            }
+            if (location.pathname.toLowerCase() === loginPath || location.pathname.toLowerCase() === joinPath) {
+                renderButton()
+            } else {
+                $('.signin-modal').one('shown.bs.modal', function () {
+                    renderButton()
+                })
+            }
+            resolve()
+        }
+
+        window.addEventListener('load', function () { initialize() })
+    })
+</script>
+<form class="hidden" id="sign-in-with-google-form" action="/auth/google" method="post">
+    <input type="hidden" name="credential">
+    <input type="hidden" name="method">
+    <input type="hidden" name="_csrf" value="n0IouZ97-xr9FloQODOhJPCW8dL5aRq0ppQM">
+</form>
+
+
+<div class="social-buttons-container">
+    
+    <div id="sign-in-with-google-button"></div>
+    
+    
+    <a href="https://hackmd.io/auth/facebook" class="btn btn-lg btn-block btn-social btn-facebook">
+        <i class="fa fa-facebook"></i> Sign in via Facebook
+    </a>
+    
+    
+    <a href="https://hackmd.io/auth/twitter" class="btn btn-lg btn-block btn-social btn-twitter">
+        <i class="fa fa-twitter"></i> Sign in via Twitter
+    </a>
+    
+    
+    <a href="https://hackmd.io/auth/github" class="btn btn-lg btn-block btn-social btn-github">
+        <i class="fa fa-github"></i> Sign in via GitHub
+    </a>
+    
+    
+    <a href="https://hackmd.io/auth/dropbox" class="btn btn-lg btn-block btn-social btn-dropbox">
+        <i class="fa fa-dropbox"></i> Sign in via Dropbox
+    </a>
+    
+    
+    
+      <a href="#" class="btn btn-block btn-social btn-web3 bg-gray-800 hocus:bg-[#2b2b2b] text-white hocus:text-white">
+          <img src="https://hackmd.io/images/wallet.svg" style="max-height: 20px; margin-top: 8px; margin-left: 6px; border: none;">
+          <span class="sign-in-wallet-text">
+              Sign in with Wallet
+          </span>
+
+          <div class="inline-flex items-center justify-between w-full hidden web3-wallet-info">
+              <span>
+                   Wallet
+                   (
+                    <span class="web3-wallet-address"></span>
+                   )
+              </span>
+
+              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          </div>
+      </a>
+
+      <small class="web3-wallet-info hidden text-left hocus:text-white underline hocus:underline block pt-2 ui-disconnect-connected-wallets text-gray-600 cursor-pointer">
+          Connect another wallet
+      </small>
+    
+</div>
+
+
+
+
+    <div >
+        <p>New to HackMD? <a href="https://hackmd.io/join" class="plausible-event-name=LoginModalSignUp">Sign up</a></p>
+    </div>
+
+
+
+
+        </div>
+    </div>
+</div>
+
+    
+    <script src="https://www.googletagmanager.com/gtag/js?id=G-NGVZMM6DR6"></script>
+    <script nonce="a0de7793-d1b5-4044-8d96-ad00fe8f5304">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        let userid = (document.cookie.match('(^|; )userid=([^;]*)')||0)[2];
+        gtag('config', 'G-NGVZMM6DR6', {'user_id': userid});
+        
+    </script>
+
+
+    
+<script src="https://browser.sentry-cdn.com/5.15.5/bundle.min.js" crossorigin="anonymous"></script>
+<script nonce="a0de7793-d1b5-4044-8d96-ad00fe8f5304">
+  Sentry.init({ dsn: 'https://73410f1915d84abc8b2dd1f1aabd1c82@sentry.hackmd.dev/4', environment: 'production', integrations: function (intrus) { return intrus.filter(function (itr) { return itr.name !== 'TryCatch' }) } });
+  const sentryUserId = document.cookie
+    .split('; ')
+    .map(cookie => cookie.split('='))
+    .reduce((acc, [k, v]) => k === 'userid' ? v : acc, '');
+  Sentry.setUser(sentryUserId ? { id: sentryUserId } : null);
+</script>
+
+
+    
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLW9Z3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+    <script src="https://hackmd.io/api/i18n.js"></script>
+     <script src="https://assets.hackmd.io/build/font-vendor.7631cb852a460f17d568.js" defer="defer"></script><script src="https://assets.hackmd.io/build/common-vendor.3c9a3da9f8a49f6ad878.js" defer="defer"></script><script src="https://assets.hackmd.io/build/pretty-vendor.1e65e4faa04a7ebdd05b.js" defer="defer"></script><script src="https://assets.hackmd.io/build/pretty-common.fb61aa6b71cf8200ffc1.js" defer="defer"></script><script src="https://assets.hackmd.io/build/pretty.4b82ea784de626fa8622.js" defer="defer"></script>
+
+    
+
+</body>
+</html>

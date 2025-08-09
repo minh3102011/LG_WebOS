@@ -1,0 +1,1 @@
+g++ -fdiagnostics-color=always -g /home/lg-lab-pc-16/Nfacct_API_C/Nfacct.cpp -o /home/lg-lab-pc-16/Nfacct_API_C/NfacctW5 -lnetfilter_acct -lmnl
